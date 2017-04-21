@@ -1,0 +1,14 @@
+{
+  "name": "storableBootstrap",
+  "version": "0.0.1",
+  "authors": [
+    "Fabian <plusvaliamarket@gmail.com>"
+  ],
+  "description": "Dependecias de Bootstrap(SAAS)",
+  "main": "index.html",
+  "keywords": [
+    "saas"
+  ],
+  "license": "MIT",
+  "homepage": "index.html"
+}

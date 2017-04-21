@@ -1,0 +1,97 @@
+
+/*Clearfix*/
+
+@mixin clearfix {
+	&:after {
+		content:"";
+		display: table;
+		clear: both;
+	}
+
+}
+
+
+/*Imagenes*/
+@mixin imagenFondo($imagen, $height:100vh, $bgPos:center center){
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6)), url($imagen);
+	background-position: $bgPos;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: $height;
+}
+
+/*Mediaqueries*/
+@mixin tablet {
+	@media only screen and (min-width:  #{$tablet}) {
+		@content;
+	}
+
+}
+
+@mixin desktop {
+	@media only screen and (min-width: #{$desktop}) {
+		@content;
+		
+	}
+
+}
+
+//declaracion de mixin
+@mixin gridImagenes($cantidad, $margin) {
+    width: ((100% - (($cantidad - 1) * $margin))/$cantidad);
+    &:nth-child(n) {
+      margin-right: $margin;
+      margin-bottom: $margin;
+    }
+    &:nth-child(#{$cantidad}n + 1) {
+        margin-right:0;
+        margin-bottom: 0;
+    }
+}
+
+
+//border-radius
+@mixin border-radius($border) {
+	border-radius:$border
+}
+
+//Font face
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal;
+            }
+        }
+    }
+}
+/*@include font-face('Ashbury', 'AshburyLig-webfont', 'Ashbury', 'serif');*/
+
+//Font weight
+@mixin font-weight-light(){
+	font-weight: 100;
+} 
+@mixin font-weight-normal(){
+	font-weight: 300;
+} 
+@mixin font-weight-semibold(){
+	font-weight: 400;
+} 
+@mixin font-weight-bold(){
+	font-weight: 800;
+} 
+
+
+
+

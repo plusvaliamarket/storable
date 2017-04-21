@@ -1,0 +1,97 @@
+/*Global imports*/
+/*Clearfix*/
+/*Imagenes*/
+/*Mediaqueries*/
+/*@include font-face('Ashbury', 'AshburyLig-webfont', 'Ashbury', 'serif');*/
+/*Variables Colores*/
+/*Colores*/
+/*Fuentes*/
+/*Screens*/
+/*Elementos*/
+/*Fonts*/
+@font-face {
+  font-family: "Proxima_nova_regular";
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.eot");
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.svg#Proxima_nova_regular") format("svg"); }
+
+@font-face {
+  font-family: "Proxima_nova_semibold";
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.eot");
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.svg#Proxima_nova_semibold") format("svg"); }
+
+@font-face {
+  font-family: "Proxima_nova_bold";
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.eot");
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.svg#Proxima_nova_bold") format("svg"); }
+
+@font-face {
+  font-family: "Proxima_nova_condensed_light";
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot");
+  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.svg#Proxima_nova_condensed_light") format("svg"); }
+
+@font-face {
+  font-family: "Proxima_nova_light";
+  src: url("../fonts/ProximaNova/proximanova-light-webfont.eot");
+  src: url("../fonts/ProximaNova/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/proximanova-light-webfont.woff") format("woff"), url("../fonts/ProximaNova/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/proximanova-light-webfont.svg#Proxima_nova_light") format("svg"); }
+
+/*General*/
+body {
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+  color: #000000; }
+
+h1 {
+  font-family: 'Proxima_nova_light', sans-serif;
+  font-weight: 100; }
+
+p {
+  font-family: 'Proxima_nova_condensed_light', sans-serif;
+  font-weight: 800; }
+
+span {
+  font-family: 'Proxima_nova_bold', sans-serif;
+  font-weight: 300; }
+
+/*Contenedores*/
+/*Botones*/
+.estacion {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen03.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px; }
+
+.navegacion {
+  padding: 10px;
+  background-color: #002c3d; }
+  .navegacion:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .navegacion h2 {
+    margin: 0px;
+    float: left;
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .navegacion h2 {
+        display: block; } }
+  .navegacion nav {
+    display: inline;
+    margin-top: 10px; }
+    @media only screen and (min-width: 768px) {
+      .navegacion nav {
+        float: right; } }
+    .navegacion nav a {
+      color: #EEE8D6;
+      font-size: 1rem;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      margin-bottom: 20px; }
+      .navegacion nav a:hover {
+        color: #FFBA00; }
+      @media only screen and (min-width: 768px) {
+        .navegacion nav a {
+          display: inline;
+          text-align: left; } }

@@ -1,0 +1,38 @@
+/*Variables Colores*/
+$blanco:		#EEE8D6;
+$azulOscuro: 	#101068;
+$amarillo: 		#FFBA00;
+$azul: 			#0076A3;
+$verde: 		#548c27;
+$rojo: 			#f32d28;
+$morado: 		#6d73c2;
+$negro:			#000000;
+
+
+/*Colores*/
+$color-fondo: $azul;
+$color-principal: $negro;
+$color-titulos: $amarillo;
+$fondo-navegacion: darken($azul,20);
+$fondo-boton:$rojo;
+$texto-boton:$blanco;
+$color-borde-noticia: $blanco;
+
+
+
+/*Fuentes*/
+$fuente-titulos:   'Proxima_nova_regular', sans-serif;
+$fuente-principal:  'Proxima_nova_semibold', sans-serif;
+ 
+
+/*Screens*/
+$tablet: 768px;
+$desktop: 1024px;
+
+/*Elementos*/
+$marginNull: 	0px;
+$paddingNull:	0px;
+$fleft:			left;
+$fright:		right;
+$spacing:		10px;
+$intspacing:    10px;
