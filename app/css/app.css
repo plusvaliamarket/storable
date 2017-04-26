@@ -1,60 +1,137 @@
+@charset "UTF-8";
 /*Global imports*/
+/*Variables Colores*/
+/*Colores*/
+/*Fuentes*/
+/*Tamaño fuente*/
+/*Screens*/
+/*Elementos*/
 /*Clearfix*/
 /*Imagenes*/
 /*Mediaqueries*/
 /*@include font-face('Ashbury', 'AshburyLig-webfont', 'Ashbury', 'serif');*/
-/*Variables Colores*/
-/*Colores*/
-/*Fuentes*/
-/*Screens*/
-/*Elementos*/
+/*Margenes entre elementos*/
+section.card-section {
+  margin-bottom: 40px; }
+
+section.card-slider .card-image, section.card-slider-small .card-image, section.card-lead .card-image {
+  margin-bottom: 10px; }
+
+section.card-slider {
+  margin-bottom: 130px; }
+
+section.card-lead, section.card-steps {
+  margin-bottom: 130px;
+  margin-top: 130px; }
+
+/*Colors*/
+.jumbotron, .lead-banner {
+  background: #00a9ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #00a9ff 0%, #017ee5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #00a9ff 0%, #017ee5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #00a9ff 0%, #017ee5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ff', endColorstr='#017ee5',GradientType=1 );
+  /* IE6-9 */ }
+
 /*Fonts*/
 @font-face {
   font-family: "Proxima_nova_regular";
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.eot");
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_regular-webfont.svg#Proxima_nova_regular") format("svg"); }
-
-@font-face {
-  font-family: "Proxima_nova_semibold";
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.eot");
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_scosf_semibold-webfont.svg#Proxima_nova_semibold") format("svg"); }
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.eot");
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.woff") format("woff"), url("../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.ttf") format("truetype"), url("../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.svg#Proxima_nova_regular") format("svg"); }
 
 @font-face {
   font-family: "Proxima_nova_bold";
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.eot");
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_bold-webfont.svg#Proxima_nova_bold") format("svg"); }
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.eot");
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.woff") format("woff"), url("../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.ttf") format("truetype"), url("../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.svg#Proxima_nova_bold") format("svg"); }
 
 @font-face {
   font-family: "Proxima_nova_condensed_light";
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot");
-  src: url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.woff") format("woff"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.svg#Proxima_nova_condensed_light") format("svg"); }
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot");
+  src: url("../fonts/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.woff") format("woff"), url("../fonts/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.ttf") format("truetype"), url("../fonts/mark_simonson_-_proxima_nova_alt_condensed_light-webfont.svg#Proxima_nova_condensed_light") format("svg"); }
 
 @font-face {
   font-family: "Proxima_nova_light";
-  src: url("../fonts/ProximaNova/proximanova-light-webfont.eot");
-  src: url("../fonts/ProximaNova/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/proximanova-light-webfont.woff") format("woff"), url("../fonts/ProximaNova/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/ProximaNova/proximanova-light-webfont.svg#Proxima_nova_light") format("svg"); }
+  src: url("../fonts/proximanova-light-webfont.eot");
+  src: url("../fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/proximanova-light-webfont.svg#Proxima_nova_light") format("svg"); }
 
 /*General*/
+* {
+  box-sizing: border-box;
+  font-weight: 100;
+  list-style: none; }
+
 body {
   background-color: #fff;
   margin: 0px;
   padding: 0px;
-  color: #000000; }
+  font-family: "Proxima_nova_regular", sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s; }
 
 h1 {
-  font-family: 'Proxima_nova_light', sans-serif;
+  font-family: "Proxima_nova_bold", sans-serif;
   font-weight: 100; }
 
 p {
-  font-family: 'Proxima_nova_condensed_light', sans-serif;
-  font-weight: 800; }
-
-span {
-  font-family: 'Proxima_nova_bold', sans-serif;
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.27rem;
+  color: #9fa2a2;
   font-weight: 300; }
 
-/*Contenedores*/
-/*Botones*/
+img {
+  width: 100%;
+  height: auto; }
+
+a {
+  -webkit-transition: all 0.4s;
+  /* Safari */
+  transition: all 0.4s; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/*Margins paddings classes*/
+.nopadding {
+  padding: 0 !important; }
+
+.nomargin {
+  margin: 0 !important; }
+
+/*Placeholder styles*/
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #303336; }
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #303336; }
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #303336; }
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #303336; }
+
+/*Button*/
+.btn {
+  font-family: "Proxima_nova_light", sans-serif;
+  font-weight: 100; }
+
+/*Divitons*/
+.line {
+  border-right: solid 1px #e6e6e6; }
+
 .estacion {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen03.jpg");
   background-position: center center;
@@ -62,36 +139,590 @@ span {
   background-size: cover;
   height: 200px; }
 
-.navegacion {
-  padding: 10px;
-  background-color: #002c3d; }
-  .navegacion:after {
+/*Elements*/
+.clear {
+  clear: both; }
+
+.positionRelative {
+  position: relative; }
+
+.divider {
+  height: 50px; }
+
+.link-main {
+  color: #00d4b8;
+  font-size: 1.7rem; }
+  .link-main:hover {
+    text-decoration: none; }
+
+/*Stars*/
+.star-container {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+
+.star-full {
+  background: url(../images/menta-star.svg) no-repeat 0 0; }
+
+.star-empty {
+  background: url(../images/grey-star.svg) no-repeat 0 0; }
+
+/*Redes sociales*/
+a svg:hover #facebook,
+a svg:hover #instagram, svg:hover #twitter {
+  fill: #017ee5; }
+
+a svg #facebook, a svg #twitter,
+a svg #instagram {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out; }
+
+/*Animation Parallax*/
+.animation-element {
+  opacity: 0;
+  position: relative; }
+
+/*animation element sliding left*/
+.animation-element.slide-left {
+  opacity: 0;
+  -moz-transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -moz-transform: translate3d(0px, 20px, 0px);
+  -webkit-transform: translate3d(0px, 20px, 0px);
+  -o-transform: translate(0px, 20px);
+  -ms-transform: translate(0px, 20px);
+  transform: translate3d(0px, 20px, 0px); }
+
+.animation-element.slide-left.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
+
+/*animation slide left styled for testimonials*/
+.animation-element.slide-left.element {
+  width: auto;
+  opacity: 1;
+  position: absolute;
+  bottom: 94px;
+  color: #f5f5f5;
+  font-size: 20rem;
+  font-weight: 700;
+  left: 10%;
+  z-index: -1; }
+
+nav.navbar {
+  background-color: transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 20px 0 14px; }
+
+nav.navbar.shrink {
+  min-height: 35px;
+  background-color: #fff; }
+
+.navbar-inverse {
+  border-color: rgba(255, 255, 255, 0.3); }
+
+/*Logo*/
+.navbar-brand {
+  display: inline-block;
+  width: 130px;
+  height: 42px;
+  background: url(../images/storable-horizontal-blanco-plano.svg) no-repeat;
+  text-indent: -9999px;
+  background-size: 130px 42px; }
+
+nav.navbar.shrink .navbar-brand {
+  background: url(../images/logo-storable.svg) no-repeat; }
+
+.nav > li > a {
+  padding: 10px 30px; }
+
+.nav-pills li a {
+  color: #fff;
+  font-family: "Proxima_nova_light", sans-serif;
+  font-weight: 100;
+  font-size: 1.27rem; }
+
+nav.navbar.shrink .nav-pills li a {
+  color: #017ee5; }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  color: #00d4b8;
+  background: none; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #00d4b8;
+  background: none; }
+
+nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus {
+  color: #00d4b8;
+  background: none; }
+
+nav.navbar.shrink .btn:hover {
+  color: #00d4b8 !important; }
+
+nav.navbar .btn {
+  font-family: "Proxima_nova_light", sans-serif;
+  padding: 7px 20px;
+  background: #017ee5;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-left: 30px;
+  font-weight: 100; }
+  nav.navbar .btn:hover {
+    background: none;
+    transition: all 0.3s ease; }
+  nav.navbar .btn:active {
+    background: #017ee5; }
+
+nav.navbar.shrink .btn {
+  background: #fff;
+  border: 1px solid #017ee5;
+  color: #017ee5; }
+  nav.navbar.shrink .btn:hover {
+    background: none;
+    transition: all 0.3s ease; }
+  nav.navbar.shrink .btn:active {
+    background: #fff; }
+
+/*Contenedores principales*/
+/*Cards*/
+section.card-slider a {
+  text-decoration: none !important;
+  color: #303336; }
+
+section.card-slider a:hover {
+  text-decoration: none; }
+
+section.card-slider h4 {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.7rem;
+  color: #303336;
+  font-weight: 100;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: pre;
+  overflow: hidden;
+  height: 20px; }
+
+section.card-slider span.caption {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.6rem;
+  color: #303336; }
+
+section.card-slider span.card-detail {
+  margin-bottom: 10px;
+  font-size: 1.27rem;
+  display: block; }
+
+section.card-slider span.card-place {
+  margin-bottom: 20px;
+  font-size: 1.27rem;
+  color: #9fa2a2 !important;
+  display: block; }
+
+section.card-slider .card-image {
+  background-color: #e6e6e6;
+  margin-bottom: 10px; }
+
+.card-slider-small-container {
+  position: relative; }
+
+section.card-slider-small a {
+  text-decoration: none !important;
+  color: #303336; }
+
+section.card-slider-small a:hover {
+  text-decoration: none; }
+
+section.card-slider-small h4 {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.7rem;
+  color: #303336;
+  font-weight: 100;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: pre;
+  overflow: hidden;
+  height: 20px; }
+
+section.card-slider-small span.caption {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.6rem;
+  color: #303336; }
+
+section.card-slider-small .card-image {
+  background-color: #e6e6e6;
+  margin-bottom: 10px; }
+
+section.card-lead:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+section.card-lead a {
+  text-decoration: none !important;
+  color: #303336; }
+
+section.card-lead a:hover {
+  text-decoration: none; }
+
+section.card-lead h2.copy {
+  font-family: "Proxima_nova_bold", sans-serif;
+  font-size: 2rem;
+  color: #303336;
+  font-weight: 800;
+  margin-top: 0px; }
+
+section.card-lead span {
+  font-weight: 100;
+  display: block;
+  font-size: 2rem;
+  font-family: "Proxima_nova_light", sans-serif;
+  margin-bottom: 40px;
+  width: 60%; }
+
+section.card-lead h4 {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.7rem;
+  color: #303336;
+  font-weight: 100;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: pre;
+  overflow: hidden;
+  height: 20px; }
+
+section.card-lead span.caption {
+  font-family: "Proxima_nova_regular", sans-serif;
+  font-size: 1.6rem;
+  color: #303336; }
+
+section.card-lead .card-image {
+  width: 555px;
+  background-color: #e6e6e6;
+  margin-bottom: 10px; }
+
+section.card-lead .btn {
+  background: #00d4b8;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.6rem; }
+  section.card-lead .btn:hover {
+    background: #00a18c;
+    transition: all 0.3s ease; }
+  section.card-lead .btn:active {
+    background: #00d4b8; }
+
+section.card-lead .btn-lg {
+  padding: 10px 18px; }
+
+section.card-steps {
+  position: relative; }
+  section.card-steps hr {
+    clear: both;
+    margin-bottom: 80px; }
+  section.card-steps:after {
     content: "";
     display: table;
     clear: both; }
-  .navegacion h2 {
-    margin: 0px;
-    float: left;
-    display: none; }
-    @media only screen and (min-width: 768px) {
-      .navegacion h2 {
-        display: block; } }
-  .navegacion nav {
+  section.card-steps p {
+    margin-top: 20px;
+    width: 68%; }
+  section.card-steps h2.copy {
+    font-family: "Proxima_nova_bold", sans-serif;
+    font-size: 2rem;
+    color: #303336;
+    font-weight: 800;
+    margin-top: 0px; }
+  section.card-steps span {
+    font-weight: 100;
+    display: block;
+    font-size: 2rem;
+    font-family: "Proxima_nova_light", sans-serif;
+    margin-bottom: 40px;
+    width: 60%; }
+  section.card-steps h4 {
+    font-family: "Proxima_nova_regular", sans-serif;
+    font-size: 1.7rem;
+    color: #303336;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 77%; }
+  section.card-steps span.caption {
+    font-family: "Proxima_nova_regular", sans-serif;
+    font-size: 1.6rem;
+    color: #303336; }
+
+/*Jumbotron*/
+.jumbotron {
+  height: 600px;
+  position: relative;
+  padding: 0;
+  margin-bottom: 0; }
+
+.jumbotron .container {
+  height: 100%; }
+
+.jumbotron h1, .jumbotron .h1 {
+  font-size: 3.4rem;
+  margin: 0;
+  line-height: 50px; }
+
+.jumbotron h1 span {
+  font-family: "Proxima_nova_light", sans-serif;
+  display: block;
+  font-weight: 100; }
+
+.jumbotron {
+  padding-top: 145px; }
+
+/*Buscador principal*/
+.main-search {
+  height: 90px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: -163px;
+  z-index: 999; }
+
+.main-search .form-group {
+  padding: 20px 0 5px;
+  margin-bottom: 0; }
+
+.main-search .form-group-last {
+  padding: 20px 0 20px 20px; }
+
+.main-search label {
+  font-size: 1.27rem;
+  color: #9fa2a2;
+  font-weight: 100;
+  font-family: "Proxima_nova_light", sans-serif;
+  width: 100%; }
+
+.main-search .ui.button {
+  background: #fff;
+  font-size: 1.6rem;
+  color: #303336;
+  font-weight: 100;
+  font-family: "Proxima_nova_regular", sans-serif;
+  width: 96%;
+  padding: 10px 0;
+  border-radius: 0; }
+
+.main-search .ui.button:hover {
+  background: #fff; }
+
+.main-search .ui.button:focus {
+  background: #fff; }
+
+.main-search .ui.active.button {
+  background: #fff; }
+
+.main-search .ui.active.button:hover {
+  background: #fff; }
+
+.main-search .ui.dropdown .menu > .item:hover {
+  background: #f5f5f5;
+  color: #017ee5; }
+
+.main-search .ui.dropdown.selected, .main-search .ui.dropdown .menu .selected.item {
+  background: transparent; }
+
+.main-search .ui.dropdown.selected, .ui.dropdown .menu .selected.item {
+  background: ransparent; }
+
+.main-search .ui.search.dropdown .menu {
+  overflow-y: hidden !important; }
+
+.main-search .ui.dropdown .menu .item {
+  padding: 12px 20px;
+  font-size: 1.27rem; }
+
+.main-search .ui.dropdown .menu .item:first-child {
+  box-shadow: inset 3px 10px 19px -15px rgba(0, 0, 0, 0.4); }
+
+.main-search .ui.floating.dropdown > .menu {
+  top: 40px;
+  border-radius: 0 !important;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15) !important; }
+
+.main-search .btn {
+  background: #00d4b8;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.6rem; }
+  .main-search .btn:hover {
+    background: #00a18c;
+    transition: all 0.3s ease; }
+  .main-search .btn:active {
+    background: #00d4b8; }
+
+.main-search .btn-lg {
+  padding: 10px 43px; }
+
+/*destacado*/
+.lead-banner {
+  padding: 4.5rem;
+  margin-bottom: 100px; }
+
+.number-counter {
+  border-right: 1px solid #fff;
+  padding-right: 3.125rem;
+  text-align: center; }
+
+.lead-banner .counter {
+  font-size: 6rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 20px; }
+
+.lead-banner .counter:before {
+  content: "+";
+  font-weight: 800; }
+
+.lead-banner p.details {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center; }
+
+.lead-banner h2.copy {
+  font-size: 3.8rem;
+  color: #fff;
+  font-weight: 100;
+  font-family: "Proxima_nova_light", sans-serif; }
+
+/*FOOTER*/
+footer {
+  padding-bottom: 50px; }
+  footer ul li {
+    line-height: 3rem; }
+    footer ul li a {
+      font-size: 1.27rem;
+      font-weight: 100; }
+  footer ul h5 {
+    font-size: 1.6rem;
+    font-weight: 300; }
+  footer .social li {
     display: inline;
-    margin-top: 10px; }
-    @media only screen and (min-width: 768px) {
-      .navegacion nav {
-        float: right; } }
-    .navegacion nav a {
-      color: #EEE8D6;
-      font-size: 1rem;
-      text-decoration: none;
-      text-align: center;
-      display: block;
-      margin-bottom: 20px; }
-      .navegacion nav a:hover {
-        color: #FFBA00; }
-      @media only screen and (min-width: 768px) {
-        .navegacion nav a {
-          display: inline;
-          text-align: left; } }
+    padding: 0 50px 0 0; }
+  footer .copyright {
+    margin-top: 30px;
+    clear: both;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px; }
+  footer .brand-footer {
+    width: 44px;
+    height: 42px;
+    float: left;
+    margin-right: 16px; }
+
+/*Header stick*/
+/*Mediaqueries*/
+.jumbotron .swiper-container-vertical > .swiper-pagination-bullets {
+  top: 14% !important; }
+
+.jumbotron .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px; }
+
+.jumbotron .parallax-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: right;
+  background-repeat: no-repeat; }
+
+.jumbotron .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 18px 0; }
+
+.jumbotron .swiper-slide .title {
+  color: #fff;
+  font-size: 3.4rem;
+  font-weight: 800;
+  font-family: "Proxima_nova_bold", sans-serif; }
+
+.jumbotron .swiper-slide .subtitle {
+  color: #fff;
+  font-size: 3.4rem;
+  font-weight: 100;
+  font-family: "Proxima_nova_light", sans-serif;
+  width: 63%; }
+
+/*Swipper*/
+.swiperIntro {
+  height: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+
+.swiper1 {
+  width: 100%;
+  height: 282px;
+  overflow: hidden;
+  position: relative; }
+
+.swiper2 {
+  width: 100%;
+  height: 191px;
+  overflow: hidden;
+  position: relative; }
+
+.swiper-button-next, .swiper-button-prev {
+  background-size: 12px 34px !important; }
+
+.card-slider-container .swiper-button-next, .card-slider-container .swiper-button-prev {
+  top: 31%; }
+
+.card-slider-small-container .swiper-button-next, .card-slider-small-container .swiper-button-prev {
+  top: 47%; }
+
+/*Slider Espacios disponibles*/
+.card-slider .swiper-slide {
+  width: 360px;
+  height: 280px; }
+
+.card-slider-container .swiper-button-next, .card-slider-container .swiper-container-rtl .swiper-button-prev,
+.card-slider-small-container .swiper-button-next, .card-slider-small- .swiper-container-rtl .swiper-button-prev {
+  right: -13px; }
+
+.card-slider-container .swiper-button-prev, .card-slider-container .swiper-container-rtl .swiper-button-next,
+.card-slider-small-container .swiper-button-prev, .card-slider-small-container .swiper-container-rtl .swiper-button-next {
+  left: -15px; }
+
+.card-slider-container .swiper-button-next, .card-slider-container .swiper-container-rtl .swiper-button-prev,
+.card-slider-small-container .swiper-button-next, .card-slider-small-container .swiper-container-rtl .swiper-button-prev {
+  right: -13px; }
+
+.card-slider-container .swiper-button-prev, .card-slider-container .swiper-container-rtl .swiper-button-next,
+.card-slider-small-container .swiper-button-prev, .card-slider-small-container .swiper-container-rtl .swiper-button-next {
+  left: -15px; }
+
+/*Slider Ciudades donde más envían inventarios*/
+.card-slider-small .swiper-slide {
+  width: 263px;
+  height: 160px;
+  background-color: #e6e6e6; }

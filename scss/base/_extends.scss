@@ -1,0 +1,19 @@
+/*Margenes entre elementos*/
+%space40 {margin-bottom: 40px}
+%space10 {margin-bottom: 10px}
+%space130 {margin-bottom: 130px}
+%spaceHero {margin-bottom: 130px; margin-top: 130px}
+
+
+
+/*Colors*/
+%gradientStorable {
+	
+background: #00a9ff; /* Old browsers */
+background: -moz-linear-gradient(left,  #00a9ff 0%, #017ee5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #00a9ff 0%,#017ee5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #00a9ff 0%,#017ee5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ff', endColorstr='#017ee5',GradientType=1 ); /* IE6-9 */
+}
+
+

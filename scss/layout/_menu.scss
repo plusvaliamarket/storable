@@ -1,39 +1,58 @@
-.navegacion {
-	@include clearfix;
-	padding: $intspacing;
-	background-color: $fondo-navegacion;
-	h2 {
-		margin:$marginNull;
-		float:$fleft;
-		display:none;
+nav.navbar{
+  background-color:transparent;
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+   padding: 20px 0 14px;
+}
 
-		@include tablet {
-			display:block;
-		}
+nav.navbar.shrink {
+  min-height: 35px;
+  background-color: #fff;
+}
+.navbar-inverse {    border-color: rgba(255, 255, 255, 0.3);}
+
+
+/*Logo*/
+.navbar-brand {
+	display: inline-block;
+	width: 130px;
+	height: 42px;
+	background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
+	text-indent:-9999px;
+	background-size: 130px 42px}
+nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;}
+.nav > li > a { padding: 10px 30px}
+
+.nav-pills  li a {
+	color:#fff;
+	font-family: $fuente-menu;
+	@include font-weight-light;
+	font-size: 1.27rem;
+}
+
+nav.navbar.shrink .nav-pills  li a  
+	{color:$azulStorable}
+.nav > li > a:hover, .nav > li > a:focus 
+	{color:$menta; 
+	background: none}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus 
+	{color:$menta; 
+	background: none}
+
+nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
+	{color:$menta; background: none}
+nav.navbar.shrink .btn:hover {color:$menta !important;}
+nav.navbar .btn {
+	font-family: $fuente-botones; 
+	padding: 7px 20px;
+	@include btnStorable($azulStorable, #fff, #fff);
+	margin-left: 30px;
+	@include font-weight-light;
 	
-	}
+}
 
-	nav {
-		display: inline;
-		margin-top:$spacing;
-		@include tablet {
-			float:$fright;
-		}
-		a {
-			color:$blanco;
-			font-size: 1rem;
-			text-decoration: none;
-			text-align: center;
-			display: block;
-			margin-bottom: 20px;
-			&:hover {
-				color: $amarillo;
-			}
-			@include tablet {
-				display: inline;
-				text-align: left;	
-			}
-		}
-
-	}
+nav.navbar.shrink .btn {
+	@include btnStorable(#fff, $azulStorable, $azulStorable);
+	
 }

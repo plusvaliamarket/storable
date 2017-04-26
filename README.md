@@ -1,2 +1,2 @@
-# Sass-Gulp
+# Storable
 Repositorio para la aplicación storable

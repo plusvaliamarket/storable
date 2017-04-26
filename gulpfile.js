@@ -16,7 +16,7 @@ gulp.task('sass', function() {
 
 // watch Sass files for changes, run the Sass preprocessor with the 'sass' task and reload
 gulp.task('serve', ['sass'], function() {
-  browserSync.init(["app/css/*.css", "app/js/*.js", "app/*.html", "scss/*.scss"], {
+  browserSync.init(["app/css/*.css", "app/js/*.js", "app/*.html"], {
     server: {
       baseDir: 'app'
     }

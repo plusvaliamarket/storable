@@ -50,14 +50,44 @@
 }
 
 
-//border-radius
+//botones
 @mixin border-radius($border) {
 	border-radius:$border
 }
 
+@mixin btnStorable ($bg,$borderColor,$color) {
+  background: $bg;
+  border: 1px solid $borderColor;
+  color:$color;
+  &:hover {
+    background:none;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: $bg;
+  } 
+}
+
+@mixin btnStorableMain ($bg,$borderColor,$color) {
+  background: $bg;
+  border: 1px solid $borderColor;
+  color:$color;
+  &:hover {
+    background:darken( $bg, 10% );
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: $bg;
+  } 
+}
+
+
+
+
+
 //Font face
 @mixin font-face($style-name, $file, $family, $category:"") {
-    $filepath: "../fonts/" + $family + "/" + $file;
+    $filepath: "../fonts/"  + $file;
     @font-face {
         font-family: "#{$style-name}";
 

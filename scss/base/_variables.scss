@@ -1,38 +1,51 @@
 /*Variables Colores*/
-$blanco:		#EEE8D6;
-$azulOscuro: 	#101068;
-$amarillo: 		#FFBA00;
-$azul: 			#0076A3;
-$verde: 		#548c27;
-$rojo: 			#f32d28;
-$morado: 		#6d73c2;
-$negro:			#000000;
-
+$azulStorable: 	#017ee5;
+$menta: 		#00d4b8;
+$darkGrey: 		#303336;
+$softGrey:		#9fa2a2;
+$highlight:		 #f5f5f5;
+$greylight:		#e6e6e6;
 
 /*Colores*/
-$color-fondo: $azul;
-$color-principal: $negro;
-$color-titulos: $amarillo;
-$fondo-navegacion: darken($azul,20);
-$fondo-boton:$rojo;
-$texto-boton:$blanco;
-$color-borde-noticia: $blanco;
+$color-principal: $azulStorable;
+
 
 
 
 /*Fuentes*/
-$fuente-titulos:   'Proxima_nova_regular', sans-serif;
-$fuente-principal:  'Proxima_nova_semibold', sans-serif;
- 
+$fuente-titulos:   'Proxima_nova_bold', sans-serif;
+$fuente-principal:  'Proxima_nova_regular', sans-serif;
+$fuente-botones:   'Proxima_nova_light', sans-serif;
+$fuente-menu:   'Proxima_nova_light', sans-serif; 
+$fuente-label:   'Proxima_nova_light', sans-serif; 
+/*Tamaño fuente*/
+$size14px: 1.27rem;
+$size18px: 1.6rem;
+$size20px: 1.7rem;
+$size30px: 2rem;
+$size40px: 3.4rem;
+
+
+
 
 /*Screens*/
+$handy: 767px;
 $tablet: 768px;
-$desktop: 1024px;
+$desktop: 980px;
+$bigDesktop: 1200px;
 
 /*Elementos*/
 $marginNull: 	0px;
+$marginTopNull: 0px;
 $paddingNull:	0px;
-$fleft:			left;
+$marginDefault:	40px;
 $fright:		right;
 $spacing:		10px;
 $intspacing:    10px;
+$paddingTop30: 30px;
+$marginTop20: 	20px;
+$marginTop30: 	30px;
+$marginBottom20: 20px;
+$marginBottom50: 50px;
+$marginBottom80: 80px;
+$marginBottom100: 100px;
