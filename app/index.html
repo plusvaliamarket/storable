@@ -9,7 +9,11 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+   <link rel="stylesheet" href="css/nouislider.min.css">
 </head>
 <body>
  <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -28,11 +32,36 @@
             <li role="presentation" class="active"><a href="#">Arrendar un espacio</a></li>
             <li role="presentation"><a href="#">¿Aún no tienes cuenta? Regístrate</a></li>
             <li role="presentation"><a href="#">Messages</a></li>
-            <li><a href="#" class="btn btn-primary" role="button">Iniciar sesión</a></li>
+            <li>
+              <a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">
+                Iniciar sesión</a>
+            </li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
+
+    
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -61,8 +90,8 @@
           <div class="main-search">
             <div class="col-md-12">
               <form>
-                <div class="row">
-                  <div class="col-md-4 line">
+                <div class="row hidden-xs">
+                  <div class="col-sm-4 col-md-4 line ">
                     <div class="form-group">
                       <label>¿A dónde vas a enviar?</label>
                       <div class="ui floating dropdown search button"><!--Dropdown destino-->
@@ -93,28 +122,59 @@
                       </div>
                     </div>
                   </div>
-                   <div class="col-md-4 line">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label>¿A dónde vas a enviar?</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label>¿A dónde vas a enviar?</label>
+                    <div class="col-sm-4 col-md-4  line">
+                     <div class="row">
+                      <div class="calendar-storable clearfix">
+                        <div class="col-sm-6 col-md-6 line">
+                          <div class="form-group">
+                            <label>¿Desde cuando?</label>
+                             <div class='input-group date' id='datetimepicker6'>
+                                <input type='text' class="form-control" placeholder="Llegada"/>
+                                <span class="input-group-addon">
+
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label>¿Hasta cuando?</label>
+                              <div class='input-group date' id='datetimepicker7'>
+                                  <input type='text' class="form-control" placeholder="Llegada" />
+                                  <span class="input-group-addon">
+                                  </span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                   <div class="col-md-4">
+                   <div class="col-sm-4 col-md-4 ">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                          <label>¿A dónde vas a enviar?</label>
+                          <label>Tamaño mts<sup>2</sup></label>
+                          <div class="ui button"><span class="hidden-sm">Entre</span> 
+                            <input id="input-with-keypress-1" type="text">
+                            <input id="input-with-keypress-0" type="text">
+                            mts<sup>2</sup>
+                          </div>
+                            <div class="ui flowing popup top left transition hidden">
+                              <div class="ui three  divided center aligned grid">
+                                <div class="column">
+                                  <p>Entre 40 - 80 mts<sup>2</sup></p>
+                                   <div id="html5" class="noUi-target noUi-ltr noUi-horizontal">
+
+                                    </div>
+                                     
+                                     <a href="#" class="btn btn-primary btn-xs pull-right" role="button">Aplicar</a>
+                                     <a href="#" class="btn btn-info btn-xs pull-right" role="button">Cancelar</a>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class=" col-sm-6 col-md-6">
                         <div class="form-group-last">
                          <a href="#" class="btn btn-primary btn-lg" role="button">Buscar</a>
                         </div>
@@ -323,12 +383,12 @@
           <div class="col-md-12">
             <div class="row">
               <section class="card-lead">
-                <div class="col-md-6">
+                <div class="col-sm-6 col-md-6">
                   <div class="card-image">
                     <img src="https://dummyimage.com/555x328/e6e6e6/fff.gif&text=Imagen" alt="Imagen"/>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6 col-md-6">
                   <div class="card-data">
                     <h4 class="card-title">París</h4>
                     <h2 class="copy">
@@ -346,7 +406,7 @@
           <div class="col-md-12">
             <div class="row">
               <section class="card-steps">
-                <div class="col-md-4">
+                <div class="col-sm-4 col-md-4">
                    <h4 class="card-title">¡Ahora exportar es más fácil!</h4>
                 </div>
                 <div class="col-md-8">
@@ -354,22 +414,28 @@
                 </div> 
                 <div class="clear"></div>
                 <hr>
-                <div class="col-md-4">
-                  <div class="bg-2"></div>
+                <div class="col-sm-4 col-md-4">
+                  <div class="animation-element slide-left element">
+                   01
+                  </div>
                   <div class="card-item">
                     <h4 class="card-title">Reserva un espacio a través de nuestras plataformas</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
                   </div>
                 </div>      
-                <div class="col-md-4">
-                  <div class="bg-3"></div>
+                <div class="col-sm-4 col-md-4">
+                  <div class="animation-element slide-left element">
+                   02
+                  </div>
                   <div class="card-item">
                     <h4 class="card-title">Nuestros Partners de envíos recogen y entregan tu inventario</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="bg-4"></div>
+                <div class="col-sm-4 col-md-4">
+                  <div class="animation-element slide-left element">
+                   03
+                  </div>
                   <div class="card-item">
                     <h4 class="card-title">Despacha y distribuye tu mercancia desde la ciudad donde almacenaste</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
@@ -387,7 +453,7 @@
       <section class="lead-banner">
         <div class="container">
           <div class="row">  
-           <div class="col-md-3 col-md-offset-2">
+           <div class="col-sm-5 col-md-3 col-sm-offset-0 col-md-offset-2">
               <div class="number-counter">
                <span class="counter">
                 1000
@@ -396,7 +462,7 @@
 REGISTRADOS CON NOSOTROS</p>
               </div>
            </div>
-           <div class="col-md-5">
+           <div class="col-sm-6 col-md-5">
               <h2 class="copy">
                   Administra y despacha
 fácilmente tu inventario
@@ -410,41 +476,43 @@ fácilmente tu inventario
     <div class="container">
        <div class="row"> 
         <footer class="clearfix">
-          <div class="col-md-3">
+          <div class="col-sm-3 col-md-3">
             <ul>
-              <li><a href="#"><h5>Storable</h5></li>
+              <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
               <li><a href="#">Políticas de privacidad</a></li>
               <li><a href="#">Términos y condiciones</a></li>
             </ul>
           </div>
-           <div class="col-md-3">
+           <div class="col-sm-3 col-md-3">
             <ul>
-              <li><a href="#"><h5>Storable</h5></li>
+              <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
               <li><a href="#">Políticas de privacidad</a></li>
               <li><a href="#">Términos y condiciones</a></li>
             </ul>
           </div>
-           <div class="col-md-3">
+           <div class="col-sm-3 col-md-3">
             <ul>
-              <li><a href="#"><h5>Storable</h5></li>
+              <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
               <li><a href="#">Políticas de privacidad</a></li>
               <li><a href="#">Términos y condiciones</a></li>
+              <li><a href="#">Empezar a exportar</a></li>
+              
             </ul>
           </div>
-           <div class="col-md-3">
+           <div class="col-sm-3 col-md-3">
             <div class="selects-footer">
               <select class="ui dropdown">
-              <option value="">Gender</option>
+              <option value="">Español</option>
               <option value="1">Male</option>
               <option value="0">Female</option>
                </select>
             </div>
             <div class="selects-footer">
               <select class="ui dropdown">
-              <option value="">Gender</option>
+              <option value="">COP</option>
               <option value="1">Male</option>
               <option value="0">Female</option>
                </select>
@@ -452,11 +520,11 @@ fácilmente tu inventario
           </div>
           <div class="clear"></div>
           <div class="copyright">
-                  <div class="col-md-9">
+                  <div class="col-sm-8 col-md-9 nopadding">
                     <img class="brand-footer" src="images/logo-footer.svg" alt="Storable"/>
                     <p>Trabajamos con orgullo © 2017 Storable.</p>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-sm-4 col-md-3 nopadding">
                     <ul class="social">
                       <li>
                         <a href="">
@@ -506,14 +574,19 @@ fácilmente tu inventario
    
 
       
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
-  <script src="js/functions.js"></script>
- <script src="js/dropdown.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/dropdown.min.js"></script>
+<script src="js/popup.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/nouislider.min.js"></script>
  
   <script>
   $(document)
@@ -522,8 +595,55 @@ fácilmente tu inventario
       $('.ui.menu .ui.dropdown').dropdown({
         on: 'hover'
       });
+      $('.ui.dropdown')
+      .dropdown();
+      $('.ui.button')
+        .popup({
+          inline     : true,
+           on    : 'click',  
+          hoverable  : false,
+          position   : 'bottom left',
+          delay: {
+            show: 300,
+            hide: 800
+          }
+        });
+
     })
   
+  </script>
+
+
+  <!--Range script-->
+  <script type="text/javascript">
+   var html5Slider = document.getElementById('html5');
+    var input0 = document.getElementById('input-with-keypress-0');
+  var input1 = document.getElementById('input-with-keypress-1');
+  var inputs = [input0, input1];
+
+noUiSlider.create(html5Slider, {
+  start: [ 10, 30 ],
+  connect: true,
+  direction: 'rtl',
+  range: {
+    'min': [0],
+    '10%': [10, 10],
+    '50%': [80, 50],
+    '80%': 150,
+    'max': 200
+    }
+  });
+  html5Slider.noUiSlider.on('update', function( values, handle ) {
+    inputs[handle].value = values[handle];
+  });
+  function setSliderHandle(i, value) {
+  var r = [null,null];
+  r[i] = value;
+  html5Slider.noUiSlider.set(r);
+}
+
+
+
   </script>
   
     <script>
@@ -551,6 +671,20 @@ fácilmente tu inventario
     });
   
     </script>
+    <script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
 </body>
 
 </html>

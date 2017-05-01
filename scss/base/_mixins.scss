@@ -58,14 +58,8 @@
 @mixin btnStorable ($bg,$borderColor,$color) {
   background: $bg;
   border: 1px solid $borderColor;
-  color:$color;
-  &:hover {
-    background:none;
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background: $bg;
-  } 
+  color:$color !important;
+
 }
 
 @mixin btnStorableMain ($bg,$borderColor,$color) {

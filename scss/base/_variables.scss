@@ -1,6 +1,7 @@
 /*Variables Colores*/
 $azulStorable: 	#017ee5;
 $menta: 		#00d4b8;
+$darkmenta: 	#00b8a0;
 $darkGrey: 		#303336;
 $softGrey:		#9fa2a2;
 $highlight:		 #f5f5f5;
@@ -19,6 +20,7 @@ $fuente-botones:   'Proxima_nova_light', sans-serif;
 $fuente-menu:   'Proxima_nova_light', sans-serif; 
 $fuente-label:   'Proxima_nova_light', sans-serif; 
 /*Tamaño fuente*/
+$size10px: 1.1rem;
 $size14px: 1.27rem;
 $size18px: 1.6rem;
 $size20px: 1.7rem;
@@ -42,10 +44,16 @@ $marginDefault:	40px;
 $fright:		right;
 $spacing:		10px;
 $intspacing:    10px;
+$spacingDefault: 12px;
 $paddingTop30: 30px;
+$padding10 :	10px;
+$padding20 :	20px;
+$marginTop10: 	10px;
 $marginTop20: 	20px;
 $marginTop30: 	30px;
 $marginBottom20: 20px;
+$marginBottom30: 30px;
 $marginBottom50: 50px;
 $marginBottom80: 80px;
 $marginBottom100: 100px;
+
