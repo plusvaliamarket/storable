@@ -31,7 +31,11 @@ p { font-family:$fuente-principal;
     height: auto;
 }
 a {  -webkit-transition: all 0.4s; /* Safari */
-    transition: all 0.4s;}
+    transition: all 0.4s;
+text-decoration: none
+	&:hover{ text-decoration: none}
+}
+
 
  ul {list-style: none; padding: 0; margin: 0}
 
@@ -39,6 +43,9 @@ a {  -webkit-transition: all 0.4s; /* Safari */
 /*Margins paddings classes*/
 .nopadding { padding: 0 !important};
 .nomargin { margin: 0 !important};
+
+
+/*FORMS*/
 
 /*Placeholder styles*/
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -57,6 +64,29 @@ input:-moz-placeholder { /* Firefox 18- */
   color: $darkGrey;
   font-size: $size18px;
 }
+.ui.checkbox input[type="checkbox"], .ui.checkbox input[type="radio"] 
+	{margin-left: 0;
+	    width: 24px !important;
+    height: 24px !important;}
+.ui.checkbox .box, .ui.checkbox label {    padding-left: $paddingTop30 !important;}
+.ui.checkbox .box:before, .ui.checkbox label:before {width: 24px !important;
+    height: 24px !important;}
+.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
+	content: "\f0c8" !important;
+	    font-family: 'FontAwesome' !important; 
+	    color:$menta !important;
+}
+.ui.checkbox .box:after, .ui.checkbox label:after {    top: 4px !important;
+    left: 4px !important;
+        font-size: 17px !important;
+}
+.ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before {
+    background: #FFFFFF;
+    border-color: $menta !important;
+}
+.ui.checkbox .box, .ui.checkbox label {    padding-top: 3px;}
+.form-control{border-radius:0}
+.form-control:focus {box-shadow: none}
 
 
 /*Button*/
@@ -66,10 +96,13 @@ input:-moz-placeholder { /* Firefox 18- */
 	@include font-weight-light;
    }
 
+
+
 /*Divitons*/
 .line {
 	border-right: solid 1px #e6e6e6;
 }
+.highlight {background: $highlight}
 
 
 .estacion{
@@ -109,7 +142,8 @@ input:-moz-placeholder { /* Firefox 18- */
 
 
 /*Redes sociales*/
-a svg:hover #facebook,
+a.selected svg .list, a.selected  svg .places,
+a svg:hover #facebook, a svg:hover .list, a svg:hover .places,
 a svg:hover #instagram,  svg:hover #twitter { 
   fill: $azulStorable;
 }
@@ -131,20 +165,7 @@ a svg #instagram {
   opacity: 0;
   position: relative;
 }
-/*animation element sliding left*/
 
-.animation-element.slide-left {
-  opacity: 0;
-  -moz-transition: all 0.6s linear;
-  -webkit-transition: all 0.6s linear;
-  -o-transition: all 0.6s linear;
-  transition: all 0.6s linear;
-  -moz-transform: translate3d(0px, 70px, 0px);
-  -webkit-transform: translate3d(0px, 70px, 0px);
-  -o-transform: translate(-0px, 70px);
-  -ms-transform: translate(0px, 70px);
-  transform: translate3d(0px, 70px, 0px);
-}
 
 .animation-element.slide-left.in-view {
   opacity: 1;
@@ -156,18 +177,7 @@ a svg #instagram {
 }
 /*animation slide left styled for testimonials*/
 
-.animation-element.slide-left.element {
- 	width: auto;
- 	opacity: 1;
- 
-	position: absolute;
-    bottom: 94px;
-    color:$highlight;
-       font-size: 20rem;
-    font-weight: 700;
-    left: 10%;
-	    z-index: -1;
-}
+
 
 .rangeslider,
 .rangeslider__fill {

@@ -1,3 +1,4 @@
+.navbar-inverse .navbar-toggle {border:0 none}
 nav.navbar{
   background-color:transparent;
    // Animation
@@ -11,89 +12,47 @@ nav.navbar.shrink {
   background-color: #fff;
 }
 .navbar-inverse {    border-color: rgba(255, 255, 255, 0.3);}
+.nav > li > a {color:#fff}
 
-
-/*Logo*/
-.navbar-brand {
-	display: inline-block;
-	width: 130px;
-	height: 42px;
-	background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
-	text-indent:-9999px;
-	background-size: 130px 42px}
-nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;}
-.nav > li > a { padding: 10px 30px}
-
-.nav-pills  li a {
-	color:#fff;
-	font-family: $fuente-menu;
-	@include font-weight-light;
-	font-size: 1.27rem;
-}
-
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus 
+		{color:#fff; 
+		background: none}
 nav.navbar.shrink .nav-pills  li a  
-	{color:$darkGrey}
-.nav > li > a:hover, .nav > li > a:focus 
-	{opacity:0.4; 
-	background: none}
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus 
-	{color:#fff; 
-	background: none}
-nav.navbar.shrink .nav-pills > li > a:hover {color:$azulStorable; opacity:1}
+		{color:$darkGrey}
 nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
-	{color:$azulStorable; background: none}
+		{color:$azulStorable; background: none}
+/*Logo*/
+	.navbar-brand {
+		display: inline-block;
+		width: 130px;
+		height: 42px;
+		margin: 0;
+		background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
+		text-indent:-9999px;
+		background-size: 130px 42px}
+	nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;
+	background-size: 130px 42px;}
 
-nav.navbar .btn {
-	font-family: $fuente-botones; 
-	padding: 7px 20px;
-	@include btnStorable($azulStorable, #fff, #fff);
-	margin-left: 30px;
-	@include font-weight-light;
-	
-	}
 
-nav.navbar.shrink .btn {
-	@include btnStorable(#fff, $azulStorable, $azulStorable);
-	}
-nav.navbar.shrink .btn:hover {
-	@include btnStorable($azulStorable, #fff, #fff) ;
-	}
+	nav.navbar .btn {
+		font-family: $fuente-botones; 
+		padding: 7px 20px;
+		@include btnStorable($azulStorable, #fff, #fff);
+		margin-left: 30px;
+		@include font-weight-light;
+		
+		}
 
-.pic-profile, .pic-profile:focus {
-	 width: 40px !important;
-  height: 40px !important;
-  display: block;
-  background-color: $greylight !important;
-	@include font-weight-normal;
-   font-size: 1.9rem !important;
-  color: $softGrey !important;
-      padding: 15px 14px 0 !important;
-  border-radius: 90px !important;
-  text-align: center;
-  font-family: $fuente-principal;
-	}
-.pic-profile:hover {opacity:0.9 !important;
-	background-color: $greylight !important;
-	}
-nav.navbar.shrink .pic-profile:hover {opacity:0.9 !important;
-	color:$azulStorable !important;
-	}
-#navbar .ui.dropdown .menu {left:-363% !important; width:200px !important;
-	    top: 162% !important;
-	}
-#navbar	.ui.labeled.button {    margin-left: 60px;}
-#navbar .ui.pointing.dropdown > .menu:after {        top: -0.60em;     left: 82% !important;}
-#navbar .ui.pointing.dropdown > .menu:after {    width: 1.2em;
-    height: 1.2em;}
-#navbar .ui.dropdown .menu{ 
-    padding:20px 0 }
-#navbar .ui.dropdown .menu > .item {font-size: $size14px; padding: $padding20 !important}
-#navbar  .ui.dropdown .menu > .item:hover {
-	background: $highlight;
-    color: $azulStorable;
+
+/*Menu movil*/
+.navbar-inverse .navbar-toggle .icon-bar { background-color: $azulStorable;
 }
-nav.navbar  .ui.empty.circular.label{    position: absolute;
-    top: 5px;
-    right: 12%;
-        background-color: $menta !important;
+.navbar-toggle .icon-bar {    width: 24px;}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 7px;
+}
+.navbar-toggle {
+    padding: 0px 10px;
+    margin-top: 6px;
+ 
 }

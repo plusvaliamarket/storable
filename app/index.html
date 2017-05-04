@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-   <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
  <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -30,9 +31,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav nav-pills navbar-right">
             <li role="presentation" class="active"><a href="#">Arrendar un espacio</a></li>
-            <li role="presentation"><a href="#">¿Aún no tienes cuenta? Regístrate</a></li>
-            <li role="presentation"><a href="#">Messages</a></li>
-            <li>
+            <li role="presentation"><a href="#" data-toggle="modal" data-target="#ModalRegistro">¿Aún no tienes cuenta? Regístrate</a></li>
               <a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">
                 Iniciar sesión</a>
             </li>
@@ -43,25 +42,92 @@
 
     
 <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalInicio">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
           <div class="modal-body">
-            ...
+            <div class="row">
+              <div class="col-xs-6 line modal-col">
+                 <h4 class="modal-title" id="myModalInicio">Iniciar sesión</h4>
+                 <form>
+                   <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
+                  </div>
+                  <div class="ui checkbox">
+                   
+                      <input type="checkbox">
+                       <label> Mantenerme ingresado
+                    </label>
+                  </div>
+                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
+                 </form>
+              </div>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
+                <span class="o"> o</span>
+                <button type="button" class="btn btn-lg btn-block btn-lg-social">
+                  <span><i class="fa fa-facebook"></i></span>
+               Ingresa con Facebook</button>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a href="#">¿Olvidaste la contraseña?</a>
           </div>
         </div>
       </div>
     </div>
 
+<!-- Modal Registro -->
+    <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalRegistro">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body clearfix">
 
+              <div class="col-xs-6 line modal-col">
+                 <h4 class="modal-title" id="myModalRegistro">Crea tu cuenta</h4>
+                 <form>
+                   <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Crear contraseña">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Confirmar contraseña">
+                  </div>
+                  <div class="ui checkbox">
+                   
+                      <input type="checkbox">
+                       <label> Mantenerme ingresado
+                    </label>
+                  </div>
+                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
+                 </form>
+              </div>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
+                <span class="o"> o</span>
+                <button type="button" class="btn btn-lg btn-block btn-lg-social">
+                  <span><i class="fa fa-facebook"></i></span>
+               Ingresa con Facebook</button>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#">¿Olvidaste la contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -176,7 +242,7 @@
                       </div>
                       <div class=" col-sm-6 col-md-6">
                         <div class="form-group-last">
-                         <a href="#" class="btn btn-primary btn-lg" role="button">Buscar</a>
+                         <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Buscar</a>
                         </div>
                       </div>
                     </div>
@@ -218,6 +284,7 @@
                     <div class="card-container">
                       <a href="#">
                         <div class="card-image">
+                          <div class="check"></div>
                           <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
                         </div>
                         <div class="card-data">
