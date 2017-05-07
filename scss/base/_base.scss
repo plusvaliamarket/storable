@@ -35,7 +35,8 @@ a {  -webkit-transition: all 0.4s; /* Safari */
 text-decoration: none
 	&:hover{ text-decoration: none}
 }
-
+hr {clear: both;
+	border-bottom: 1px solid $greylight;}
 
  ul {list-style: none; padding: 0; margin: 0}
 
@@ -64,11 +65,12 @@ input:-moz-placeholder { /* Firefox 18- */
   color: $darkGrey;
   font-size: $size18px;
 }
+
 .ui.checkbox input[type="checkbox"], .ui.checkbox input[type="radio"] 
 	{margin-left: 0;
 	    width: 24px !important;
     height: 24px !important;}
-.ui.checkbox .box, .ui.checkbox label {    padding-left: $paddingTop30 !important;}
+.ui.checkbox .box, .ui.checkbox label {    padding-left: 34px!important;font-size: $size18px !important;}
 .ui.checkbox .box:before, .ui.checkbox label:before {width: 24px !important;
     height: 24px !important;}
 .ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
@@ -76,6 +78,18 @@ input:-moz-placeholder { /* Firefox 18- */
 	    font-family: 'FontAwesome' !important; 
 	    color:$menta !important;
 }
+.ui.radio input:checked ~ .box:after, .ui.radio input:checked ~ label:after {
+	content: "\f111" !important;
+    font-family: 'FontAwesome' !important; 	    
+    background-color: $menta !important;
+    width: 31px !important;
+    height: 31px !important;
+    top: -2px !important;
+    left: -3px !important;
+
+}
+
+
 .ui.checkbox .box:after, .ui.checkbox label:after {    top: 4px !important;
     left: 4px !important;
         font-size: 17px !important;
@@ -96,7 +110,11 @@ input:-moz-placeholder { /* Firefox 18- */
 	@include font-weight-light;
    }
 
-
+.btn-primary {
+	@include btnStorableMain ($menta,$menta,#fff); 
+	font-size: $size18px;
+	    padding: 10px 54px;
+} 
 
 /*Divitons*/
 .line {
@@ -118,7 +136,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .link-main {
 	color: $menta;
-	font-size: $size20px;	
+	
 
 	&:hover {
 		text-decoration: none
@@ -165,7 +183,32 @@ a svg #instagram {
   opacity: 0;
   position: relative;
 }
+	/*animation element sliding left*/
 
+	.animation-element.slide-left {
+	  opacity: 0;
+	  -moz-transition: all 0.6s linear;
+	  -webkit-transition: all 0.6s linear;
+	  -o-transition: all 0.6s linear;
+	  transition: all 0.6s linear;
+	  -moz-transform: translate3d(0px, 70px, 0px);
+	  -webkit-transform: translate3d(0px, 70px, 0px);
+	  -o-transform: translate(-0px, 70px);
+	  -ms-transform: translate(0px, 70px);
+	  transform: translate3d(0px, 70px, 0px);
+	}
+  	.animation-element.slide-left.element {
+ 	width: auto;
+ 	opacity: 1;
+ 
+	position: absolute;
+    bottom: 94px;
+    color:$highlight;
+       font-size: 20rem;
+    font-weight: 700;
+    left: 10%;
+	    z-index: -1;
+	}
 
 .animation-element.slide-left.in-view {
   opacity: 1;
@@ -192,5 +235,15 @@ a svg #instagram {
   background-color: hotpink;
 }
 
-
-
+.pic-profile, .pic-profile:focus {
+	  display: block;
+	  background-color: $greylight !important;
+		@include font-weight-normal;
+	  color: $softGrey !important;
+	  border-radius: 90px !important;
+	  text-align: center;
+	  font-family: $fuente-principal;
+		}
+.pic-profile:hover {opacity:0.9 !important;
+		background-color: $greylight !important;
+		}
