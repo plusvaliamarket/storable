@@ -1,4 +1,4 @@
-.navbar-inverse .navbar-toggle {border:0 none}
+nav.navbar .navbar-toggle {border:0 none}
 nav.navbar{
   
    // Animation
@@ -8,24 +8,25 @@ nav.navbar{
 }
 
 nav.navbar.shrink {
-  min-height: 35px;
   background-color: #fff;
+
 }
-nav.navbar  .ui.empty.circular.label{    position: absolute;
-	    top: 5px;
-	    right: 12%;
+
+nav.navbar  .ui.empty.circular.label{   
+	   
 	        background-color: $menta !important;
 	}
-.navbar-inverse {    border-color: rgba(255, 255, 255, 0.3);}
+nav.navbar {    border-color: rgba(255, 255, 255, 0.3); background: transparent;}
 .nav > li > a {color:#fff}
 
 	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus 
 		{color:#fff; 
 		background: none}
-nav.navbar.shrink .nav-pills  li a  
-		{color:$darkGrey;}
-nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
-		{color:$azulStorable; background: none}
+
+
+.nav>li>a:hover, .nav>li>a:focus {background: none}
+nav.navbar.shrink .btn {outline: none}
+
 /*Logo*/
 	.navbar-brand {
 		display: inline-block;
@@ -38,25 +39,95 @@ nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.
 	}
 
 	
-	nav.navbar .btn {
-		font-family: $fuente-botones; 
-		
-		@include btnStorable($azulStorable, #fff, #fff);
-		margin-left: 30px;
-		@include font-weight-light;
-		
+nav.navbar .btn {
+	font-family: $fuente-botones; 
+	
+	@include btnStorable($azulStorable, #fff, #fff);
+
+	@include font-weight-light;
+		&:hover {
+			@include btnStorable(#fff, #fff, $azulStorable) ;
 		}
+	
+}
 
 #navbar .ui.labeled.button {    position: relative;}
 /*Menu movil*/
-.navbar-inverse .navbar-toggle .icon-bar { background-color: $azulStorable;
+nav.navbar .navbar-toggle .icon-bar { background-color: $azulStorable;
 }
-.navbar-toggle .icon-bar {    width: 24px;}
+
+
+
+.navbar-toggle .icon-bar {    width: 24px;    height: 1px;}
 .navbar-toggle .icon-bar+.icon-bar {
     margin-top: 7px;
 }
 .navbar-toggle {
     padding: 0px 10px;
-    margin-top: 6px;
+    margin-top: 16px;
  
+}
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 1px;
+}
+nav.navbar .navbar-collapse, nav.navbar .navbar-form
+{ @extend %gradientStorable29;
+	text-align: center;	
+	transform: all 0.5s;
+}
+.navbar-collapse .nav-pills  li  a {
+
+	@include font-weight-light;
+	font-family: $fuente-label;
+}
+.navbar-collapse {   border: 0 none}
+.navbar-collapse.nav {text-align: center}
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 100ms ease-in-out;
+}
+
+nav.navbar .navbar-toggle:hover, nav.navbar .navbar-toggle:focus
+{background: none}
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 9px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -8px;
+	  transform: rotate(-45deg);
+}
+
+.cerrar-movil {background:darken( $azulStorable, 3% ); display: block;
+margin:0 -15px 0; color:#fff; text-align: center; font-size: $size18px;
+padding: $padding20; text-decoration:none;
+widht:100%;}
+
+
+/*Submenu*/
+.submenu-container {background-color: $highlight;
+    position: relative;
+    top: -4rem;}
+.sub-menu li {float:left;}
+.sub-menu li.active a {border-bottom: 2px solid $azulStorable;
+		color:$darkGrey;
+		text-decoration: none;}
+.sub-menu li a {display: inline-block; color:$softGrey;
+	&:hover{
+		border-bottom: 2px solid $azulStorable;
+		color:$darkGrey;
+		text-decoration: none;
+	}
+	&:focus{
+		border-bottom: 2px solid $azulStorable;
+	}
 }

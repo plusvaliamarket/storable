@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
-<body>
+<body id="layout-int">
  <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -201,23 +201,14 @@
         </div>
       </div>
     </div>    
-
-
+    
 <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalInicio">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header clearfix visible-xs">
-            <a class="navbar-brand" href="#">Storable</a>
-            <button type="button" class="navbar-toggle" data-dismiss="modal" aria-label="Close">        
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-xs-12 col-sm-6 line modal-col">
+              <div class="col-xs-6 line modal-col">
                  <h4 class="modal-title" id="myModalInicio">Iniciar sesión</h4>
                  <form>
                    <div class="form-group">
@@ -235,9 +226,9 @@
                    <button type="submit" class="btn btn-lg btn-block">Submit</button>
                  </form>
               </div>
-              <div class="col-xs-12 col-sm-6 modal-col">
-                <p class="hidden-xs">Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
-                <button type="button" class="btn btn-lg btn-block hidden-xs">Crear cuenta</button>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
                 <span class="o"> o</span>
                 <button type="button" class="btn btn-lg btn-block btn-lg-social">
                   <span><i class="fa fa-facebook"></i></span>
@@ -245,11 +236,10 @@
               </div>
             </div>
           </div>
-          
-        </div>
-        <div class="modal-footer">
+          <div class="modal-footer">
             <a href="#">¿Olvidaste la contraseña?</a>
           </div>
+        </div>
       </div>
     </div>
 
@@ -257,17 +247,9 @@
     <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalRegistro">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header clearfix visible-xs">
-            <a class="navbar-brand" href="#">Storable</a>
-            <button type="button" class="navbar-toggle" data-dismiss="modal" aria-label="Close">        
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
           <div class="modal-body clearfix">
 
-              <div class="col-xs-12 col-sm-6 line modal-col">
+              <div class="col-xs-6 line modal-col">
                  <h4 class="modal-title" id="myModalRegistro">Crea tu cuenta</h4>
                  <form>
                    <div class="form-group">
@@ -291,9 +273,9 @@
                    <button type="submit" class="btn btn-lg btn-block">Submit</button>
                  </form>
               </div>
-              <div class="col-xs-12 col-sm-6 modal-col">
-                <p class="hidden-xs">Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
-                <button type="button" class="btn btn-lg btn-block hidden-xs">Crear cuenta</button>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
                 <span class="o"> o</span>
                 <button type="button" class="btn btn-lg btn-block btn-lg-social">
                   <span><i class="fa fa-facebook"></i></span>
@@ -309,411 +291,138 @@
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+
+          <!--Título sección-->
+          <div class="head-title-section ">
+            <h1 class="title-section">Mis inventarios</h1>
+            <a href="#" class="btn btn-primary  btn-lg">+ Agregar inventario</a>
+          </div>
          
-        <div class="swiperIntro">
-          <div class="parallax-bg" style="background-image:url(images/map.png)" data-swiper-parallax="3%"></div> 
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                 <div class="title" data-swiper-parallax="-100">¿Estás buscando un espacio?
-                </div>
-                <div class="subtitle" data-swiper-parallax="-200">Reserva bodegas, espacios y depositos alrededor del mundo.</div>
-              </div>
-              <div class="swiper-slide">
-                <div class="title" data-swiper-parallax="-100">¿Qué
-                </div>
-                <div class="subtitle" data-swiper-parallax="-200">Reserva bodegas, espacios y depositos alrededor del mundo.</div>
-              </div>
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination swiper-pagination-white"></div>
-         </div><!-- Fin Swiper-->
-
-          <!--Busqueda-->
-
-          <div class="main-search">
-            <div class="col-md-12">
-              <form>
-                <div class="visible-xs filter-movil" >
-                  <a href="#" class="btn  btn-lg  btn-block" role="button" data-toggle="modal" data-target="#ModalFiltro">Buscar</a>
-                </div>
-                <div class="row hidden-xs">
-                  <div class="col-sm-4 col-md-4 line ">
-                    <div class="form-group">
-                      <label>¿A dónde vas a enviar?</label>
-                      <div class="ui floating dropdown search button"><!--Dropdown destino-->
-                        <span class="text">Destino, ciudad, dirección</span>
-                        <div class="menu">
-                           <div class="item">Bogotá, Colombia</div>
-                          <div class="item">Boston Massachusetts, Estados Unidos</div>
-                          <div class="item">Bogotá, Colombia</div>
-                          <div class="item">Bolonia, Italia</div>
-                          <div class="item">Bosques de las lomas, Ciudad de México</div>
-                          <div class="item">French</div>
-                          <div class="item">German</div>
-                          <div class="item">Greek</div>
-                          <div class="item">Hungarian</div>
-                          <div class="item">Italian</div>
-                          <div class="item">Japanese</div>
-                          <div class="item">Korean</div>
-                          <div class="item">Lithuanian</div>
-                          <div class="item">Persian</div>
-                          <div class="item">Polish</div>
-                          <div class="item">Portuguese</div>
-                          <div class="item">Russian</div>
-                          <div class="item">Spanish</div>
-                          <div class="item">Swedish</div>
-                          <div class="item">Turkish</div>
-                          <div class="item">Vietnamese</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                    <div class="col-sm-4 col-md-4  line">
-                     <div class="row">
-                      <div class="calendar-storable clearfix">
-                        <div class="col-sm-6 col-md-6 line">
-                          <div class="form-group">
-                            <label>¿Desde cuando?</label>
-                             <div class='input-group date' id='datetimepicker6'>
-                                <input type='text' class="form-control" placeholder="Llegada"/>
-                                <span class="input-group-addon">
-
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6 col-md-6">
-                            <div class="form-group">
-                              <label>¿Hasta cuando?</label>
-                              <div class='input-group date' id='datetimepicker7'>
-                                  <input type='text' class="form-control" placeholder="Llegada" />
-                                  <span class="input-group-addon">
-                                  </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                   <div class="col-sm-4 col-md-4 ">
-                    <div class="row">
-                      <div class="col-sm-6 col-md-6 line">
-                        <div class="form-group">
-                          <label>Tamaño mts<sup>2</sup></label>
-                          <div class="ui button"><span class="hidden-sm">Entre</span> 
-                            <input id="input-with-keypress-1" type="text">
-                            <input id="input-with-keypress-0" type="text">
-                            mts<sup>2</sup>
-                          </div>
-                            <div class="ui flowing popup top left transition hidden">
-                              <div class="ui three  divided center aligned grid">
-                                <div class="column">
-                                  <p>Entre 40 - 80 mts<sup>2</sup></p>
-                                   <div id="html5" class="noUi-target noUi-ltr noUi-horizontal">
-
-                                    </div>
-                                     
-                                     <a href="#" class="btn btn-primary btn-xs pull-right" role="button">Aplicar</a>
-                                     <a href="#" class="btn btn-info btn-xs pull-right" role="button">Cancelar</a>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class=" col-sm-6 col-md-6">
-                        <div class="form-group-last">
-                         <a href="#" class="btn btn-primary btn-lg " role="button">Buscar</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>  
 
       </div>
     </div>
-
+  <div class="submenu-container">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 card-slider-container ">
-          <section class="card-slider">
-            <h4>Espacios disponibles</h4>
-            <!-- Swiper --> 
-            <div class="swiper1">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Bodega en la calleja</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <div class="check"></div>
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Habitación vacia en miami</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div>  
-                  </div>
-                  <div class="swiper-slide">
-                     <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Deposito de 80 mts² en salitre</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div> 
-                  </div>
-                  <div class="swiper-slide">
-                     <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Deposito de 80 mts² en salitre</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div> 
-                  </div>
-                  <div class="swiper-slide">
-                     <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Deposito de 80 mts² en salitre</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div> 
-                  </div>
-                  <div class="swiper-slide">
-                     <div class="card-container">
-                      <a href="#">
-                        <div class="card-image">
-                          <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
-                        </div>
-                        <div class="card-data">
-                          <h4 class="card-title">Deposito de 80 mts² en salitre</h4>
-                          <span class="card-detail">$175.000 x noche · 80 mts²</span>
-                          <span class="card-place">Residencial · Bogotá</span>
-                        </div>
-                        <div>
-                          <div id="stars-existing" class="starrr" data-rating='4'></div>
-                        </div>
-                      </a>  
-                    </div> 
-                  </div>
-              </div>
-            </div> 
-          </section>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next swiper-button-black"></div>
-          <div class="swiper-button-prev swiper-button-black"></div>
+      <ul class="sub-menu">
+      <li class="active"><a href="">Activos</a></li>
+      <li><a href="">Sin enviar</a></li>
+      <li><a href="">Historial de enviados</a></li>
+      </ul> 
+    </div>
+  </div>  
+  
+  <div class="container">
+    <div class="row">
+
+        <section class="mis-inventarios">
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing min">Faltan: 120 días </span><a class="link-plus" href="#">¿Solicitar más tiempo?</a>
+              <a class="plus" href="#"></a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-    
-    <div class="container">
-      <div class="row">
-        <!--Ciudades donde más envían inventarios-->
-        <div class="col-md-12 card-slider-small-container ">
-          <!--Parallax container-->
-          <div class="animation-element slide-left element hidden-xs">
-                Ciudades
-          </div>
-          <section class="card-slider-small">
-            <h4>Ciudades donde más envían inventarios</h4>
-            <!-- Swiper 2--> 
-            <div class="swiper2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                   <div class="card-container">
-                    <a href="#">
-                      <div class="card-image">
-                        <img src="https://dummyimage.com/263x160/e6e6e6/fff.gif&text=Ciudad" alt="Image"/>
-                      </div>
-                      <div class="card-data">
-                        <h4 class="card-title">Bogotá</h4>
-                      </div>
-                    </a>  
-                  </div> 
-                </div>
-                <div class="swiper-slide">
-                   <div class="card-container">
-                    <a href="#">
-                      <div class="card-image">
-                        <img src="https://dummyimage.com/263x160/e6e6e6/fff.gif&text=Ciudad" alt="Image"/>
-                      </div>
-                      <div class="card-data">
-                        <h4 class="card-title">Miami</h4>
-                      </div>
-                    </a>  
-                  </div> 
-                </div>
-                <div class="swiper-slide">
-                   <div class="card-container">
-                    <a href="#">
-                      <div class="card-image">
-                        <img src="https://dummyimage.com/263x160/e6e6e6/fff.gif&text=Ciudad" alt="Image"/>
-                      </div>
-                      <div class="card-data">
-                        <h4 class="card-title">Medellín</h4>
-                      </div>
-                    </a>  
-                  </div> 
-                </div>
-                <div class="swiper-slide">
-                   <div class="card-container">
-                    <a href="#">
-                      <div class="card-image">
-                        <img src="https://dummyimage.com/263x160/e6e6e6/fff.gif&text=Ciudad" alt="Image"/>
-                      </div>
-                      <div class="card-data">
-                        <h4 class="card-title">París</h4>
-                      </div>
-                    </a>  
-                  </div> 
-                </div>
-              </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing">Faltan: 120 días </span>
+              <a class="plus" href="#"></a>
             </div>
-            </section>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next swiper-button-black"></div>
-            <div class="swiper-button-prev swiper-button-black"></div> 
           </div>
-
-          <!--Lead-->
-          <div class="col-md-12">
-            <div class="row">
-              <section class="card-lead">
-                <div class="col-sm-6 col-md-6">
-                  <div class="card-image">
-                    <img src="https://dummyimage.com/555x328/e6e6e6/fff.gif&text=Imagen" alt="Imagen"/>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="card-data">
-                    <h4 class="card-title hidden-xs">¡Arrendienda un espacio!</h4>
-                    <h2 class="copy">
-                    ¿Tienes un espacio disponible?
-                    </h2>
-                    <span>Gana dinero arrendando los espacios disponibles que no utilizas.</span>
-                    <a href="#" class="btn btn-primary btn-lg" role="button">Más información</a>
-                  </div>
-                </div>
-              </section>
-            </div> 
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing">Faltan: 120 días </span>
+              <a class="plus" href="#"></a>
+            </div>
           </div>
-
-          <!--Steps-->
-          <div class="col-md-12">
-            <div class="row">
-              <section class="card-steps">
-                <div class="col-sm-12 col-md-4">
-                   <h4 class="card-title">¡Ahora exportar es más fácil!</h4>
-                </div>
-                <div class="col-md-8 hidden-xs">
-                   <a href="#" class="link-main pull-right">Empezar a exportar</a>
-                </div> 
-                <div class="clear"></div>
-                <hr>
-                <div class="col-sm-4 col-md-4">
-                  <div class="animation-element slide-left element">
-                   01
-                  </div>
-                  <div class="card-item">
-                    <h4 class="card-subtitle">Reserva un espacio a través de nuestras plataformas</h4>
-                    <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
-                  </div>
-                </div>      
-                <div class="col-sm-4 col-md-4">
-                  <div class="animation-element slide-left element">
-                   02
-                  </div>
-                  <div class="card-item">
-                    <h4 class="card-subtitle">Nuestros Partners de envíos recogen y entregan tu inventario</h4>
-                    <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                  <div class="animation-element slide-left element">
-                   03
-                  </div>
-                  <div class="card-item">
-                    <h4 class="card-subtitle">Despacha y distribuye tu mercancia desde la ciudad donde almacenaste</h4>
-                    <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
-                  </div>
-                </div>
-              </section>
-            </div> 
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing">Faltan: 120 días </span>
+              <a class="plus" href="#"></a>
+            </div>
           </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing">Faltan: 120 días </span>
+              <a class="plus" href="#"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="card-inventario">
+            <img src="images/storable-thumb.svg" alt="">
+            <div class="card-data">
+              <h4>Zapatos y textos largo de inventario</h4>
+              
+              <span class="quantity">3 cajas </span>
+              <span class="locate">
+              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus accumsan et.</p>
+              </span>
+              <span class="missing">Faltan: 120 días </span>
+              <a class="plus" href="#"></a>
+            </div>
+          </div>
+        </div>
+        </section>
 
-      </div>
-    </div>
-
-    <!--Lead banner-->
+    </div>    
+  </div> <!-- /container -->
+  <!--Lead banner-->
     <div class="container-fluss">
       <section class="lead-banner">
+        <div class="container">
           <div class="row">  
-           <div class="col-xs-12 col-sm-5 col-md-3 col-sm-offset-1 col-md-offset-2">
-              <div class="number-counter">
-               <span class="counter">
-                1000
-                </span>
-                <p class="details">BODEGAS Y ESPACIOS
-REGISTRADOS CON NOSOTROS</p>
-              </div>
-           </div>
-           <div class="col-xs-12 col-sm-6 col-md-5">
+          
+           <div class="col-sm-8 col-md-8 col-centered">
               <h2 class="copy">
-                  Administra y despacha
-fácilmente tu inventario
+                  Empieza ahora a enviar inventarios
+alrededor del mundo
               </h2>
            </div>
          </div>
@@ -721,8 +430,8 @@ fácilmente tu inventario
 
     </div>
 
-    <div class="container">
-
+        <div class="container">
+      
         <footer class="clearfix">
           <div class="col-sm-3 col-md-3 hidden-xs">
             <ul>
@@ -750,7 +459,7 @@ fácilmente tu inventario
               
             </ul>
           </div>
-           <div class="col-xs-12 col-sm-3 col-md-3 nopadding">
+           <div class="col-sm-3 col-md-3 nopadding">
             <div class="selects-footer">
               <select class="ui dropdown">
               <option value="">Español</option>
@@ -768,11 +477,11 @@ fácilmente tu inventario
           </div>
           <div class="clear"></div>
           <div class="copyright">
-                  <div class="col-xs-12 col-sm-8 col-md-9 nopadding">
+                  <div class="col-sm-8 col-md-9 nopadding">
                     <img class="brand-footer" src="images/logo-footer.svg" alt="Storable"/>
                     <p>Trabajamos con orgullo © 2017 Storable.</p>
                   </div>
-                  <div class="col-xs-12 col-sm-4 col-md-3 nopadding">
+                  <div class="col-sm-4 col-md-3 nopadding">
                     <ul class="social">
                       <li>
                         <a href="">
@@ -816,13 +525,9 @@ fácilmente tu inventario
                   </div>
           </div>
         </footer>
-
+ 
     </div>
     
-   
-
-      
-  </div> <!-- /container -->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -919,27 +624,20 @@ noUiSlider.create(html5Slider, {
     });
   
     </script>
-<script type="text/javascript">
-$(function () {
-    $('#datetimepicker6').datetimepicker();
-    $('#datetimepicker7').datetimepicker({
-        useCurrent: false //Important! See issue #1075
-    });
-    $("#datetimepicker6").on("dp.change", function (e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-    $("#datetimepicker7").on("dp.change", function (e) {
-        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-});
-</script>
-  <script>
-    $(document).ready(function () {
-        $(".navbar-toggle").on("click", function () {
-            $(this).toggleClass("active");
+    <script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     });
-  </script>
+</script>
 </body>
 
 </html>

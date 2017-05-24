@@ -7,25 +7,30 @@
 
 
 /*General*/
-*  {box-sizing: border-box;@include font-weight-light; list-style: none}
+*  {box-sizing: border-box;@include font-weight-light; list-style: none; outline:none}
 
-
+html, body {
+    height: 100%;
+    max-height:100%;
+}
 body {background-color: #fff;
 	margin: $marginNull;
- 	padding: $paddingNull;
+ 	padding: $paddingNull !important;
  	font-family: $fuente-principal;
  	box-sizing: border-box;
  	font-size: 100%;
  	  -webkit-transition: all 2s; /* Safari */
     transition: all 2s;
+    overflow-x:hidden; 
  	
 	}
 h1 { font-family:$fuente-titulos;
 	@include font-weight-light;}
 p { font-family:$fuente-principal;
-	font-size: $size14px;
+	font-size: $size15px;
 	color:$softGrey;
-	 @include font-weight-normal;}
+	 @include font-weight-normal;
+	    line-height: 2.4rem;}
  img {
     width: 100%;
     height: auto;
@@ -34,16 +39,21 @@ a {  -webkit-transition: all 0.4s; /* Safari */
     transition: all 0.4s;
 text-decoration: none
 	&:hover{ text-decoration: none}
+	&:focus {outline:none; border:0 none}
 }
 hr {clear: both;
 	border-bottom: 1px solid $greylight;}
 
  ul {list-style: none; padding: 0; margin: 0}
-
+table {    table-layout: fixed;}
 
 /*Margins paddings classes*/
 .nopadding { padding: 0 !important};
 .nomargin { margin: 0 !important};
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
 
 
 /*FORMS*/
@@ -65,7 +75,20 @@ input:-moz-placeholder { /* Firefox 18- */
   color: $darkGrey;
   font-size: $size18px;
 }
+.ui.selection.dropdown{ width:100%;
+	border-radius:0;
+   padding: 1.5em 2.1em 1.5em 1em !important;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);}
 
+.ui.dropdown .menu > .item {font-size: $size14px !important;}
+  .ui.selection.dropdown > .search.icon, .ui.selection.dropdown > .delete.icon, .ui.selection.dropdown > .dropdown.icon
+  {	top: 35% !important;}
+ .ui.dropdown > .dropdown.icon:before {background: url(../images/flecha.svg) no-repeat 0 0 !important;
+    width: 12px;
+    height: 12px;
+    display: block;
+    content: "" !important;}
 .ui.checkbox input[type="checkbox"], .ui.checkbox input[type="radio"] 
 	{margin-left: 0;
 	    width: 24px !important;
@@ -115,6 +138,19 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-size: $size18px;
 	    padding: 10px 54px;
 } 
+.btn-primary:focus, .btn-primary:hover {
+	@include btnStorableMain($darkmenta, $darkmenta, #fff);
+	font-size: $size18px;
+	    padding: 10px 54px;
+
+}
+
+
+.btn-info {
+	@include btnStorableMain ($azulStorable,$azulStorable,#fff); 
+	font-size: $size18px;
+	    
+} 
 
 /*Divitons*/
 .line {
@@ -142,6 +178,9 @@ input:-moz-placeholder { /* Firefox 18- */
 		text-decoration: none
 	}
 }
+
+h1.title-section {  color:#fff;
+font-family: $fuente-label}
 
 /*Stars*/
 .star-container{
@@ -200,13 +239,11 @@ a svg #instagram {
   	.animation-element.slide-left.element {
  	width: auto;
  	opacity: 1;
- 
+ 	@include font-weight-bold();
 	position: absolute;
-    bottom: 94px;
     color:$highlight;
-       font-size: 20rem;
-    font-weight: 700;
-    left: 10%;
+ 	font-family: $fuente-titulos;
+    font-weight: 800;
 	    z-index: -1;
 	}
 

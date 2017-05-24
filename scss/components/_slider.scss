@@ -1,0 +1,92 @@
+.jumbotron .swiper-container-vertical>.swiper-pagination-bullets {
+  top: 14% !important;  
+}
+.jumbotron .swiperIntro-inverse .swiper-pagination { left: 0 !important}
+.jumbotron .swiper-pagination-bullet {width: 6px; height: 6px}
+.jumbotron .parallax-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  }
+.jumbotron .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet 
+  {    margin: 18px 0;
+  }
+.jumbotron .swiperIntro-inverse  .swiper-slide .title, .jumbotron .swiperIntro-inverse .swiper-slide .subtitle{ text-align: right; } 
+.jumbotron .swiperIntro-inverse .swiper-slide .subtitle {  float: right}
+.jumbotron .swiper-slide .title {color:#fff; 
+  @include font-weight-bold;
+  font-family: $fuente-titulos;
+}
+.jumbotron .swiper-slide .subtitle {
+  color:#fff; 
+  @include font-weight-light;
+  font-family: $fuente-label;
+  }
+.jumbotron .swiperIntro-inverse .parallax-bg { opacity:1; background-position: left 0 !important}
+
+
+/*Swipper*/
+.swiperIntro {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.swiperIntro-inverse {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+} 
+.swiperIntro-inverse  .btn {    float: right;
+    clear: both;  
+    margin: $marginDefault 0;}
+.ver-video {position:absolute;  background: url(../images/play.svg) no-repeat 0 0  !important;
+   display: block; height:30px;
+  padding: 6px 0 0 39px; color: #fff; font-size: $size14px;}
+.ver-video:hover{ text-decoration: none; opacity:0.7; color:#fff}
+.swiperIntro-inverse img {position: absolute; top: 0}
+.swiper1{
+    width: 100%;
+    height: 287px;
+    overflow: hidden;
+    position: relative;
+} 
+ .swiper2 {
+    width: 100%;
+    height: 191px;
+    overflow: hidden;
+    position: relative;
+} 
+.swiper-button-next, .swiper-button-prev {background-size: 12px 34px !important;}
+
+.card-slider-small-container  .swiper-button-next, .card-slider-small-container  .swiper-button-prev { top:47%}
+.card-slider-thumb-container .swiper-button-next, .card-slider-thumb-container   .swiper-button-prev {top: 23%;} 
+.card-slider-thumb-container .swiper-button-next, .card-slider-thumb-container  .swiper-container-rtl .swiper-button-prev
+  {right: -13px;}
+.card-slider-thumb-container .swiper-button-prev, .card-slider-thumb-container .swiper-container-rtl .swiper-button-next
+  {left: -15px;}
+
+
+
+/*Slider Espacios disponibles*/
+
+.card-slider-container .swiper-button-next, .card-slider-container  .swiper-container-rtl .swiper-button-prev,
+.card-slider-small-container .swiper-button-next, .card-slider-small-  .swiper-container-rtl .swiper-button-prev
+  {right: -13px;}
+.card-slider-container  .swiper-button-prev, .card-slider-container  .swiper-container-rtl .swiper-button-next,
+.card-slider-small-container  .swiper-button-prev, .card-slider-small-container  .swiper-container-rtl .swiper-button-next 
+  {left: -15px;}
+
+
+ /*Slider Ciudades donde más envían inventarios*/
+

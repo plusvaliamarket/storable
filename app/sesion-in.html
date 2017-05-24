@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
- <nav class="navbar navbar-fixed-top">
+ <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,12 +31,35 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav nav-pills navbar-right">
-            <li role="presentation" class="active"><a href="#">Arrendar un espacio</a></li>
-            <li role="presentation"><a href="#" data-toggle="modal" data-target="#ModalRegistro">¿Aún no tienes cuenta? Regístrate</a></li>
-              <a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">
-                Iniciar sesión</a>
+             <li class="visible-xs" role="presentation" ><a href="#">Ver y editar mi perfil</a></li>
+            <li role="presentation" ><a href="#">Mis espacios</a></li>
+            <li role="presentation"><a href="#">Mis inventarios</a></li>
+            <li role="presentation">
+              <a href="#">Notificaciones
+                <div class="ui red empty circular label"></div>
+              </a>
+            </li>
+            <li role="presentation"><a href="#">Mensajes
+              <div class="ui red empty circular label"></div>
+              </a></li>
+            <li role="presentation"><a href="#">Preguntas frecuentes</a></li>
+
+            <li class="hidden-xs">
+              <div class="ui labeled pointing dropdown button">
+             
+                <span class="pic-profile">D</span>
+                <div class="menu">
+                  <div class="item">
+                    Ver y editar mi perfil
+                  </div>
+                  <div class="item">
+                    Cerrar sesión
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
+          <a class="cerrar-movil" href="">Cerrar sesión</a>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -200,113 +223,7 @@
           </div>
         </div>
       </div>
-    </div>    
-
-
-<!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalInicio">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header clearfix visible-xs">
-            <a class="navbar-brand" href="#">Storable</a>
-            <button type="button" class="navbar-toggle" data-dismiss="modal" aria-label="Close">        
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 line modal-col">
-                 <h4 class="modal-title" id="myModalInicio">Iniciar sesión</h4>
-                 <form>
-                   <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
-                  </div>
-                  <div class="ui checkbox">
-                   
-                      <input type="checkbox">
-                       <label> Mantenerme ingresado
-                    </label>
-                  </div>
-                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
-                 </form>
-              </div>
-              <div class="col-xs-12 col-sm-6 modal-col">
-                <p class="hidden-xs">Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
-                <button type="button" class="btn btn-lg btn-block hidden-xs">Crear cuenta</button>
-                <span class="o"> o</span>
-                <button type="button" class="btn btn-lg btn-block btn-lg-social">
-                  <span><i class="fa fa-facebook"></i></span>
-               Ingresa con Facebook</button>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="modal-footer">
-            <a href="#">¿Olvidaste la contraseña?</a>
-          </div>
-      </div>
-    </div>
-
-<!-- Modal Registro -->
-    <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalRegistro">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header clearfix visible-xs">
-            <a class="navbar-brand" href="#">Storable</a>
-            <button type="button" class="navbar-toggle" data-dismiss="modal" aria-label="Close">        
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="modal-body clearfix">
-
-              <div class="col-xs-12 col-sm-6 line modal-col">
-                 <h4 class="modal-title" id="myModalRegistro">Crea tu cuenta</h4>
-                 <form>
-                   <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Crear contraseña">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Confirmar contraseña">
-                  </div>
-                  <div class="ui checkbox">
-                   
-                      <input type="checkbox">
-                       <label> Mantenerme ingresado
-                    </label>
-                  </div>
-                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
-                 </form>
-              </div>
-              <div class="col-xs-12 col-sm-6 modal-col">
-                <p class="hidden-xs">Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
-                <button type="button" class="btn btn-lg btn-block hidden-xs">Crear cuenta</button>
-                <span class="o"> o</span>
-                <button type="button" class="btn btn-lg btn-block btn-lg-social">
-                  <span><i class="fa fa-facebook"></i></span>
-               Ingresa con Facebook</button>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <a href="#">¿Olvidaste la contraseña?</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>     
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -402,7 +319,7 @@
                       <div class="col-sm-6 col-md-6 line">
                         <div class="form-group">
                           <label>Tamaño mts<sup>2</sup></label>
-                          <div class="ui button"><span class="hidden-sm">Entre</span> 
+                          <div class="ui button">Entre
                             <input id="input-with-keypress-1" type="text">
                             <input id="input-with-keypress-0" type="text">
                             mts<sup>2</sup>
@@ -410,7 +327,7 @@
                             <div class="ui flowing popup top left transition hidden">
                               <div class="ui three  divided center aligned grid">
                                 <div class="column">
-                                  <p>Entre 40 - 80 mts<sup>2</sup></p>
+                                  <p><span>Entre</span> 40 - 80 mts<sup>2</sup></p>
                                    <div id="html5" class="noUi-target noUi-ltr noUi-horizontal">
 
                                     </div>
@@ -424,7 +341,7 @@
                       </div>
                       <div class=" col-sm-6 col-md-6">
                         <div class="form-group-last">
-                         <a href="#" class="btn btn-primary btn-lg " role="button">Buscar</a>
+                         <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Buscar</a>
                         </div>
                       </div>
                     </div>
@@ -466,7 +383,6 @@
                     <div class="card-container">
                       <a href="#">
                         <div class="card-image">
-                          <div class="check"></div>
                           <img src="images/img-placeholder.gif" alt="Image" width="360px" height="160px"/>
                         </div>
                         <div class="card-data">
@@ -564,7 +480,7 @@
         <!--Ciudades donde más envían inventarios-->
         <div class="col-md-12 card-slider-small-container ">
           <!--Parallax container-->
-          <div class="animation-element slide-left element hidden-xs">
+          <div class="animation-element slide-left element">
                 Ciudades
           </div>
           <section class="card-slider-small">
@@ -639,7 +555,7 @@
                 </div>
                 <div class="col-sm-6 col-md-6">
                   <div class="card-data">
-                    <h4 class="card-title hidden-xs">¡Arrendienda un espacio!</h4>
+                    <h4 class="card-title">París</h4>
                     <h2 class="copy">
                     ¿Tienes un espacio disponible?
                     </h2>
@@ -655,10 +571,10 @@
           <div class="col-md-12">
             <div class="row">
               <section class="card-steps">
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-4 col-md-4">
                    <h4 class="card-title">¡Ahora exportar es más fácil!</h4>
                 </div>
-                <div class="col-md-8 hidden-xs">
+                <div class="col-md-8">
                    <a href="#" class="link-main pull-right">Empezar a exportar</a>
                 </div> 
                 <div class="clear"></div>
@@ -668,7 +584,7 @@
                    01
                   </div>
                   <div class="card-item">
-                    <h4 class="card-subtitle">Reserva un espacio a través de nuestras plataformas</h4>
+                    <h4 class="card-title">Reserva un espacio a través de nuestras plataformas</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
                   </div>
                 </div>      
@@ -677,7 +593,7 @@
                    02
                   </div>
                   <div class="card-item">
-                    <h4 class="card-subtitle">Nuestros Partners de envíos recogen y entregan tu inventario</h4>
+                    <h4 class="card-title">Nuestros Partners de envíos recogen y entregan tu inventario</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
                   </div>
                 </div>
@@ -686,7 +602,7 @@
                    03
                   </div>
                   <div class="card-item">
-                    <h4 class="card-subtitle">Despacha y distribuye tu mercancia desde la ciudad donde almacenaste</h4>
+                    <h4 class="card-title">Despacha y distribuye tu mercancia desde la ciudad donde almacenaste</h4>
                     <p>Encuentra bodegas, espacios y depositos alrededor del mundo. Miles de usuarios ya están arrendando sus depositos, garages y habitaciones vacias que no utilizan.</p>
                   </div>
                 </div>
@@ -700,8 +616,9 @@
     <!--Lead banner-->
     <div class="container-fluss">
       <section class="lead-banner">
+        <div class="container">
           <div class="row">  
-           <div class="col-xs-12 col-sm-5 col-md-3 col-sm-offset-1 col-md-offset-2">
+           <div class="col-sm-5 col-md-3 col-sm-offset-1 col-md-offset-2">
               <div class="number-counter">
                <span class="counter">
                 1000
@@ -710,7 +627,7 @@
 REGISTRADOS CON NOSOTROS</p>
               </div>
            </div>
-           <div class="col-xs-12 col-sm-6 col-md-5">
+           <div class="col-sm-6 col-md-5">
               <h2 class="copy">
                   Administra y despacha
 fácilmente tu inventario
@@ -722,9 +639,9 @@ fácilmente tu inventario
     </div>
 
     <div class="container">
-
+       <div class="row"> 
         <footer class="clearfix">
-          <div class="col-sm-3 col-md-3 hidden-xs">
+          <div class="col-sm-3 col-md-3">
             <ul>
               <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
@@ -732,7 +649,7 @@ fácilmente tu inventario
               <li><a href="#">Términos y condiciones</a></li>
             </ul>
           </div>
-           <div class="col-sm-3 col-md-3 hidden-xs">
+           <div class="col-sm-3 col-md-3">
             <ul>
               <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
@@ -740,7 +657,7 @@ fácilmente tu inventario
               <li><a href="#">Términos y condiciones</a></li>
             </ul>
           </div>
-           <div class="col-sm-3 col-md-3 hidden-xs">
+           <div class="col-sm-3 col-md-3">
             <ul>
               <li><h5>Storable</h5></li>
               <li><a href="#">Sobre Storable</a></li>
@@ -750,7 +667,7 @@ fácilmente tu inventario
               
             </ul>
           </div>
-           <div class="col-xs-12 col-sm-3 col-md-3 nopadding">
+           <div class="col-sm-3 col-md-3 nopadding">
             <div class="selects-footer">
               <select class="ui dropdown">
               <option value="">Español</option>
@@ -768,11 +685,11 @@ fácilmente tu inventario
           </div>
           <div class="clear"></div>
           <div class="copyright">
-                  <div class="col-xs-12 col-sm-8 col-md-9 nopadding">
+                  <div class="col-sm-8 col-md-9 nopadding">
                     <img class="brand-footer" src="images/logo-footer.svg" alt="Storable"/>
                     <p>Trabajamos con orgullo © 2017 Storable.</p>
                   </div>
-                  <div class="col-xs-12 col-sm-4 col-md-3 nopadding">
+                  <div class="col-sm-4 col-md-3 nopadding">
                     <ul class="social">
                       <li>
                         <a href="">
@@ -816,13 +733,13 @@ fácilmente tu inventario
                   </div>
           </div>
         </footer>
-
+        </div>
     </div>
     
    
 
       
-  </div> <!-- /container -->
+    </div> <!-- /container -->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
