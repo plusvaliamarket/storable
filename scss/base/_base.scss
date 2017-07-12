@@ -27,7 +27,7 @@ body {background-color: #fff;
 h1 { font-family:$fuente-titulos;
 	@include font-weight-light;}
 p { font-family:$fuente-principal;
-	font-size: $size15px;
+	font-size: $size14px;
 	color:$softGrey;
 	 @include font-weight-normal;
 	    line-height: 2.4rem;}
@@ -41,11 +41,13 @@ text-decoration: none
 	&:hover{ text-decoration: none}
 	&:focus {outline:none; border:0 none}
 }
-hr {clear: both;
+hr {clear: both; margin-top: 0;
 	border-bottom: 1px solid $greylight;}
 
  ul {list-style: none; padding: 0; margin: 0}
 table {    table-layout: fixed;}
+
+h3.sub-title {color:$azulStorable; margin-top: 0}
 
 /*Margins paddings classes*/
 .nopadding { padding: 0 !important};
@@ -54,24 +56,26 @@ table {    table-layout: fixed;}
     float: none;
     margin: 0 auto;
 }
-
+.long {width: 100% !important}
+.maring80 {margin-bottom: 80px}
+.hr-min {margin-bottom: 20px !important}
 
 /*FORMS*/
 
 /*Placeholder styles*/
-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $darkGrey !important;
   font-size: $size18px;
 }
-input::-moz-placeholder { /* Firefox 19+ */
+input::-moz-placeholder, textarea::-moz-placeholder  { /* Firefox 19+ */
   color: $darkGrey;
   font-size: $size18px;
 }
-input:-ms-input-placeholder { /* IE 10+ */
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
   color: $darkGrey;
   font-size: $size18px;
 }
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
   color: $darkGrey;
   font-size: $size18px;
 }
@@ -93,16 +97,17 @@ input:-moz-placeholder { /* Firefox 18- */
 	{margin-left: 0;
 	    width: 24px !important;
     height: 24px !important;}
-.ui.checkbox .box, .ui.checkbox label {    padding-left: 34px!important;font-size: $size18px !important;}
+.ui.checkbox .box, .ui.checkbox label {    padding-left: 34px!important;}
 .ui.checkbox .box:before, .ui.checkbox label:before {width: 24px !important;
     height: 24px !important;}
 .ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
 	content: "\f0c8" !important;
 	    font-family: 'FontAwesome' !important; 
 	    color:$menta !important;
+
 }
 .ui.radio input:checked ~ .box:after, .ui.radio input:checked ~ label:after {
-	content: "\f111" !important;
+	content: "\f0c8" !important;
     font-family: 'FontAwesome' !important; 	    
     background-color: $menta !important;
     width: 31px !important;
@@ -120,6 +125,7 @@ input:-moz-placeholder { /* Firefox 18- */
 .ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before {
     background: #FFFFFF;
     border-color: $menta !important;
+     
 }
 .ui.checkbox .box, .ui.checkbox label {    padding-top: 3px;}
 .form-control{border-radius:0}
@@ -127,6 +133,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 
 /*Button*/
+
 .btn  { 
  
 	font-family: $fuente-botones; 
@@ -135,8 +142,8 @@ input:-moz-placeholder { /* Firefox 18- */
 
 .btn-primary {
 	@include btnStorableMain ($menta,$menta,#fff); 
-	font-size: $size18px;
-	    padding: 10px 54px;
+
+	   
 } 
 .btn-primary:focus, .btn-primary:hover {
 	@include btnStorableMain($darkmenta, $darkmenta, #fff);
@@ -144,13 +151,18 @@ input:-moz-placeholder { /* Firefox 18- */
 	    padding: 10px 54px;
 
 }
-
-
 .btn-info {
 	@include btnStorableMain ($azulStorable,$azulStorable,#fff); 
 	font-size: $size18px;
+	color:#fff !important
 	    
 } 
+.btn-danger {
+	color:#fff !important;
+	@include btnStorableMain ($alert,$alert,#fff); 	    
+} 
+/*Disabled*/
+.btn-primary[disabled], .disabled {opacity: 0.5 !important; cursor: default }
 
 /*Divitons*/
 .line {
@@ -172,16 +184,23 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .link-main {
 	color: $menta;
-	
-
+	cursor: pointer;
+	font-family: $fuente-botones;
+	@include font-weight-light;
 	&:hover {
 		text-decoration: none
 	}
 }
-
+.spacer-aside {height: 73px}
+.short-margin {margin-bottom:40px !important;}
+.margin20 {margin-bottom:20px !important;}
+.margin30 {margin-bottom:30px !important;}
+.form-group {overflow: hidden; clear: both}
 h1.title-section {  color:#fff;
 font-family: $fuente-label}
-
+h4.subtitle-section {font-family: $fuente-titulos;
+	
+}
 /*Stars*/
 .star-container{
     position: relative;
@@ -284,3 +303,32 @@ a svg #instagram {
 .pic-profile:hover {opacity:0.9 !important;
 		background-color: $greylight !important;
 		}
+
+/*Breadcrum*/
+.breadcrumb  {background: none;font-size: $size14px;    padding: 8px 0 8px 0; }
+.breadcrumb li a {color: $softGrey;font-size: $size14px }
+.breadcrumb li a:hover {color: $azulStorable; text-decoration: none} 
+.breadcrumb>.active {color: $azulStorable;}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: $softGrey;
+    content: "|";
+
+}
+
+/*Spots*/
+.ui.menta.labels .label, .ui.menta.label {
+    background-color: $menta !important;
+    border-color: $menta !important;
+    color: #FFFFFF !important;
+}
+.ui.red.labels .label, .ui.red.label {
+    background-color: $alert !important;
+    border-color: $alert !important;
+    color: #FFFFFF !important;
+}
+.ui.shade.labels .label, .ui.shade.label {
+    background-color: $greylight !important;
+    border-color: $greylight !important;
+    color: #FFFFFF !important;
+}

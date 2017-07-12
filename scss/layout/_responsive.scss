@@ -11,8 +11,19 @@
  /* Extra Small Devices, Phones Handy */ 
 
 @media  (min-width : 320px) {
+	h3.sub-title  {font-size: $size18px; margin-bottom: $marginBottom20;}
+	table {table-layout: auto}
+	aside { margin-bottom: 90px}
+	h4.subtitle-section {font-size: 23px; 
+	margin-bottom:15px;
+	}
+	.btn-primary {
+	    font-size: $size14px;
+	}	 
+
 	.btn-info {
 	    padding: 10px 32px;
+	    font-size: $size15px;
 	}	
 	.jumbotron {   padding: 84px 15px 0 15px;
 		height: 400px}
@@ -44,7 +55,7 @@
 	}
 	nav.navbar.shrink .navbar-brand { background-size: 94px 31px;}
 	nav.navbar .btn{padding: 20px 18px;color:#fff ;
-		border:0 none; background: none transparent}
+		border:0 none; background: none transparent;font-size: 18px}
 	nav.navbar .btn:hover, nav.navbar .btn:focus {background: none; outline: none; border: 0 none;color:#fff !important}	
 	#map-container { margin-bottom: $marginBottom20;}
 	  .swiperIntro {
@@ -55,7 +66,12 @@
     width: 63%;
     float: right;
 	}
-	
+	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination {
+    left: 0 !important;
+    top: 14% !important;
+    width: 8px;
+	}
+	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {margin:7px 0}
 	
 	.jumbotron .swiper-slide .title { font-size:  2rem;
 	    width: 91%;
@@ -74,6 +90,9 @@
 	#layout-int .main-search {
         height: 65px;
     margin-bottom: 31px;
+	}
+	#layout-int section.card-steps .card-item {
+    margin-top: 0;
 	}
 	.swiperIntro-inverse {
     height: 310px;
@@ -132,10 +151,12 @@
 		margin-bottom: $marginTop30;
   		margin-top: $marginTopNull;
 	}
+	section.card-slider h4{font-size: $size14px;}
 		 section.card-steps {
    		margin-top: 46px;
 	    margin-bottom: 35px;
 	}
+	section .navbar-right {float: right !important}
 		section.card-lead{
    		margin-top: 46px;
 	    margin-bottom: 35px;
@@ -151,18 +172,21 @@
     	font-size: 9rem;
    	 left: 64%;
 	}
-	section.card-steps .card-item {margin-bottom: 60px}
+	section.card-steps .card-item {margin-top:60px ;margin-bottom: 60px}
 	section.card-steps hr{
-		margin-bottom: 38px;
+		margin-bottom: 15px;
 	}
-	section.card-steps h4.card-title {
+	section.card-steps h4.card-title, section.content-2col h4.card-title  {
     font-size: 1.6rem;
 
 	}
+	section.content-2col .item-2col {overflow: hidden; margin-bottom: 20px}
 	section.card-steps h4.card-subtitle {
     font-size: 1.5rem;
+        line-height: 21px;
 
 	}
+	.detalle-info .btn  {margin-top: 50px}
 	.lead-banner {
     margin-bottom: 72px;
 	   padding: 3.5rem;
@@ -174,13 +198,14 @@
     	 width: 100%;
     	 font-size: 21px;
     }
+    .lead-banner  .btn {margin-bottom:10px}
     .number-counter {border-right:0 none;
     	padding-right: 0;
 	}
-	.selects-footer  {float: left; margin:0  15px 0 0}
+	.selects-footer  {float: left; margin:0  30px 0 0}
 		.selects-footer .ui.dropdown {
 	width:130px !important;
-    min-width: 8em !important; 
+    min-width: 7em !important; 
 	}	
 	.copyright {
 		margin-top: $marginTop10;
@@ -190,7 +215,7 @@
 		float: none;
 		margin: 0 auto; 
 	}
-	footer .copyright p {margin: $marginTop20 0 50px    ;font-size: $size10px;}
+	footer .copyright p {margin: $marginTop20 0 50px    ;font-size: $size10px; text-align: center}
 	.social {
 		float: none; display: block; margin: 0 auto; width: 62%	
 	}	
@@ -200,10 +225,11 @@
 	{margin:0}
 	.modal-header {padding: 0; margin-bottom: 20px;}
 	.modal-dialog{margin: 0}
-	.modal-header .navbar-brand { margin: 0}
-	.modal-dialog .modal-content { padding: 15px;border:0 none}
+	
+	.modal-dialog .modal-content { padding: 0;border:0 none}
+	.modal-body {padding: 15px} 
 	.modal-content h4 {font-size: $size14px; margin-bottom:$marginBottom20;  }
-	.modal-dialog .navbar-toggle  {margin: 11px 0 13px 0}
+	.modal-dialog .navbar-toggle  {margin: 16px 15px 13px 0}
 	.modal-dialog .navbar-toggle .icon-bar {    background-color: $azulStorable;}
 	.modal-dialog .icon-bar + .icon-bar {
 	    margin-top: 7px;
@@ -281,13 +307,13 @@
     width: 78%;
     padding: 0 0 0 11px;
 	}
-	.detalle-info 	h4 { 
-		font-size: $size30px;
+	h4.card-title { 
+		font-size: 27px;
  	}
  	.navbar-right {
-    float: right!important;
+    float: none !important;
 	}
-	section.card-slider h4 {
+	.card-slider h4 {
     margin-bottom: 30px;
 	}
 	#layout-int section.card-slider .card-container {
@@ -320,21 +346,113 @@
         float: none;
     display: block;
 	}
+	.card-inventario img {
+    width: 120px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+        float: none;
+	}
 	.card-inventario {
     min-height: 245px;
     padding: 20px 10px;
 	}
+	 .card-inventario {
+    min-height: 132px;
+    padding: 20px 10px;
+	}
+	.card-inventario .card-data  span { font-size: $size12px;}
 	.card-inventario h4 {width: 90%}
 	.panel .form-group {
     padding: 10px 12px 5px 12px;
 	}
+	.empty-message img {width:128px; height:128px}
+	.empty-message {width:278px;padding:20px 0 50px}
+	.empty-message  h4 { font-size: 14px; margin:10px 0 20px}
+	.selects-footer-last {margin:0 !important} 
+	.img-placeholder { height: 240px; margin-bottom: 60px;  }
+	.img-placeholder span , .img-placeholder-small span{ font-size: $size12px; padding: 0 19px;} 
+	.ui.progress {    max-width: 86% !important;}
+	table#addStock  {margin-bottom:$marginDefault; }
+	table#addStock  .form-group .ui.checkbox label {
+    font-size: $size14px !important;
+	}  
+	.link-main {
+    font-size: $size12px;
+	}
+	#ModalFiltro .ui.search.dropdown {
+		font-size: $size14px;}
+	table#addStock  tr td, table#addStock  tr td table tr td {padding:20px 11px 5px  !important;}
+	.m-r55 {    margin-right: 24px !important;}
+	table#addStock .form-group label {font-size: $size14px;}
+	table#addStock  p { font-size:$size14px;}
+	table#addStock .link-main {    right: 10px;
+    top: 73%;font-size: $size12px;}
+	section.card-steps .popover{ margin-bottom:10px}
+	.ui.checkbox .box, .ui.checkbox label { font-size: $size12px !important;}
+	.radio, .checkbox {margin-top:0}
+ 	.notifications table tr td:first-child {width: 20px;}
+ 	.notifications .table tr td:first-child {width: auto !important;}
+	.notifications table tr td:nth-child(2) {width:196px}
+	.notifications table tr td:nth-child(3) {width:196px}
+	.notifications table tr td:nth-child(4) {width:200px}
+	.notifications table tr td:nth-child(5) {width:55px}
+	.credit  table tr td:first-child {width: 68% ;}
+	.credit table tr td:nth-child(2) {width: 60%;}
+	
+	.notification-info {font-size: $size14px;}
+	.spacer-aside {height: auto}
+	.panel-heading .panel-title a{ padding: 20px 15px;}
+	.panel-body {padding: 10px 15px 15px; }
+	.panel table tr td:last-child {
+	 max-width: 20px;
 
+	}
+
+	.post-content .pic-profile {
+		 width: 29px !important;
+	  height: 29px !important;
+	   font-size: $size12px !important;
+	      padding: 10px 17px 0 11px !important;
+
+	}
+	.comment__footer .author, .comment__header .author {font-size: $size12px;}
+	.star-aside  { margin: 20px  auto 20px}
+	.post-content {  margin-bottom: $marginTop10;}
+	.post-meta {font-size: $size12px;}
+	.post-message { margin-top: 10px}
+	.img-placeholder-profile {width:162px; height: 162px}
+	.img-placeholder-small {width:100%; height: 116px}
+	.breadcrumb  {margin-bottom: 20px}
+	.img-placeholder-thumb-container {margin-bottom: 20px;}
 }
 
 
 
 /*  Tablets */
 @media  (min-width : 768px) {
+	h3.sub-title  {font-size: $size20px;margin-bottom: $marginBottom30;}
+	.btn-danger {
+
+		font-size: $size14px !important;
+	    
+	} 
+	.btn-primary {
+	    padding: 10px 24px;
+	    font-size: $size18px;
+	    &:hover {
+	    	padding: 10px 24px;
+	    font-size: $size18px;
+	    }
+	}	 
+	
+	h4.subtitle-section {font-size: $size30px; 
+	margin-bottom: 30px;
+	}
+	.m-r55 {margin-right:55px !important}
+	.navbar-right {
+    float: right !important;
+	}
 	.btn-info {
 	    padding: 10px 54px;
 	}	 
@@ -357,15 +475,16 @@
 	.navbar-collapse .nav-pills>li{ float: left}
 	nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
 		{color:$azulStorable; background: none;
-		    font-size: 1.15rem;}
-	nav.navbar.shrink .nav li a, nav.navbar.shrink .nav > li.active > a {padding: 12px 16px 0}
+		    font-size: 14px;}
+	nav.navbar.shrink .nav li a, nav.navbar.shrink .nav > li.active > a {padding: 12px 16px 0;    font-size: 1.15rem;}
 	nav.navbar .navbar-collapse, nav.navbar .navbar-form {background: none transparent}
 	nav.navbar.shrink .nav-pills  li a  
 		{color:$darkGrey;}
 	.navbar-collapse {background: none}
 	.link-main {
 	font-size: $size14px;}	
-	nav.navbar .btn{padding: 5px 18px;}
+
+	nav.navbar .btn{padding: 5px 18px;font-size: $size12px;}
 
 	
 	.jumbotron {
@@ -378,6 +497,13 @@
 	}
 	.navbar-brand {    width: 103px;background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
 	background-size: 97px 31px;}
+	nav.navbar.shrink .btn {
+		@include btnStorable(#fff, $azulStorable, $azulStorable);
+		}
+	nav.navbar.shrink .btn:hover {
+		@include btnStorable($azulStorable, #fff, #fff) ;
+		}
+
 	nav.navbar {background-color:transparent; min-height: 50px}
 	nav.navbar, nav.navbar.shrink {
 		padding:4px 10px 0;
@@ -447,14 +573,24 @@
 	      padding: 10px 17px 0 11px !important;
 
 	}
+	.post-content .pic-profile {
+	 	width: 29px !important;
+	  height: 29px !important;
+	   font-size: $size14px !important;
+	      padding: 5px 17px 0 11px !important;
+
+	}
+
+	.author {font-size: $size14px;}
 	.ui.dropdown > .text {    font-size: 1.3rem;}
 	/*Main search*/
 	.main-search {height: 65px;    top: -127px;}
 	.main-search .col-md-12 form .row .col-sm-4:first-child {width: 25%}
+	.main-search .line { height: 64px;}
 	.main-search .col-md-12 form .row .col-sm-4:nth-child(3) {width: 41%}
 	.main-search label { font-size: $size10px;
 	        padding-top: 9px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 	}
 	.main-search .form-group {
 	    padding: 0;	
@@ -469,9 +605,9 @@
     padding: 0;
 	}
 	
-	.main-search .ui.button { font-size:12px;padding: 10px 0 11px;}
+	.main-search .ui.button { font-size:12px;padding: 16px 0 11px;}
 	.main-search .ui.floating.dropdown > .menu {
-    top: 28px;
+    top:36px;
     border-radius: 0 !important;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15) !important;
     left: -14px;
@@ -490,7 +626,7 @@
     	width: 281px;
 	}
 	#layout-int .main-search .ui.grid { 
-		width: 110% !important;  padding: 20px 20px;}
+		width: 111% !important;  padding: 20px 20px;}
 		#layout-int .calendar-storable .form-control {padding: 0 31px 0 0px;
 	    font-size: 1.1rem;}
 	
@@ -511,7 +647,7 @@
     margin-bottom: 96px;
 	}
 	section.card-slider .card-image img { width: 100%; height: auto}
-	section.card-slider h4{margin-bottom:$marginBottom30;}
+	section.card-slider h4{margin-bottom:$marginBottom30;font-size: $size18px;}
 	.card-slider .swiper-slide {   
 	  width:220px !important;
 
@@ -542,13 +678,15 @@
 	}
 	section.card-lead, section.card-steps {
    		margin-top: 46px;
-	    margin-bottom: 90px;
+	    margin-bottom: 60px;
 	}
-	
+		section.card-lead h2.copy {
+	font-size: $size20px;}
 	 section.card-steps {
    		margin-top: 0;
 
 	}
+	section.card-lead .btn {font-size: $size12px;}
 	section.card-lead .card-image {
 		width:auto;
 		height: 236px;
@@ -562,34 +700,33 @@
 	}
 	section.card-lead span{
 		margin-bottom: $marginBottom30;
-		width: 60%
+		width: 100%
 	}
-	section.card-steps h4.card-title{
+	section.card-steps h4.card-title, section.content-2col h4.card-title {
 	    width: 100%;
 	    font-size: $size18px;
 	    line-height: 2rem;
-	        margin: 0;
+	        margin-bottom: 20px;
 	}
 	section.card-steps h4.card-subtitle{
 	    width: 100%;
 	    font-size: $size15px;
 	    line-height: 2rem;
 	        margin: 0;
+	         height: 66px;
 	}
 	section.card-steps hr{
-		margin-bottom: 58px;
+		margin-bottom: 20px;
 	}
-	section.card-steps p {
-		    width: 100%;
-
-	}
+	
 	section.card-steps .animation-element.slide-left.element{
-	 	bottom: 117px;
+	 	bottom: 173px;
     	font-size: 10rem;
     	left: 48%;
 	}
 	section.card-steps p {width: 68%;}
-	section.card-steps .card-item {margin-bottom: 0}
+	#layout-int section.card-steps p {width: 80%;}
+	section.card-steps .card-item {margin-top: 20px; margin-bottom: 0}
 	section.card-slider-small h4{
 		margin-bottom: $marginTop30;
   		margin-top: $marginTopNull;
@@ -599,7 +736,8 @@
 	   padding: 3.5rem;
 
 	}
-	.lead-banner .col-centered h2.copy { width: 100%; font-size: 30px}
+
+	.lead-banner .col-centered h2.copy { width: 100%; font-size: 30px;    margin-bottom: 30px;}
     .number-counter {
     	height: 112.3px;
     	 padding-right: 3.125rem;
@@ -612,25 +750,26 @@
     .lead-banner p.details {
     	margin: 0;
     	font-size: $size14px;
+    	    line-height: 19px;
     }
     .lead-banner .counter {
     font-size: 5.5rem;
 	}
-
+	.lead-banner  .btn {margin-bottom:0}
 	/*Placeholder styles*/
-	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  color: $darkGrey !important;
 	  font-size: 13px !important;
 	}
-	input::-moz-placeholder { /* Firefox 19+ */
+	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
 	  color: $darkGrey;
 	  font-size: 13px !important;
 	}
-	input:-ms-input-placeholder { /* IE 10+ */
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
 	  color: $darkGrey;
 	  font-size: 13px !important;
 	}
-	input:-moz-placeholder { /* Firefox 18- */
+	input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	  color: $darkGrey;
 	  font-size: 13px !important;
 	}
@@ -640,6 +779,7 @@
 	}
 	.modal-content .modal-col {
     padding: 29px 40px;
+    min-height: 346px;
 	}
 	.modal-content .btn {
 	padding: 14px 0;
@@ -659,9 +799,9 @@
   	}
 
   	/*LAYOUT INTERNO*/
-  	#layout-int .main-search { height: 41px; margin-bottom: $marginDefault;}
-  	#layout-int .main-search .line {     height: 41px;}
-  	#layout-int .main-search .calendar-storable .form-group {padding: 2px 0 0px 14px;
+  	#layout-int .main-search { height: 43px; margin-bottom: $marginDefault;}
+  	#layout-int .main-search .line {     height: 43px;}
+  	#layout-int .main-search .calendar-storable .form-group {padding: 0 0 0px 14px;
 	}
 	#layout-int .jumbotron {padding:80px 0 0}
   	#layout-int .main-search .form-group 
@@ -681,40 +821,53 @@
     white-space: nowrap;
     width: 83%;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+        height: 18px; }
 	#layout-int  section.card-slider .card-container {
 		margin-bottom: 44px;
 
 	}
 	#layout-int .ui.button {
 		font-size: $size10px;
-		    padding: 8px 0;
+		    padding: 12px 0;
 	}
 	#layout-int .push-jumbotron{     padding-top: 103px !important;}
 	/*Placeholder styles*/
-	#layout-int .main-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	#layout-int .main-search input::-webkit-input-placeholder, #layout-int .main-search textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  font-size: $size10px !important;
 	}
-	#layout-int .main-search input::-moz-placeholder { /* Firefox 19+ */
+	#layout-int .main-search input::-moz-placeholder, #layout-int .main-search textarea::-moz-placeholder  { /* Firefox 19+ */
 	  font-size: $size10px;
 	}
-	#layout-int .main-search input:-ms-input-placeholder { /* IE 10+ */
+	#layout-int .main-search input:-ms-input-placeholder, #layout-int .main-search textarea:-ms-input-placeholder { /* IE 10+ */
 	  font-size: $size10px;
 	}
-	#layout-int .main-search input:-moz-placeholder { /* Firefox 18- */
+	#layout-int .main-search input:-moz-placeholder, #layout-int .main-search textarea:-moz-placeholder { /* Firefox 18- */
 	  font-size: $size10px;
 	}
+	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination {
+    left: 0 !important;
+    top: 14% !important;
+    width: 8px;
+	}
+	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {margin:7px 0}
 	.panel .form-group { padding:10px 12px 5px 12px}
+	.panel-open .btn {padding: 10px 7px;}
+	.panel table tr td:last-child {
+	 max-width: 168px;
+
+	}
 	.pagination {
     float: none;
     display: block;
-    width: 58%;
+    width: 61%;
     margin: 0 auto;
 	}
+	.pagination ul > li > a {font-size: $size14px;}
 	footer	.copyright {
 		padding-top: $marginBottom20;}
 	#map-container { margin-bottom: $marginBottom20;}
-	footer .copyright p {margin: $marginTop10; font-size: $size12px;}
+	footer .copyright p {margin: $marginTop10; font-size: $size12px; text-align: left}
 	footer{
 		padding-bottom: $marginBottom30;}
 	footer .social {
@@ -732,6 +885,7 @@
 		}
 		.btn {width:auto;}
 	}
+	.filters .form-group {margin-bottom: 90px}
 	.jumbotron-detalle {
   		height: 380px;
      	margin-bottom:15px
@@ -770,11 +924,12 @@
 	margin-bottom:0.5rem}
 	.owner span {font-size: 1rem;    width: 78%; padding: 0 0 0 11px;}
 	 .owner span.pic-profile {font-size:$size20px !important;    padding: 10px 17px 0 15px !important;} 
-	 aside .btn {font-size: 13px;}
+	 aside .btn {font-size: 11px;    padding: 10px 7px;}
 	 .btn-info {
 	 	    padding: 10px 9px;
 	 }
 	 .panel {padding: 14px; }
+	 .modal-body {padding: 0} 
 	 .modal-dialog.modal-sm {
 	width:288px;
 	}
@@ -790,7 +945,7 @@
 	   width: 263px !important;
 	  height: 160px;
   	} 
-  	.selects-footer  {float: right;}
+  	.selects-footer  {float: right;    margin: 0;}
   	.selects-footer .ui.dropdown {
 	width:157px !important;
     min-width: 10em !important; 
@@ -810,7 +965,7 @@
 	margin-bottom: $marginBottom80;
 		
 	}
-	.detalle-info 	h4 { 
+	h4.card-title { 
 
  		font-size: $size40px;
  	}
@@ -824,18 +979,80 @@
 	.sub-menu li a  { font-size: $size18px; padding: 1.2rem 4rem;}
 	.card-inventario {min-height: 245px; padding: 20px 10px}
 	.card-inventario img {width:120px; height: 120px; margin-right:$marginTop20; float: left}
+	.card-inventario img {width:60px; height: 60px; margin-right:$marginTop20; float: left}
 	.card-inventario .card-data {width:56%}
-	.head-title-section  .btn {position:absolute; top:4px; right:0; padding: 10px 18px;}
+	.card-inventario .card-data  span { font-size: $size14px;}
+	.head-title-section  .btn {position:absolute; top:4px; right:0; padding: 10px 4px;    width:197px;}
+	.card-inventario .small {width:70% !important} 
 	.card-inventario .link-plus { display: block}
 	.title-section {
     text-align: center;font-size: $size40px !important;
 	}
+	
+	.empty-message img {width:148px; height:148px}
+	.empty-message {width:347px;padding:60px 0 100px}
+	.empty-message img {width:148px; height:148px}
+	.empty-message  h4 {font-size:$size18px; margin:10px 0 20px}
+	.img-placeholder { height: 262px;  }
+	.img-placeholder-small { height: 116px}
+	.img-placeholder span, .img-placeholder-small span { font-size: $size12px; padding: 0 19px;} 
+	.ui.progress {    max-width: 74% !important;}
+	table#addStock  {margin-bottom: $marginBottom80; }
+	table#addStock  .form-group .ui.checkbox label {
+    font-size: $size12px !important;
+	}
+	table#addStock  tr td, table#addStock tr td table tr td {padding:20px 20px 5px  !important;}
+	table#addStock  .form-group label {
+    font-size: $size14px;
+	}
+	table#addStock  p { font-size:$size14px;}
+	table#addStock .link-main {    right: 20px;
+    top: 42%;font-size: $size15px;}
+	section.card-steps .popover{ margin-bottom:30px}
+	.ui.checkbox .box, .ui.checkbox label { font-size: $size18px !important; }
+	.notifications table tr td:first-child {width: 20%;}
+	.notifications .table tr td:first-child {width: auto !important;}
+	.notifications table tr td:nth-child(2) {width:60%}
+	.notifications table tr td:nth-child(3) {width:40%}
+	.notifications table tr td:nth-child(4) {width:60%}
+	.notifications table tr td:nth-child(5) {width:20%}
+	.credit table tr td:first-child {width: 7%;}
+	.credit table tr td:nth-child(2) {width: 32%;}
 
+  	.notification-info {font-size: $size14px;}
+  	aside { margin-bottom: 100px}
+  	aside section.card-slider {margin-top:72px}
+	.spacer-aside {height: 52px}
+	.panel-heading .panel-title a{ padding: 20px 30px;}
+	.panel-body {padding: 10px 30px 30px; }
+	.post-meta {font-size: $size14px;}
+	.post-message { margin-top: 20px}
+	.post-message p {font-size: $size14px;}
+	.star-aside  { margin: 20px  auto 40px}
+	.breadcrumb  {margin-bottom: 30px}
+	.img-placeholder-thumb-container {margin-bottom: $marginBottom30;}
+	.panel-open {margin-bottom:$marginBottom30;}
+	.panel-open p {margin-bottom:$marginBottom30;}
+	section.content-2col .item-2col {overflow: hidden; margin-bottom: 40px}
+	.img-placeholder-thumb { width: 48%; margin:0 7px 10px 0; float: left; height: 56px}
 }
 
 
 /* Medium Devices, Desktops */
 @media (min-width : 980px) {
+	table {table-layout: fixed;}
+	h3.sub-title  {font-size: $size24px;}
+	.btn-danger {
+	
+		font-size: $size18px !important;
+	    
+	} 
+	.btn-primary {
+	    padding: 10px 24px;
+	}	 
+	h4.subtitle-section {font-size: $size40px;
+	margin-bottom: 40px;
+	}
 	.link-main {
 	font-size: $size20px;}	
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {margin-left: 0}
@@ -846,12 +1063,18 @@
 		background-size: 130px 42px;
 		    margin: 2px
 	}
-	nav.navbar  { height: 70px;
+	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
+		padding: 12px 30px 0;
+	}
+	nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
+		{color:$azulStorable; background: none;padding: 12px 30px 0;
+	    font-size: $size14px;}
+	nav.navbar, nav.navbar.shrink   { height: 70px;
 	     padding: 10px;}
-	 nav.navbar .btn{padding: 7px 20px;}
+	 nav.navbar .btn{padding: 7px 20px; font-size: $size14px;}
 	nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;
 	background-size: 130px 42px;}
-	
+	h4.card-title { margin-bottom: $marginBottom30;}
 	.nav > li > a:hover
 		{opacity:0.4; 
 		background: none}
@@ -872,6 +1095,14 @@
 	      padding: 15px 14px 0 !important;
 
 		}
+	.post-content .pic-profile{
+		 width: 40px !important;
+	  height: 40px !important;
+	   font-size: 1.9rem !important;
+	      padding: 7px 14px 0 !important;
+
+		}
+	.comment__footer .author, .comment__header .author {font-size: $size18px;}
 	.panel .pic-profile, .panel .pic-profile:focus {   
 		width: 60px !important;
 	  height: 60px !important; padding: 8px 14px 0 !important;
@@ -896,7 +1127,8 @@
 		background: $highlight;
 	    color: $azulStorable;
 	}
-	
+	#ModalFiltro .ui.search.dropdown {
+		font-size: $size18px;}
 	nav .container {margin-left: auto; margin-right: auto}
 	.modal-dialog {
 	width: 810px;
@@ -910,19 +1142,19 @@
 		font-size: $size14px !important;
 	}
 			/*Placeholder styles*/
-	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  color: $darkGrey !important;
 	   font-size: $size18px !important;
 	}
-	input::-moz-placeholder { /* Firefox 19+ */
+	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
 	  color: $darkGrey !important;
 	  font-size: $size18px !important;
 	}
-	input:-ms-input-placeholder { /* IE 10+ */
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
 	  color: $darkGrey !important;
 	  font-size: $size18px!important;
 	}
-	input:-moz-placeholder { /* Firefox 18- */
+	input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	  color: $darkGrey !important ;
 	  font-size: $size18px !important;
 	}
@@ -960,18 +1192,18 @@
     left: 5%;
 	    z-index: -1;
 	}
-	.lead-banner .col-centered h2.copy { width: 100%; font-size: 40px}
+	.lead-banner .col-centered h2.copy { font-size: 40px;line-height: 41px;}
 	.ui.dropdown > .text {    font-size: $size18px;}
 	.main-search {
      height: 90px;}
      .main-search .form-group {
-	padding: 16px 0 9px;}
+	padding: 16px 0 2px;}
 	.main-search .line {    height: 89px;}
-  	.main-search .ui.button { font-size:$size18px;}
+  	.main-search .ui.button { font-size:$size18px;padding: 10px 0 11px;}
   	.main-search .btn-lg {padding: 10px 43px;}
   	.main-search label { 
   		padding-top: 0;
-    	margin-bottom: 10px;
+   		margin-bottom: 0;
     	 font-size: $size14px;
 	}
 	.main-search .form-group-last
@@ -988,16 +1220,24 @@
 	#layout-int  section.card-slider .card-container {
 		margin-bottom: $marginBottom50;
 	}
+	section.card-steps p {width: 68%;}
+	.main-search .ui.button input {
+    width: 36px;
+    padding: 0;
+	}
 	.main-search .ui.popup {
    		top: 83px !important;
 	    left:0 !important;
     	width: 281px;
 	}
 	.main-search .ui.floating.dropdown > .menu {
-		top: 34px;}
+		top: 45px;}
+	#layout-int	.main-search .ui.floating.dropdown > .menu {
+		top: 37px;}
 	#layout-int .panel .ui.search.dropdown > .text { font-size:$size18px !important;}
 	.panel .form-group { padding: 10px 20px 5px 20px}
 	.panel .ui.dropdown .menu > .item {font-size: $size14px;}
+	 .panel-open .btn {padding: 10px 23px;}
   	.jumbotron {
   		height: 600px;
      	margin-bottom:$marginDefault;
@@ -1006,7 +1246,7 @@
 	.jumbotron .title-bk { 
 	background-size: content;
 	height: 330px;
-	bottom:0;
+	    bottom: -10px;
 	}
 	.jumbotron .swiper-slide .title { font-size:  $size40px;
 	}
@@ -1014,6 +1254,9 @@
 	.jumbotron .swiper-slide .subtitle {
 	  font-size: $size40px;
 	}
+	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination { left:0 !important;     top: 14% !important;
+    width: 8px;}
+    .swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {margin:7px 0}
 	.jumbotron-detalle {
   		height: 600px;
      	margin-bottom:$marginDefault;
@@ -1037,6 +1280,7 @@
 	  .swiperIntro {
 	  height: 400px;
 	}
+	  .jumbotron .swiperIntro-inverse .swiper-slide .title { font-size:  40px;}
 	.swiperIntro-inverse {
 	  height: 500px; margin-top: -45px;
 	}
@@ -1057,31 +1301,38 @@
     margin-bottom: 130px;
     margin-top: 130px;
 	}
+	section.card-lead h2.copy {
+	font-size: $size30px;}
 	section.card-lead .card-image {
   		width: 555px; 		
   		margin-bottom: $spacing;
   		height: auto
 	}
-	section.card-lead span {font-size: $size30px;}
+	section.card-lead .btn {font-size: $size18px;}
+	section.card-lead span {font-size: $size30px; width: 100%}
+	section.card-lead h4 {
+		margin-bottom: $marginDefault; }
+
 	 section.card-steps {
-    margin-bottom: 130px;
+    margin-bottom: 80px;
 	}
-
+	section.card-steps .card-item {margin-top: 60px}
+	#layout-int section.card-steps .card-item {margin-top: 0}
 	section.card-steps .animation-element.slide-left.element {
-    font-size: 11rem;
-    bottom: 41px;
-    font-weight: 800;
-    left: 59%;
-	}
-	section.card-slider h4{margin-bottom:$marginDefault;}
+    	font-size: 11rem;
+       bottom: 100px;
+    	font-weight: 800;
+    	left: 47%;
+	}	
+	section.card-slider h4{margin-bottom:$marginDefault;font-size: $size20px;}
 	.card-slider-container  .swiper-button-next, .card-slider-container  .swiper-button-prev { top: 30%}
-
-	section.card-steps h4.card-title {
+	section.content-2col .item-2col {overflow: hidden; margin-bottom: 80px}
+	section.card-steps h4.card-title, section.content-2col h4.card-title  {
    		font-family: $fuente-principal;
  		font-size: $size20px;
   		color: $darkGrey;
   		@include font-weight-light;
-  		margin-bottom: $marginNull;
+  		margin-bottom: $marginBottom30;
   		margin-top: $marginTopNull;
     	width: 77%;
 	    line-height: 22px;
@@ -1093,12 +1344,13 @@
   		@include font-weight-light;
   		margin-bottom: $marginNull;
   		margin-top: $marginTopNull;
-    	width: 77%;
+    	width: 81%;
 	    line-height: 22px;
+	        height: 66px;
 	}
-
+	#layout-int section.card-steps h4.card-subtitle {height: 46px}
 	section.card-steps hr {
-	margin-bottom: $marginBottom80;}
+	margin-bottom: $marginBottom20;}
 	section.card-slider-small h4{
 	margin-bottom: $marginDefault;
   		margin-top: $marginTopNull;
@@ -1107,7 +1359,9 @@
 	.lead-banner h2.copy {
     	font-size: 3.8rem;
     	 width: 100%;
+    	     line-height: 36px;
     }
+    .lead-banner p.details {    padding: 0 27px;} 
 	.card-slider .swiper-slide {   
 	  width: 360px !important;
 	  height: 280px;
@@ -1117,7 +1371,7 @@
 	      width: 165px !important;
 
 	  }
-	.lead-banner { padding: 4.9rem;
+	.lead-banner { padding: 72px;
 	  margin-bottom: $marginBottom100;}
 	
 	#layout-int .filter { text-indent: 0;
@@ -1128,10 +1382,10 @@
 	#layout-int .main-search {
     height: 57px; margin-bottom: $marginDefault;
 	}
-	 #layout-int .main-search .calendar-storable .form-group {padding: 13px 0 9px 20px;
+	 #layout-int .main-search .calendar-storable .form-group {padding: 6px 0 9px 20px;
 	}
 	#layout-int .main-search .line {     height: 57px;}
-	#layout-int .main-search .form-group {    padding: 17px 0 13px 20px; }
+	#layout-int .main-search .form-group {    padding: 13px 0 13px 20px; }
 	.ui.search.dropdown > .text {font-size: $size18px;color:$darkGrey !important;}
 	#layout-int .ui.search.dropdown > .text {
 	font-size: $size14px;
@@ -1172,7 +1426,7 @@
 	.filters {
 
 		h4{
-			margin-bottom: $marginDefault;
+			margin-bottom: $marginBottom30;
 		}
 		hr {
    			 margin-top: 35px;
@@ -1196,19 +1450,56 @@
 	    margin-top: 1.8rem;}
 	.owner span {font-size: $size14px; padding: 0 11px;
 		    width: 81%;}
-    aside .btn {font-size: $size18px;}
+	aside { margin-bottom: 130px}
+	 
+    aside .btn {font-size: $size14px;     padding: 10px 33px;
+		&:hover {
+			font-size: $size14px;     padding: 10px 33px;
+		}
+    }
     .btn-info {
 	 	    padding: 10px 54px;
 	 }
-	 .panel {padding: $padding20; }
+	 .panel {padding: $padding10 $padding20; }
+	 .modal-dialog .modal-content {padding:0}
+	 .modal-body {padding: 0} 
 	 .modal-content .modal-col {
-	padding: 40px 60px;
+		padding: 40px 60px 30px;
+	    min-height: 346px;
 	}
 	.title-section {font-size: $size40px !important;text-align: center;}
 	.card-inventario img {width:120px; height: 120px; margin-right:$marginTop30;}
+	.card-inventario img {width:60px; height: 60px; margin-right:$marginTop20; float: left}
 	.card-inventario .card-data {width:68%}
+	.card-inventario .card-data  span { font-size: $size14px;}
+	.card-inventario .small {width:76%}
+	.card-inventario .card-data p{    margin-bottom: 20px;}
 	.card-inventario {min-height: 180px; padding: 30px 20px}
+	 .card-inventario  {min-height: 130px;}
 	.card-inventario .link-plus { display: inline}
+	.empty-message {width:372px;padding:90px 0 130px}
+	.empty-message img {width:148px; height:148px}
+	.empty-message  h4 {font-size:$size18px; margin:20px 0 30px}
+	.img-placeholder { height: 262px;  }
+	.img-placeholder-small { height: 116px}
+	.img-placeholder span, .img-placeholder-small span { font-size: $size14px;padding: 0 46px;} 
+	.ui.progress {    max-width: 85% !important;}
+	
+	table#addStock  .form-group .ui.checkbox label {
+    font-size: $size18px !important;
+	}
+	table#addStock  .form-group textarea {
+	font-size: $size18px; 
+	}
+	table#addStock  p { font-size:$size18px;}
+	section.card-steps .popover{ margin-bottom:40px}
+	.notification-info {font-size: $size18px;}
+	.spacer-aside {height: 73px}
+	.img-placeholder-profile {width:162px; height: 162px}
+	.img-placeholder-thumb-container {margin-bottom: $marginDefault;}
+	aside hr { margin-top: $marginTop30;}
+	.panel-open {margin-bottom: $marginDefault;}
+	.img-placeholder-thumb { width: 48%; margin:0 10px 10px 0; float: left; height: 56px}
 
 }
 

@@ -248,7 +248,7 @@
                 </div>
               </section>
               <section class="card-steps">
-                <div class="col-sm-4 col-md-4">
+                <div class="col-sm-10 col-md-10">
                    <h4 class="card-title">2. Acepta o rechaza una solicitud de reserva</h4>
                 </div> 
                 <div class="clear"></div>
@@ -298,7 +298,7 @@
                 </div>
               </section>
               <section class="card-steps">
-                <div class="col-sm-4 col-md-4">
+                <div class="col-sm-10 col-md-10">
                    <h4 class="card-title">4. Beneficios para tí y tu espacio</h4>
                 </div> 
                 <div class="clear"></div>
@@ -486,43 +486,13 @@ inventarios de otros usuarios
   </script>
 
 
-  <!--Range script-->
-  <script type="text/javascript">
-   var html5Slider = document.getElementById('html5');
-    var input0 = document.getElementById('input-with-keypress-0');
-  var input1 = document.getElementById('input-with-keypress-1');
-  var inputs = [input0, input1];
-
-noUiSlider.create(html5Slider, {
-  start: [ 10, 30 ],
-  connect: true,
-  direction: 'rtl',
-  range: {
-    'min': [0],
-    '10%': [10, 10],
-    '50%': [80, 50],
-    '80%': 150,
-    'max': 200
-    }
-  });
-  html5Slider.noUiSlider.on('update', function( values, handle ) {
-    inputs[handle].value = values[handle];
-  });
-  function setSliderHandle(i, value) {
-  var r = [null,null];
-  r[i] = value;
-  html5Slider.noUiSlider.set(r);
-}
-
-
-
-  </script>
+ 
   
     <script>
     var swiperIntro = new Swiper('.swiperIntro-inverse', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        direction: 'vertical',
+        direction: 'horizontal',
         parallax: true,
         spaceBetween: 30,
         loop: true,
@@ -531,20 +501,7 @@ noUiSlider.create(html5Slider, {
     });
   
     </script>
-    <script type="text/javascript">
-    $(function () {
-        $('#datetimepicker6').datetimepicker();
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false //Important! See issue #1075
-        });
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-        });
-    });
-</script>
+
 </body>
 
 </html>
