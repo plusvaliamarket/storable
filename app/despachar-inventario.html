@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Storable</title>
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body id="layout-int">
+ <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Storable</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav nav-pills navbar-right">
+            <li role="presentation" class="active"><a href="#">Arrendar un espacio</a></li>
+            <li role="presentation"><a href="#" data-toggle="modal" data-target="#ModalRegistro">¿Aún no tienes cuenta? Regístrate</a></li>
+            <li>
+              <a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">
+                Iniciar sesión</a>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+<!-- Modal filtro movil -->
+    <div class="modal fade" id="ModalFiltro" tabindex="-1" role="dialog" aria-labelledby="myModalFiltro">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header clearfix">
+            <a class="navbar-brand" href="#">Storable</a>
+            <button type="button" class="navbar-toggle" data-dismiss="modal" aria-label="Close">        
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-xs-12 ">
+                 <h4 class="modal-title" id="myModaFiltro">Iniciar sesión</h4>
+                <a class="link-modal" href="#">Quitar filtros</a>
+                 <div class="clear"></div>
+                  <div class="row">
+                    <form>
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <div class="ui floating dropdown search button"><!--Dropdown destino-->
+                            <span class="text">Destino, ciudad, dirección</span>
+                            <div class="menu">
+                               <div class="item">Bogotá, Colombia</div>
+                              <div class="item">Boston Massachusetts, Estados Unidos</div>
+                              <div class="item">Bogotá, Colombia</div>
+                              <div class="item">Bolonia, Italia</div>
+                              <div class="item">Bosques de las lomas, Ciudad de México</div>
+                              <div class="item">French</div>
+                              <div class="item">German</div>
+                              <div class="item">Greek</div>
+                              <div class="item">Hungarian</div>
+                              <div class="item">Italian</div>
+                              <div class="item">Japanese</div>
+                              <div class="item">Korean</div>
+                              <div class="item">Lithuanian</div>
+                              <div class="item">Persian</div>
+                              <div class="item">Polish</div>
+                              <div class="item">Portuguese</div>
+                              <div class="item">Russian</div>
+                              <div class="item">Spanish</div>
+                              <div class="item">Swedish</div>
+                              <div class="item">Turkish</div>
+                              <div class="item">Vietnamese</div>
+                            </div>
+                          </div>
+                        </div>  
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-group calendar-storable">
+                          <div class='input-group date' id='datetimepicker6'>
+                            <input type='text' class="form-control" placeholder="Llegada"/>
+                            <span class="input-group-addon">
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-group calendar-storable">
+                          <div class='input-group date' id='datetimepicker7'>
+                            <input type='text' class="form-control" placeholder="Llegada" />
+                            <span class="input-group-addon">
+                            </span>
+                          </div>
+                        </div>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Rango de tamaño">
+                        </div>
+                      </div>
+                      <div class="col-xs-12">
+                        <h4>Tipo de espacio</h4>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                            <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="col-xs-12">
+                        <h4>Vigilancia privada</h4>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="col-xs-12">
+                        <h4>Cámaras de seguridad</h4>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Radio choice</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="col-xs-12">
+                        <h4>Ventilación</h4>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="checkbox">
+                            <label>Radio choice</label>
+                          </div>
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="checkbox">
+                            <label>Radio choice</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="col-xs-12">
+                        <h4>Accesibilidad</h4>   
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">                       
+                          <div class="ui checkbox">
+                            <input name="radio" checked="checked" type="checkbox">
+                            <label>Radio choice</label>
+                          </div>
+                          <div class="ui checkbox">
+                            <input name="radio" checked="checked" type="checkbox">
+                            <label>Radio choice</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="col-xs-12">
+                        <button type="submit" class="btn btn-lg btn-block">Filtrar búsqueda</button>
+                      </div>
+                   </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalInicio">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-6 line modal-col">
+                 <h4 class="modal-title" id="myModalInicio">Iniciar sesión</h4>
+                 <form>
+                   <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
+                  </div>
+                  <div class="ui checkbox">
+                   
+                      <input type="checkbox">
+                       <label> Mantenerme ingresado
+                    </label>
+                  </div>
+                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
+                 </form>
+              </div>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
+                <span class="o"> o</span>
+                <button type="button" class="btn btn-lg btn-block btn-lg-social">
+                  <span><i class="fa fa-facebook"></i></span>
+               Ingresa con Facebook</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#">¿Olvidaste la contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal Registro -->
+    <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalRegistro">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body clearfix">
+
+              <div class="col-xs-6 line modal-col">
+                 <h4 class="modal-title" id="myModalRegistro">Crea tu cuenta</h4>
+                 <form>
+                   <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Tu contraseña">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Crear contraseña">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Confirmar contraseña">
+                  </div>
+                  <div class="ui checkbox">
+                   
+                      <input type="checkbox">
+                       <label> Mantenerme ingresado
+                    </label>
+                  </div>
+                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
+                 </form>
+              </div>
+              <div class="col-xs-6 modal-col">
+                <p>Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
+                <button type="button" class="btn btn-lg btn-block">Crear cuenta</button>
+                <span class="o"> o</span>
+                <button type="button" class="btn btn-lg btn-block btn-lg-social">
+                  <span><i class="fa fa-facebook"></i></span>
+               Ingresa con Facebook</button>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#">¿Olvidaste la contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+
+          <!--Título sección-->
+          <div class="head-title-section ">
+            <h1 class="title-section">Mis inventarios</h1>
+            <a href="#" class="btn btn-primary  btn-lg">+ Agregar inventario</a>
+          </div>
+         
+
+      </div>
+    </div>
+  <div class="submenu-container">
+    <div class="container">
+      <ul class="sub-menu">
+      <li ><a href="">Activos</a></li>
+      <li class="active"><a href="">Sin enviar</a></li>
+      <li><a href="">Historial de enviados</a></li>
+      </ul> 
+    </div>
+  </div>  
+  
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Mis inventarios</a></li>
+            <li><a href="#">Activosr</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li class="active">Despachar inventario</li>
+          </ol>  
+        </div>
+        <div class="col-sm-12">
+           <section class="card-steps">
+               <h4 class="subtitle-section">Despachar inventario</h4>
+                <div class="row">
+                  <div class="col-xs-4 col-sm-7  col-md-8">
+                     <h4 class="card-title">Artículos</h4>
+                  </div>
+                  <div class="col-xs-8 col-sm-5  col-md-4">
+                     <div class="form-group pull-right">                       
+                        <div class="ui radio checkbox">
+                          <input name="radio" checked="checked" type="radio">
+                          <label>Despachar caja completo</label>
+                        </div>
+                      </div> 
+                  </div> 
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-inventario">
+                      <img src="images/storable-thumb.svg" alt="">
+                      <div class="card-data small">
+                            <h4>Caja 1</h4>
+                            <span class="quantity">Disponibles: <i>2</i></span>
+                            <span class="locate">
+                              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus</p>
+                            </span>
+                            
+                            <div class="button-group">
+                              <span>Despachar:</span>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg id="svg-minus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <g >
+                                  <rect id="minus" x="5.75" y="19.524" fill="#ffffff" width="28.5" height="0.951"/>
+                                </g>
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-default">6</button>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg  id="svg-plus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <polygon id="plus" fill="#ffffff" points="34.25,19.524 20.476,19.524 20.476,5.75 19.524,5.75 19.524,19.524 5.75,19.524 5.75,20.476 
+                                  19.524,20.476 19.524,34.25 20.476,34.25 20.476,20.476 34.25,20.476 "/>
+                                </svg>  
+                              </button>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-inventario">
+                      <img src="images/storable-thumb.svg" alt="">
+                      <div class="card-data small">
+                            <h4>Caja 1</h4>
+                            <span class="quantity">Disponibles: <i>2</i></span>
+                            <span class="locate">
+                              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus</p>
+                            </span>
+                            
+                            <div class="button-group">
+                              <span>Despachar:</span>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg id="svg-minus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <g >
+                                  <rect id="minus" x="5.75" y="19.524" fill="#ffffff" width="28.5" height="0.951"/>
+                                </g>
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-default">6</button>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg  id="svg-plus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <polygon id="plus" fill="#ffffff" points="34.25,19.524 20.476,19.524 20.476,5.75 19.524,5.75 19.524,19.524 5.75,19.524 5.75,20.476 
+                                  19.524,20.476 19.524,34.25 20.476,34.25 20.476,20.476 34.25,20.476 "/>
+                                </svg>  
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-inventario">
+                      <img src="images/storable-thumb.svg" alt="">
+                      <div class="card-data small">
+                            <h4>Caja 1</h4>
+                            <span class="quantity">Disponibles: <i>2</i></span>
+                            <span class="locate">
+                              <p class="description">Donec scelerisque massa velit, nec lorem sit pellente squeamet tellus</p>
+                            </span>
+                            
+                            <div class="button-group">
+                              <span>Despachar:</span>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg id="svg-minus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <g >
+                                  <rect id="minus" x="5.75" y="19.524" fill="#ffffff" width="28.5" height="0.951"/>
+                                </g>
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-default">6</button>
+                              <button type="button" class="btn btn-default btn-on">
+                                <svg  id="svg-plus" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="25px" height="25px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                <polygon id="plus" fill="#ffffff" points="34.25,19.524 20.476,19.524 20.476,5.75 19.524,5.75 19.524,19.524 5.75,19.524 5.75,20.476 
+                                  19.524,20.476 19.524,34.25 20.476,34.25 20.476,20.476 34.25,20.476 "/>
+                                </svg>  
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                    <div class="col-xs-12 col-sm-6 col-xs-offset-0 col-sm-offset-6 col-sm-offset-7 col-xs-offset-8">
+                       <a href="#" class="btn btn-primary  btn-block btn-lg">Guardar y continuar con el checkout</a>
+                    </div>  
+              </div>
+            </section>
+        </div>
+        <div class="col-sm-3">
+
+
+        </div>
+        
+
+
+    </div>    
+  </div> <!-- /container -->
+  <!--Lead banner-->
+    <div class="container-fluss">
+      <section class="lead-banner">
+        <div class="container">
+          <div class="row">  
+          
+           <div class="col-sm-8 col-md-8 col-centered">
+              <h2 class="copy">
+                  Empieza ahora a enviar inventarios alrededor del mundo
+              </h2>
+           </div>
+         </div>
+      </section>      
+
+    </div>
+
+        <div class="container">
+      
+        <footer class="clearfix">
+          <div class="col-sm-3 col-md-3 hidden-xs">
+            <ul>
+              <li><h5>Storable</h5></li>
+              <li><a href="#">Sobre Storable</a></li>
+              <li><a href="#">Políticas de privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+          </div>
+           <div class="col-sm-3 col-md-3 hidden-xs">
+            <ul>
+              <li><h5>Storable</h5></li>
+              <li><a href="#">Sobre Storable</a></li>
+              <li><a href="#">Políticas de privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+          </div>
+           <div class="col-sm-3 col-md-3 hidden-xs">
+            <ul>
+              <li><h5>Storable</h5></li>
+              <li><a href="#">Sobre Storable</a></li>
+              <li><a href="#">Políticas de privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+              <li><a href="#">Empezar a exportar</a></li>
+              
+            </ul>
+          </div>
+           <div class="col-sm-3 col-md-3 nopadding">
+            <div class="selects-footer">
+              <select class="ui dropdown">
+              <option value="">Español</option>
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+               </select>
+            </div>
+            <div class="selects-footer selects-footer-last">
+              <select class="ui dropdown">
+              <option value="">COP</option>
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+               </select>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="copyright">
+                  <div class="col-sm-8 col-md-9 nopadding">
+                    <img class="brand-footer" src="images/logo-footer.svg" alt="Storable"/>
+                    <p>Trabajamos con orgullo © 2017 Storable.</p>
+                  </div>
+                  <div class="col-sm-4 col-md-3 nopadding">
+                    <ul class="social">
+                      <li>
+                        <a href="">
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <path id="facebook" fill="#9FA2A2" d="M24,22.675C24,23.406,23.407,24,22.675,24h-6.114v-9.294h3.119l0.467-3.622h-3.586V8.771
+          c0-1.048,0.291-1.763,1.795-1.763h1.918v-3.24c-0.929-0.098-1.861-0.146-2.795-0.143c-2.766,0-4.66,1.688-4.66,4.788v2.671H9.692
+          v3.622h3.126V24H1.325C0.593,24,0,23.406,0,22.675l0,0V1.325C0,0.593,0.593,0,1.325,0h21.35C23.407,0,24,0.593,24,1.325V22.675"/>
+        </svg>
+                        </a>
+                      </li>
+                       <li>
+                        <a href="">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <path id="instagram" fill="#9FA2A2" d="M21.146,0H2.853C1.279-0.001,0.002,1.272,0,2.846v18.308C0.002,22.728,1.279,24.002,2.853,24h18.293
+          c1.574,0.002,2.852-1.272,2.854-2.846V2.846C23.998,1.272,22.721-0.001,21.146,0z M17.25,3.75C17.25,3.336,17.586,3,18,3h2.25
+          C20.664,3,21,3.336,21,3.75V6c0,0.414-0.336,0.75-0.75,0.75H18c-0.414,0-0.75-0.336-0.75-0.75V3.75z M12.028,7.423
+          c2.546-0.002,4.613,2.059,4.615,4.605l0,0c-0.003,2.546-2.068,4.607-4.615,4.604c-2.545,0.003-4.611-2.058-4.615-4.604
+          C7.416,9.482,9.482,7.42,12.028,7.423L12.028,7.423z M21.75,21c0,0.414-0.336,0.75-0.75,0.75H3c-0.414,0-0.75-0.336-0.75-0.75V9.75
+          h3c-0.39,0.562-0.523,1.611-0.523,2.278c0,4.016,3.276,7.285,7.3,7.285c4.028,0,7.302-3.269,7.302-7.285
+          c0-0.667-0.095-1.7-0.579-2.278h3V21z"/>
+        </svg>
+                        </a>
+                      </li>
+                       <li>
+                        <a href="">
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <path id="twitter" fill="#9FA2A2" d="M23.338,2.388c-0.957,0.614-2.017,1.049-3.129,1.285C19.312,2.643,18.033,2,16.615,2
+          c-2.717,0-4.922,2.374-4.922,5.301c0,0.416,0.043,0.82,0.127,1.207C7.728,8.287,4.1,6.18,1.67,2.968
+          c-0.44,0.82-0.669,1.737-0.666,2.668c0,1.838,0.87,3.461,2.191,4.412c-0.788-0.027-1.556-0.255-2.232-0.66v0.064
+          c0,2.57,1.698,4.713,3.952,5.198c-0.723,0.213-1.486,0.245-2.224,0.093c0.626,2.104,2.444,3.639,4.599,3.68
+          c-1.685,1.423-3.81,2.271-6.115,2.271c-0.398,0-0.79-0.024-1.175-0.073C2.179,22.122,4.768,23,7.548,23
+          c9.058,0,14.011-8.077,14.011-15.083c0-0.23-0.006-0.46-0.014-0.687C22.52,6.468,23.352,5.539,24,4.486
+          c-0.893,0.427-1.846,0.708-2.827,0.834C22.189,4.665,22.971,3.626,23.338,2.388"/>
+        </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+          </div>
+        </footer>
+ 
+    </div>
+    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/dropdown.min.js"></script>
+<script src="js/popup.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/nouislider.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+      $('#toolStorable')
+  .popup({
+    position : 'bottom center',
+    title    : 'REGISTRAR CAJAS:',
+    content  : 'Debes registrar el número de cajas que vas a enviar en este inventario'
+  });
+
+      $('.ui.floating.dropdown').dropdown();
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.dropdown')
+      .dropdown();
+      $('.ui.button')
+        .popup({
+          inline     : true,
+           on    : 'click',  
+          hoverable  : false,
+          position   : 'bottom left',
+          delay: {
+            show: 300,
+            hide: 800
+          }
+        });
+
+
+
+    })
+  
+  </script>
+
+
+ 
+  
+    <script>
+    var swiperIntro = new Swiper('.swiperIntro', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        parallax: true,
+        loop: true,
+         speed: 600
+    });
+    var swiper1 = new Swiper('.swiper1', {
+        slidesPerView: 3,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        loop: true
+    });
+    var swiper2 = new Swiper('.swiper2', {
+        slidesPerView: 4,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        loop: true
+    });
+  
+    </script>
+    <script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
+</body>
+
+</html>
