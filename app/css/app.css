@@ -203,6 +203,9 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .ui.checkbox .box, .ui.checkbox label {
   padding-left: 34px !important; }
 
+.ui.checkbox .box, .ui.checkbox label span {
+  padding: 0 20px; }
+
 .ui.checkbox .box:before, .ui.checkbox label:before {
   width: 24px !important;
   height: 24px !important; }
@@ -220,6 +223,15 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   height: 31px !important;
   top: -2px !important;
   left: -3px !important; }
+
+.footnote {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  font-style: normal;
+  text-align: center;
+  font-size: 14px;
+  color: #9fa2a2; }
 
 .ui.checkbox .box:after, .ui.checkbox label:after {
   top: 4px !important;
@@ -852,10 +864,29 @@ aside .btn {
 /*Panel*/
 .panel {
   border: 1px solid #e6e6e6;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  clear: both; }
 
 .panel .form-group {
-  border: 1px solid #e6e6e6; }
+  border-bottom: 1px solid #e6e6e6; }
+
+.panel .form-group:last-child {
+  border: 0 none; }
+
+.panel .form-group p {
+  color: #303336; }
+
+.panel .form-group input {
+  border: 0;
+  height: 36px;
+  width: 100%;
+  line-height: 20px; }
+
+textarea::selection, input::selection {
+  color: #9fa2a2; }
+
+.panel .calendar-storable .form-group {
+  border-bottom: 0 none; }
 
 .panel .form-group-last {
   clear: both; }
@@ -897,9 +928,6 @@ aside .btn {
 
 .panel table {
   font-size: 14px; }
-
-.panel table tr td {
-  padding: 15px 0; }
 
 .panel table tr td p, .panel table tr td span {
   color: #9fa2a2;
@@ -2002,6 +2030,9 @@ table#addStock .link-main {
   position: absolute; }
 
 /*_Progress bar*/
+.progress-container {
+  padding: 10px; }
+
 .ui.progress {
   position: relative;
   overflow: visible;
@@ -2286,6 +2317,12 @@ section.card-steps .popover {
 .credit table tr td:first-child {
   text-align: center; }
 
+.credit table .form-group {
+  margin: 0; }
+
+.credit table tr td {
+  vertical-align: middle; }
+
 .credit .time {
   font-size: 14px; }
 
@@ -2311,6 +2348,42 @@ section.card-steps .popover {
   height: 21px;
   display: block;
   margin: 0 auto; }
+
+.suma table {
+  margin-bottom: 40px !important;
+  color: #9fa2a2;
+  font-family: "Proxima_nova_light", sans-serif; }
+
+.suma table {
+  width: 100%;
+  margin-bottom: 130px; }
+
+.suma table tr td {
+  padding: 10px  20px; }
+
+.suma table .form-group {
+  margin: 0; }
+
+.suma table tr td {
+  vertical-align: middle; }
+
+.suma table tr td:last-child {
+  text-align: right; }
+
+.suma .resultado {
+  border-top: 1px solid #e6e6e6; }
+
+.suma p {
+  text-align: left; }
+
+.suma .total {
+  color: #000;
+  text-transform: uppercase;
+  font-family: "Proxima_nova_bold", sans-serif; }
+
+.suma .totalnumber {
+  color: #00d4b8;
+  font-family: "Proxima_nova_bold", sans-serif; }
 
 /*Accordion*/
 #accordionStorable .panel {
@@ -2399,6 +2472,8 @@ section.card-steps .popover {
     margin-bottom: 20px; }
   table {
     table-layout: auto; }
+  aside table {
+    table-layout: fixed; }
   aside {
     margin-bottom: 90px; }
   h4.subtitle-section {
@@ -2667,9 +2742,8 @@ section.card-steps .popover {
     margin: -1px 0 0 0;
     padding: 7px 3px; }
   .panel {
-    padding: 14px; }
+    padding: 14px 0; }
   .owner {
-    margin: 0 -1.4rem;
     padding: 7px 14px; }
   .owner .pic-profile {
     width: 40px !important;
@@ -2681,7 +2755,8 @@ section.card-steps .popover {
   .owner h4 {
     font-size: 1.3rem;
     width: 77%;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    padding-top: 10px; }
   .owner span {
     font-size: 1rem;
     width: 78%;
@@ -2749,7 +2824,8 @@ section.card-steps .popover {
     font-size: 14px;
     margin: 10px 0 20px; }
   .selects-footer-last {
-    margin: 0 !important; }
+    margin: 0 !important;
+    float: right; }
   .img-placeholder {
     height: 240px;
     margin-bottom: 60px; }
@@ -2834,10 +2910,14 @@ section.card-steps .popover {
   .breadcrumb {
     margin-bottom: 20px; }
   .img-placeholder-thumb-container {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .suma table tr td {
+    font-size: 14px; } }
 
 /*  Tablets */
 @media (min-width: 768px) {
+  aside table {
+    table-layout: fixed; }
   h3.sub-title {
     font-size: 20px;
     margin-bottom: 30px; }
@@ -3154,19 +3234,19 @@ section.card-steps .popover {
   /*Placeholder styles*/
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #303336 !important;
+    color: #9fa2a2 !important;
     font-size: 13px !important; }
   input::-moz-placeholder, textarea::-moz-placeholder {
     /* Firefox 19+ */
-    color: #303336;
+    color: #9fa2a2;
     font-size: 13px !important; }
   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     /* IE 10+ */
-    color: #303336;
+    color: #9fa2a2;
     font-size: 13px !important; }
   input:-moz-placeholder, textarea:-moz-placeholder {
     /* Firefox 18- */
-    color: #303336;
+    color: #9fa2a2;
     font-size: 13px !important; }
   .modal-dialog {
     width: 583px;
@@ -3301,12 +3381,13 @@ section.card-steps .popover {
     margin: -1px 0 0 0;
     padding: 7px 20px; }
   .owner {
-    margin: 0 -1.4rem;
     padding: 7px 14px; }
   .owner .pic-profile {
     width: 40px !important;
     height: 40px !important;
     margin-top: 8px; }
+  .panel table tr td {
+    padding: 15px 8px; }
   .owner h4 {
     font-size: 1.3rem;
     width: 77%;
@@ -3324,7 +3405,7 @@ section.card-steps .popover {
   .btn-info {
     padding: 10px 9px; }
   .panel {
-    padding: 14px; }
+    padding: 14px 0; }
   .modal-body {
     padding: 0; }
   .modal-dialog.modal-sm {
@@ -3434,7 +3515,7 @@ section.card-steps .popover {
   section.card-steps .popover {
     margin-bottom: 30px; }
   .ui.checkbox .box, .ui.checkbox label {
-    font-size: 18px !important; }
+    font-size: 14px !important; }
   .notifications table tr td:first-child {
     width: 20%; }
   .notifications .table tr td:first-child {
@@ -3448,9 +3529,17 @@ section.card-steps .popover {
   .notifications table tr td:nth-child(5) {
     width: 20%; }
   .credit table tr td:first-child {
-    width: 7%; }
+    width: 14%; }
+  .credit h5 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 94%; }
+  .credit table tr td {
+    padding: 10px 2px; }
   .credit table tr td:nth-child(2) {
     width: 32%; }
+  .credit table {
+    table-layout: fixed; }
   .notification-info {
     font-size: 14px; }
   aside {
@@ -3458,7 +3547,7 @@ section.card-steps .popover {
   aside section.card-slider {
     margin-top: 72px; }
   .spacer-aside {
-    height: 52px; }
+    height: 56px; }
   .panel-heading .panel-title a {
     padding: 20px 30px; }
   .panel-body {
@@ -3486,7 +3575,11 @@ section.card-steps .popover {
     width: 48%;
     margin: 0 7px 10px 0;
     float: left;
-    height: 56px; } }
+    height: 56px; }
+  .ui.checkbox label span {
+    padding: 0 10px; }
+  .suma table {
+    font-size: 14px; } }
 
 /* Medium Devices, Desktops */
 @media (min-width: 980px) {
@@ -3558,8 +3651,8 @@ section.card-steps .popover {
   .comment__footer .author, .comment__header .author {
     font-size: 18px; }
   .panel .pic-profile, .panel .pic-profile:focus {
-    width: 60px !important;
-    height: 60px !important;
+    width: 40px !important;
+    height: 40px !important;
     padding: 8px 14px 0 !important;
     font-size: 30px !important; }
   nav.navbar.shrink .pic-profile:hover {
@@ -3604,19 +3697,19 @@ section.card-steps .popover {
   /*Placeholder styles*/
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #303336 !important;
+    color: #9fa2a2 !important;
     font-size: 18px !important; }
   input::-moz-placeholder, textarea::-moz-placeholder {
     /* Firefox 19+ */
-    color: #303336 !important;
+    color: #9fa2a2 !important;
     font-size: 18px !important; }
   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     /* IE 10+ */
-    color: #303336 !important;
+    color: #9fa2a2 !important;
     font-size: 18px !important; }
   input:-moz-placeholder, textarea:-moz-placeholder {
     /* Firefox 18- */
-    color: #303336 !important;
+    color: #9fa2a2 !important;
     font-size: 18px !important; }
   .card-container .check {
     background: url(../images/check.svg) no-repeat 0 0;
@@ -3676,6 +3769,8 @@ section.card-steps .popover {
   #layout-int .calendar-storable .form-control {
     padding: 0 38px 0 0px;
     font-size: 14px; }
+  aside .calendar-storable .form-control {
+    padding: 0 !important; }
   #layout-int section.card-slider .card-container {
     margin-bottom: 50px; }
   section.card-steps p {
@@ -3695,10 +3790,14 @@ section.card-steps .popover {
     font-size: 18px !important; }
   .panel .form-group {
     padding: 10px 20px 5px 20px; }
+  .panel .form-group p {
+    font-size: 18px; }
   .panel .ui.dropdown .menu > .item {
     font-size: 14px; }
   .panel-open .btn {
     padding: 10px 23px; }
+  .panel .form-group input {
+    font-size: 18px; }
   .jumbotron {
     height: 600px;
     margin-bottom: 40px;
@@ -3903,21 +4002,22 @@ section.card-steps .popover {
   .filters .btn {
     width: auto; }
   .owner {
-    margin: 0 -2rem;
-    padding: 10px 20px; }
+    padding: 20px 20px; }
   .owner span.pic-profile {
-    font-size: 32px !important;
-    padding: 9px 17px 0 20px !important;
+    font-size: 20px !important;
+    padding: 9px 17px 0 15px !important;
     margin-top: 6px; }
   .owner h4 {
     font-size: 18px;
-    width: 81%;
+    width: 73%;
     margin-bottom: 0.3rem;
     margin-top: 1.8rem; }
   .owner span {
     font-size: 14px;
     padding: 0 11px;
     width: 81%; }
+  .panel table tr td {
+    padding: 15px; }
   aside {
     margin-bottom: 130px; }
   aside .btn {
@@ -3929,7 +4029,7 @@ section.card-steps .popover {
   .btn-info {
     padding: 10px 54px; }
   .panel {
-    padding: 10px 20px; }
+    padding: 10px 0; }
   .modal-dialog .modal-content {
     padding: 0; }
   .modal-body {
@@ -3982,6 +4082,8 @@ section.card-steps .popover {
     padding: 0 46px; }
   .ui.progress {
     max-width: 85% !important; }
+  .ui.checkbox .box, .ui.checkbox label {
+    font-size: 18px !important; }
   table#addStock .form-group .ui.checkbox label {
     font-size: 18px !important; }
   table#addStock .form-group textarea {
@@ -4007,7 +4109,13 @@ section.card-steps .popover {
     width: 48%;
     margin: 0 10px 10px 0;
     float: left;
-    height: 56px; } }
+    height: 56px; }
+  .suma table {
+    font-size: 18px; }
+  .ui.checkbox label span {
+    padding: 0 20px; }
+  .credit table {
+    table-layout: auto; } }
 
 /* Large Devices, Wide Screens */
 .jumbotron .swiper-container-vertical > .swiper-pagination-bullets {

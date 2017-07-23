@@ -13,6 +13,7 @@
 @media  (min-width : 320px) {
 	h3.sub-title  {font-size: $size18px; margin-bottom: $marginBottom20;}
 	table {table-layout: auto}
+	aside table { table-layout: fixed;}
 	aside { margin-bottom: 90px}
 	h4.subtitle-section {font-size: 23px; 
 	margin-bottom:15px;
@@ -282,10 +283,10 @@
     	padding: 7px 3px;
 	}
 	.panel {
-    padding: 14px;
+    padding: 14px 0;
 	}
 	.owner {
-    margin: 0 -1.4rem;
+
     padding: 7px 14px;
 	}
 	.owner .pic-profile {
@@ -301,6 +302,7 @@
     font-size: 1.3rem;
     width: 77%;
     margin-bottom: 0.5rem;
+    padding-top: 10px;
 	}
 	.owner span {
     font-size: 1rem;
@@ -369,7 +371,7 @@
 	.empty-message img {width:128px; height:128px}
 	.empty-message {width:278px;padding:20px 0 50px}
 	.empty-message  h4 { font-size: 14px; margin:10px 0 20px}
-	.selects-footer-last {margin:0 !important} 
+	.selects-footer-last {margin:0 !important; float: right;} 
 	.img-placeholder { height: 240px; margin-bottom: 60px;  }
 	.img-placeholder span , .img-placeholder-small span{ font-size: $size12px; padding: 0 19px;} 
 	.ui.progress {    max-width: 86% !important;}
@@ -425,12 +427,14 @@
 	.img-placeholder-small {width:100%; height: 116px}
 	.breadcrumb  {margin-bottom: 20px}
 	.img-placeholder-thumb-container {margin-bottom: 20px;}
+	.suma table tr td { font-size: $size14px;}
 }
 
 
 
 /*  Tablets */
 @media  (min-width : 768px) {
+	aside table { table-layout: fixed;}
 	h3.sub-title  {font-size: $size20px;margin-bottom: $marginBottom30;}
 	.btn-danger {
 
@@ -758,19 +762,19 @@
 	.lead-banner  .btn {margin-bottom:0}
 	/*Placeholder styles*/
 	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: $darkGrey !important;
+	  color: $softGrey !important;
 	  font-size: 13px !important;
 	}
 	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
-	  color: $darkGrey;
+	  color: $softGrey;
 	  font-size: 13px !important;
 	}
 	input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
-	  color: $darkGrey;
+	  color: $softGrey;
 	  font-size: 13px !important;
 	}
 	input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
-	  color: $darkGrey;
+	  color: $softGrey;
 	  font-size: 13px !important;
 	}
 	.modal-dialog {
@@ -909,7 +913,7 @@
 	 margin: -1px 0 0 0;
 		padding: 7px 20px;}
 	 .owner {
-	 	margin: 0 -1.4rem;
+	 
     padding: 7px 14px;
 
 	}
@@ -918,7 +922,7 @@
  	    margin-top: 8px;
 		 
 	 }
-	
+	.panel table tr td {padding: 15px 8px }
 	.owner h4 { font-size: 1.3rem;
 	width: 77%; 
 	margin-bottom:0.5rem}
@@ -928,7 +932,7 @@
 	 .btn-info {
 	 	    padding: 10px 9px;
 	 }
-	 .panel {padding: 14px; }
+	 .panel {padding: 14px 0; }
 	 .modal-body {padding: 0} 
 	 .modal-dialog.modal-sm {
 	width:288px;
@@ -1009,20 +1013,22 @@
 	table#addStock .link-main {    right: 20px;
     top: 42%;font-size: $size15px;}
 	section.card-steps .popover{ margin-bottom:30px}
-	.ui.checkbox .box, .ui.checkbox label { font-size: $size18px !important; }
+	.ui.checkbox .box, .ui.checkbox label { font-size: $size14px !important; }
 	.notifications table tr td:first-child {width: 20%;}
 	.notifications .table tr td:first-child {width: auto !important;}
 	.notifications table tr td:nth-child(2) {width:60%}
 	.notifications table tr td:nth-child(3) {width:40%}
 	.notifications table tr td:nth-child(4) {width:60%}
 	.notifications table tr td:nth-child(5) {width:20%}
-	.credit table tr td:first-child {width: 7%;}
+	.credit table tr td:first-child {width: 14%;}
+	.credit h5 { text-overflow:ellipsis; overflow: hidden; width: 94%}
+	.credit table tr td {    padding: 10px 2px;}
 	.credit table tr td:nth-child(2) {width: 32%;}
-
+	.credit table { table-layout: fixed;}
   	.notification-info {font-size: $size14px;}
   	aside { margin-bottom: 100px}
   	aside section.card-slider {margin-top:72px}
-	.spacer-aside {height: 52px}
+	.spacer-aside {height: 56px}
 	.panel-heading .panel-title a{ padding: 20px 30px;}
 	.panel-body {padding: 10px 30px 30px; }
 	.post-meta {font-size: $size14px;}
@@ -1035,6 +1041,8 @@
 	.panel-open p {margin-bottom:$marginBottom30;}
 	section.content-2col .item-2col {overflow: hidden; margin-bottom: 40px}
 	.img-placeholder-thumb { width: 48%; margin:0 7px 10px 0; float: left; height: 56px}
+	.ui.checkbox label span {padding:0 10px}
+	.suma  table {font-size: $size14px;}
 }
 
 
@@ -1104,8 +1112,8 @@
 		}
 	.comment__footer .author, .comment__header .author {font-size: $size18px;}
 	.panel .pic-profile, .panel .pic-profile:focus {   
-		width: 60px !important;
-	  height: 60px !important; padding: 8px 14px 0 !important;
+		width: 40px !important;
+	  height: 40px !important; padding: 8px 14px 0 !important;
 		font-size: 30px !important;}
 
 	nav.navbar.shrink .pic-profile:hover {opacity:0.9 !important;
@@ -1143,19 +1151,19 @@
 	}
 			/*Placeholder styles*/
 	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: $darkGrey !important;
+	  color: $softGrey !important;
 	   font-size: $size18px !important;
 	}
 	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
-	  color: $darkGrey !important;
+	  color: $softGrey !important;
 	  font-size: $size18px !important;
 	}
 	input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
-	  color: $darkGrey !important;
+	  color: $softGrey !important;
 	  font-size: $size18px!important;
 	}
 	input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
-	  color: $darkGrey !important ;
+	  color: $softGrey !important ;
 	  font-size: $size18px !important;
 	}
 	.card-container .check {
@@ -1217,6 +1225,8 @@
 	}
 	#layout-int .calendar-storable .form-control {padding: 0 38px 0 0px;
 		    font-size: $size14px;}
+	aside .calendar-storable .form-control {padding: 0 !important;
+		    }
 	#layout-int  section.card-slider .card-container {
 		margin-bottom: $marginBottom50;
 	}
@@ -1236,8 +1246,10 @@
 		top: 37px;}
 	#layout-int .panel .ui.search.dropdown > .text { font-size:$size18px !important;}
 	.panel .form-group { padding: 10px 20px 5px 20px}
+	.panel .form-group p { font-size: $size18px;}
 	.panel .ui.dropdown .menu > .item {font-size: $size14px;}
 	 .panel-open .btn {padding: 10px 23px;}
+	.panel  .form-group input { font-size: $size18px;}
   	.jumbotron {
   		height: 600px;
      	margin-bottom:$marginDefault;
@@ -1436,20 +1448,21 @@
 	}
 
 	.owner {
-		 margin: 0 -2rem;
-		padding: 10px 20px;
+
+		padding: 20px 20px;
 	}
 	.owner span.pic-profile {
-		    font-size: 32px !important;
-    	padding: 9px 17px 0 20px !important;
+		 font-size: 20px !important;
+    	padding: 9px 17px 0 15px !important;
 		 margin-top: 6px;
 	}
 	.owner h4 { font-size: $size18px;
-		width: 81%; 
+		width: 73%; 
 	    margin-bottom: 0.3rem;
 	    margin-top: 1.8rem;}
 	.owner span {font-size: $size14px; padding: 0 11px;
 		    width: 81%;}
+	.panel table tr td {padding: 15px }
 	aside { margin-bottom: 130px}
 	 
     aside .btn {font-size: $size14px;     padding: 10px 33px;
@@ -1460,7 +1473,7 @@
     .btn-info {
 	 	    padding: 10px 54px;
 	 }
-	 .panel {padding: $padding10 $padding20; }
+	 .panel {padding: $padding10 0; }
 	 .modal-dialog .modal-content {padding:0}
 	 .modal-body {padding: 0} 
 	 .modal-content .modal-col {
@@ -1484,7 +1497,7 @@
 	.img-placeholder-small { height: 116px}
 	.img-placeholder span, .img-placeholder-small span { font-size: $size14px;padding: 0 46px;} 
 	.ui.progress {    max-width: 85% !important;}
-	
+	.ui.checkbox .box, .ui.checkbox label { font-size: $size18px !important; }
 	table#addStock  .form-group .ui.checkbox label {
     font-size: $size18px !important;
 	}
@@ -1500,6 +1513,9 @@
 	aside hr { margin-top: $marginTop30;}
 	.panel-open {margin-bottom: $marginDefault;}
 	.img-placeholder-thumb { width: 48%; margin:0 10px 10px 0; float: left; height: 56px}
+	.suma  table {font-size: $size18px;}
+	.ui.checkbox label span {padding:0 20px}
+	.credit table { table-layout: auto;}
 
 }
 

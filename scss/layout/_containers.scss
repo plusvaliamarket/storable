@@ -255,8 +255,22 @@ section.card-steps{
 /*Sidebar*/
 aside .btn { margin-bottom: $marginBottom20;}
 /*Panel*/
-.panel {border:1px solid $greylight;  margin-bottom: $marginBottom20;}
-.panel .form-group {border:1px solid $greylight;}
+.panel {border:1px solid $greylight;  margin-bottom: $marginBottom20; clear: both;}
+.panel .form-group {border-bottom:1px solid $greylight;}
+.panel .form-group:last-child { border:0 none;}
+.panel .form-group p {color: $darkGrey;}
+.panel  .form-group input {
+    border: 0;
+    height: 36px;
+    width: 100%;
+    line-height: 20px;
+   
+}
+textarea::selection, input::selection { color:$softGrey;}
+
+
+.panel .calendar-storable .form-group  { border-bottom: 0 none}
+
 .panel .form-group-last {clear:both} 
 .panel label {font-size: $size14px;
   color: $softGrey;
@@ -284,7 +298,7 @@ aside .btn { margin-bottom: $marginBottom20;}
     padding: 0 11px;
 	}
 .panel table  {font-size: $size14px;}
-.panel table tr td {padding: 15px 0}
+
 .panel table tr td p, .panel table tr td span {color:$softGrey; display: block; line-height: 18px}
 .panel table tr td:first-child {@include font-weight-normal;
 	color:$darkGrey;
@@ -1154,6 +1168,7 @@ table#addStock .link-main {position: absolute;
 }
 
 /*_Progress bar*/
+.progress-container { padding: 10px}
 .ui.progress {  position:relative;overflow: visible; /*revisar*/
 	    border-radius: 7.285714rem !important;margin: 5px 0em 0 !important;
     height: 10px !important;}
@@ -1262,6 +1277,8 @@ width: 20px; height: 20px}
 .credit table tr td{ padding:10px  20px; border-bottom:1px solid $greylight;}
 .credit table tr td:first-child {
     text-align: center;}
+ .credit table  .form-group { margin:0}
+.credit table tr td { vertical-align: middle}
 .credit .time { font-size: $size14px;}
 .credit p {color:$softGrey; margin: 0; padding:0;font-size: $size14px;}
 .notification-info {color: $darkGrey; text-align: left;}
@@ -1269,6 +1286,22 @@ width: 20px; height: 20px}
     	display: block;}
 .ico {background: url(../images/tarjeta-ico.svg) no-repeat 0 0 ; width:24px; height: 21px;
     	display: block; margin: 0 auto}
+
+
+
+
+.suma  table {margin-bottom:$marginDefault !important; color:$softGrey;  font-family: $fuente-label;}
+
+.suma  table { width: 100%; margin-bottom: 130px}
+.suma  table tr td{ padding:10px  20px;}
+.suma  table  .form-group { margin:0}
+.suma  table tr td { vertical-align: middle}
+.suma table tr td:last-child { text-align: right}
+.suma  .resultado { border-top:1px solid $greylight;}
+.suma p { text-align: left}
+.suma .total { color:#000; text-transform: uppercase; font-family: $fuente-titulos;}
+.suma .totalnumber { color:$menta; font-family:$fuente-titulos}
+
 
 /*Accordion*/
 #accordionStorable .panel {padding:0; margin:0;border-radius: 0  }

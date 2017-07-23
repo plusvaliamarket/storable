@@ -98,6 +98,7 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	    width: 24px !important;
     height: 24px !important;}
 .ui.checkbox .box, .ui.checkbox label {    padding-left: 34px!important;}
+.ui.checkbox .box, .ui.checkbox label  span {padding:0 20px}
 .ui.checkbox .box:before, .ui.checkbox label:before {width: 24px !important;
     height: 24px !important;}
 .ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
@@ -116,7 +117,7 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
     left: -3px !important;
 
 }
-
+.footnote { display: inline-block; clear:both; width: 100%; font-style: normal; text-align: center; font-size: $size14px; color:$softGrey; }
 
 .ui.checkbox .box:after, .ui.checkbox label:after {    top: 4px !important;
     left: 4px !important;
