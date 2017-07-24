@@ -1138,11 +1138,11 @@ table#addStock  .form-group label {
     width: 100%;
 }
 .cell-border{    border-right: 1px solid #ddd;}
-table#addStock  .form-group input {
+table#addStock  .form-group input, table#addStock  .form-group textarea {
 	    border: 0;
     height: 34px;
     width: 100%;
-	font-size: $size18px; 
+	
 }
 table#addStock  p {color:$darkGrey;    margin-top: 6px;}
 table .form-group input::-webkit-input-placeholder, table textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */

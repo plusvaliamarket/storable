@@ -426,8 +426,23 @@
 	.img-placeholder-profile {width:162px; height: 162px}
 	.img-placeholder-small {width:100%; height: 116px}
 	.breadcrumb  {margin-bottom: 20px}
+		.breadcrumb>li+li:before {
+    padding: 0 2px;
+	}
+	.img-placeholder-thumb {
+    width: 48%;
+    margin: 0 7px 10px 0;
+    float: left;
+    height: 56px;
+	}
 	.img-placeholder-thumb-container {margin-bottom: 20px;}
 	.suma table tr td { font-size: $size14px;}
+	table#addStock  .form-group input, table#addStock  .form-group textarea {
+	font-size: $size14px; padding: 0; line-height: 20px
+	}
+	.filters .form-group {margin-bottom: 10px}
+	.filter-container {margin-bottom: 40px}
+
 }
 
 
@@ -889,7 +904,9 @@
 		}
 		.btn {width:auto;}
 	}
-	.filters .form-group {margin-bottom: 90px}
+	.filter-container {margin-bottom:60px}
+	
+	.filters .filters-container {}
 	.jumbotron-detalle {
   		height: 380px;
      	margin-bottom:15px
@@ -1036,6 +1053,9 @@
 	.post-message p {font-size: $size14px;}
 	.star-aside  { margin: 20px  auto 40px}
 	.breadcrumb  {margin-bottom: 30px}
+	.breadcrumb>li+li:before {
+    padding: 0 5px;
+	}
 	.img-placeholder-thumb-container {margin-bottom: $marginBottom30;}
 	.panel-open {margin-bottom:$marginBottom30;}
 	.panel-open p {margin-bottom:$marginBottom30;}
@@ -1043,6 +1063,9 @@
 	.img-placeholder-thumb { width: 48%; margin:0 7px 10px 0; float: left; height: 56px}
 	.ui.checkbox label span {padding:0 10px}
 	.suma  table {font-size: $size14px;}
+	table#addStock  .form-group input, table#addStock  .form-group textarea {
+	font-size: $size14px; 
+	}
 }
 
 
@@ -1516,6 +1539,9 @@
 	.suma  table {font-size: $size18px;}
 	.ui.checkbox label span {padding:0 20px}
 	.credit table { table-layout: auto;}
+	table#addStock  .form-group input, table#addStock  .form-group textarea {
+	font-size: $size18px; 
+	}
 
 }
 

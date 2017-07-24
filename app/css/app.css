@@ -466,7 +466,6 @@ a svg #instagram {
   color: #017ee5; }
 
 .breadcrumb > li + li:before {
-  padding: 0 5px;
   color: #9fa2a2;
   content: "|"; }
 
@@ -1985,11 +1984,10 @@ table#addStock .form-group label {
 .cell-border {
   border-right: 1px solid #ddd; }
 
-table#addStock .form-group input {
+table#addStock .form-group input, table#addStock .form-group textarea {
   border: 0;
   height: 34px;
-  width: 100%;
-  font-size: 18px; }
+  width: 100%; }
 
 table#addStock p {
   color: #303336;
@@ -2909,10 +2907,25 @@ section.card-steps .popover {
     height: 116px; }
   .breadcrumb {
     margin-bottom: 20px; }
+  .breadcrumb > li + li:before {
+    padding: 0 2px; }
+  .img-placeholder-thumb {
+    width: 48%;
+    margin: 0 7px 10px 0;
+    float: left;
+    height: 56px; }
   .img-placeholder-thumb-container {
     margin-bottom: 20px; }
   .suma table tr td {
-    font-size: 14px; } }
+    font-size: 14px; }
+  table#addStock .form-group input, table#addStock .form-group textarea {
+    font-size: 14px;
+    padding: 0;
+    line-height: 20px; }
+  .filters .form-group {
+    margin-bottom: 10px; }
+  .filter-container {
+    margin-bottom: 40px; } }
 
 /*  Tablets */
 @media (min-width: 768px) {
@@ -3358,8 +3371,8 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .filters .btn {
     width: auto; }
-  .filters .form-group {
-    margin-bottom: 90px; }
+  .filter-container {
+    margin-bottom: 60px; }
   .jumbotron-detalle {
     height: 380px;
     margin-bottom: 15px; }
@@ -3562,6 +3575,8 @@ section.card-steps .popover {
     margin: 20px  auto 40px; }
   .breadcrumb {
     margin-bottom: 30px; }
+  .breadcrumb > li + li:before {
+    padding: 0 5px; }
   .img-placeholder-thumb-container {
     margin-bottom: 30px; }
   .panel-open {
@@ -3579,6 +3594,8 @@ section.card-steps .popover {
   .ui.checkbox label span {
     padding: 0 10px; }
   .suma table {
+    font-size: 14px; }
+  table#addStock .form-group input, table#addStock .form-group textarea {
     font-size: 14px; } }
 
 /* Medium Devices, Desktops */
@@ -4115,7 +4132,9 @@ section.card-steps .popover {
   .ui.checkbox label span {
     padding: 0 20px; }
   .credit table {
-    table-layout: auto; } }
+    table-layout: auto; }
+  table#addStock .form-group input, table#addStock .form-group textarea {
+    font-size: 18px; } }
 
 /* Large Devices, Wide Screens */
 .jumbotron .swiper-container-vertical > .swiper-pagination-bullets {
