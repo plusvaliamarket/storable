@@ -1,6 +1,6 @@
 nav.navbar .navbar-toggle {border:0 none}
 nav.navbar{
-  
+  z-index: 1000;
    // Animation
    -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;

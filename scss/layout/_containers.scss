@@ -641,7 +641,7 @@ textarea::selection, input::selection { color:$softGrey;}
 
 	}
 .lead-banner .col-centered h2.copy { width: 100%; font-family: $fuente-label;line-height: 30px }
-
+#col-left p {color:$darkGrey}
 
 
 /*FOOTER*/
@@ -735,7 +735,7 @@ footer {
   color: $softGrey !important;
   font-size: $size14px !important;
 	}
-.modal-content .btn {
+.modal-content .btn-primary {
 	 -webkit-transition: all 0.4s; /* Safari */
     transition: all 0.4s;
 	@include btnStorable ($menta, $menta, #fff);
@@ -744,6 +744,15 @@ footer {
 		}
 
 	}
+.modal-content .btn-info {
+	 -webkit-transition: all 0.4s; /* Safari */
+    transition: all 0.4s;
+	@include btnStorableMain ($azulStorable,$azulStorable,#fff); 
+	&:hover {
+		@include btnStorableMain($greylight, $greylight, $greylight);
+		}
+	    
+} 
 .modal-content  .btn-lg-social{
 	@include btnStorable (#3b5998, #3b5998, #fff) ;
 
@@ -757,7 +766,8 @@ footer {
 .modal-content p {
 	margin-bottom: $marginBottom30;
 }
-
+.modal-content .form-group p { margin-bottom: 0 !important}
+.modal-content table { margin-bottom: 10px !important; text-align: left}
 .modal-content .ui.checkbox{margin: 5px 0 $marginBottom30;
    }
 
@@ -768,6 +778,7 @@ footer {
 	color: $darkGrey;
 	font-size: $size14px;
 }
+.modal-content p.high {color:$softGrey; text-align: left; clear: both;}
 .modal-content span.o{ text-align: center;
 	padding: $padding20  0;
 	display: block;
@@ -782,6 +793,14 @@ footer {
 	font-size: $size14px; text-align: center;
 	display: table-cell;
 	vertical-align: middle;}
+#activo p { text-align: left}
+#activo .modal-dialog .modal-title { text-align: left}
+#activo .modal-content .modal-col {
+    min-height: auto !important;
+}
+#activo .modal-content .modal-right-col {
+        padding: 0 57px 30px 57px;
+}
  
 
 /*LAYOUT SECCION INTERNA SIN SLIDER*/
@@ -1087,7 +1106,14 @@ color: $darkGrey;
 .card-inventario {border:1px solid $greylight; position: relative; cursor: pointer;
 margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;}
 .card-inventario:hover {background: $azulStorable; color:#fff}
+.card-inventario.active-inventario   {background: $azulStorable; color:#fff}
+.card-inventario.active-inventario  .description, .card-inventario.active-inventario .quantity i  {color:#fff}
 .card-inventario:hover  .description, .card-inventario:hover .quantity i  {color:#fff}
+.card-inventario.active-inventario .button-group .btn-on {
+    background: #fff !important;
+    border-color: #fff !important;
+}
+.card-inventario.active-inventario  #minus, .card-inventario.active-inventario  #plus {fill: $azulStorable !important;}
 .card-inventario img {float: left}
 .card-inventario h4 {width: 100%; margin-top: 0;    overflow: hidden;
     text-overflow: ellipsis;
@@ -1097,6 +1123,14 @@ margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;
 
 .card-inventario .card-data {float: left}
 .card-inventario .card-data span {margin-bottom: 0}
+.card-inventario .value {   color: $darkGrey;
+    background-color: #fff; font-size: $size18px;
+	margin-right:5px;
+	width: 130px;
+	height: 40px;
+	text-align: center;
+    border: 1px solid $greylight;
+    border-radius: 4px;} 
 .card-inventario .card-data p {width:100% !important}
 .card-inventario .missing {font-size: $size14px;}
 .card-inventario .description {margin:10px 0}
@@ -1104,8 +1138,28 @@ margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;
 .card-inventario .link-plus {color:$menta;font-size: $size14px; padding:0 3px}
 .card-inventario .plus {background: url(../images/plus.svg) no-repeat 50% 50% $azulStorable; 
 	width:40px; height: 40px; border-radius: 80px;
-position:absolute; right: 10px; bottom: 10px;
+ 
+position:absolute; right: 10px;
 } 
+.hint {background: $highlight; color:$softGrey; position: absolute; bottom:0; font-size: $size14px;
+	    width: 100%;
+    left: 0;
+    @include font-weight-light;
+    font-family: $fuente-botones;
+    text-align: center;}
+.hint-complete {background: $menta; color:#fff; position: absolute; bottom:0; font-size: $size14px;
+	    width: 100%;
+    @include font-weight-light;
+
+    font-family: $fuente-botones;	
+    left: 0;
+    text-align: center;}
+.hint-incomplete{background: $alert; color:#fff; position: absolute; bottom:0; font-size: $size14px;
+	    width: 100%;
+    @include font-weight-light;
+    font-family: $fuente-botones;
+    left: 0;
+    text-align: center;}
 .card-steps .card-inventario span {width:100%}
 .button-group span{ float:left;    width: auto !important;}
 .button-group .btn-default {    color: $darkGrey;
@@ -1243,7 +1297,7 @@ width: 20px; height: 20px}
 }
 .img-placeholder span {color:$menta;    
     display: inline-block;} 
-
+.img-placeholder.uploaded, .img-placeholder-profile.uploaded  { border:0  none !important; background: $greylight !important;	}
 .img-placeholder-profile{ border:0.4px dashed $softGrey; background: $highlight; text-align: center; display: table;
 	vertical-align: middle;margin:0 auto;    border-radius: 130px;}
 .img-placeholder-profile .container-img {display: table-cell; vertical-align: middle; }
@@ -1354,10 +1408,156 @@ text-decoration: none; cursor: pointer}
 .post-content .pic-profile, .post-content .pic-profile:hover   {text-decoration: none}
 
 
-/*2 col int*/
-.content-2col {
-
+/*Time line*/
+#timeline {
+  position: relative;
+  display: table;
+  height: 100%;
+	
+  width: 100%;
+}
+#timeline section.year:after {
+  content: '';
+  width: 2px;
+  position: absolute;
+  top: 3.5rem;
+  bottom: 0rem;
+  left: 11px;
+  z-index: 1;
+  
+}
+#timeline section.year.complete-line:after{background: $menta;}
+#timeline section.year.incomplete-line:after{background: $greylight;}
+#timeline h3 {
+  position: -webkit-sticky;
+  position: absolute;
+  right: 0;
+  top:11px;
+  color: $darkGrey;
+  margin: 0;
+  font-weight: 400;
+}
+#timeline section.year {
+  position: relative;
+}
+#timeline section.year:first-child section {
+  margin-top: -1.3em;
 
 }
+#timeline section.year:last-child:after,  #timeline section.last-year:after{ background: none !important}
+#timeline section.year section {
+  	position: relative;
+  	padding-bottom: 1.25em;
+  	margin-bottom: 1.2em;
+	margin-top: 1.7em;
+
+}
+#timeline section.year section h4 {
+  position: absolute;
+  bottom: 0;
+  font-size: .9em;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 0 89px;
+  color: #C5C5C5;
+}
+#timeline section.year section ul {
+  list-style-type: none;
+  margin: -1.35rem 0 1em -4px;
+  font-size: 1em;
+}
+#timeline section.year section ul.actual:first-of-type:after {
+	background: url(../images/time-actual.svg)  no-repeat  0 0;
+}
+#timeline section.year section ul.complete:first-of-type:after{
+	background: url(../images/time-complete.svg)  no-repeat  0 0;
+
+}
+#timeline section.year section ul.incomplete:first-of-type:after {
+	background: url(../images/time-incomplete.svg)  no-repeat  0 0;
+
+}
+#timeline section.year section ul.incomplete li { color: $softGrey;}
+#timeline section.year section ul:last-child {
+  margin-bottom: 0;
+}
+#timeline section.year section ul:first-of-type:after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  z-index: 2;
+}
+#timeline section.year section ul li {
+  margin-left: .5rem;
+	
+}
+#timeline section.year section ul li  span { display: block}
+#timeline section.year section ul.incomplete li {
+color:$softGrey;}
+#timeline section.year section ul li:before {
+ 
+  margin-left: -.5rem;
+  padding-right: .3rem;
+}
+#timeline section.year section ul li:not(:first-child) {
+  margin-top: .4rem;
+}
+#timeline section.year section ul li span.price {
+  color: mediumturquoise;
+  font-weight: 500;
+}
+
+.report {
+	textarea { float: left; width: 100%}
+	.img-placeholder-small { float: left}	
+}
+
+/*Calificación modal*/
+.head-score {
+	padding: 20px 60px 10px;
+	@extend %gradientStorable;
+	p {color:#fff; margin: 0; text-align: left;
+		font-family: $fuente-botones;
+  		@include font-weight-light;
+	}
+	h6 {color: #303336; margin-bottom: 16px}
+}
+.head-score > p { margin-bottom: 20px}
+.body-score { padding: 30px 60px}
+.body-score .star-container {
+
+    width: 42px;
+    height: 44px;
+}
+.body-score #stars-existing{ margin-bottom: 60px} 
+.body-score .star-full  {background: url(../images/full-storable.svg) no-repeat 0 0}
+.body-score .star-empty  {background: url(../images/empty-storable.svg) no-repeat 0 0}
 
 
+/*Submenu inventarios*/
+.submenu-int-container {
+	width: 100%;
+	clear: both;
+    position: relative;
+    border-bottom: 1px solid $greylight;
+    margin:10px 0 20px;
+    overflow: hidden;
+    }
+.submenu-int li {float:left;}
+.submenu-int li.active a {border-bottom: 2px solid $azulStorable;
+		color:$darkGrey;
+		text-decoration: none;}
+.submenu-int li a {display: inline-block; color:$softGrey;
+	&:hover{
+		border-bottom: 2px solid $azulStorable;
+		color:$darkGrey;
+		text-decoration: none;
+	}
+	&:focus{
+		border-bottom: 2px solid $azulStorable;
+	}
+}

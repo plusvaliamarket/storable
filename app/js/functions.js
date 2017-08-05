@@ -1,6 +1,6 @@
 $(window).load(function() {
   draw();
-
+  //statusAlert();
 
 });
 
@@ -14,6 +14,17 @@ $(window).scroll(function() {
   }
 });
 
+
+/*Status active (Cuando hay una alerta de envio)*/
+/*function statusAlert(){
+
+  if ($( "body" ).has( ".bar-status" )) {
+
+    $('.jumbotron').addClass('positionStatus');
+  } else {
+    $('.jumbotron').removeClass('positionStatus');
+  }
+}*/
 
 
 /*Heigth and width script*/

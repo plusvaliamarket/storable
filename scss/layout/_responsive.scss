@@ -18,7 +18,7 @@
 	h4.subtitle-section {font-size: 23px; 
 	margin-bottom:15px;
 	}
-	.btn-primary {
+	.btn-primary, .btn-primary:hover, .btn-primary:focus  {
 	    font-size: $size14px;
 	}	 
 
@@ -340,6 +340,13 @@
         font-size: 1.3rem;
     padding: 1rem 1.1rem
 	}
+	.submenu-int li a {
+        font-size: 1.3rem;
+    padding: 1rem 1.1rem
+	}
+	.card-inventario .plus {
+    bottom: 33px;
+	}	
 	.card-inventario img {
     width: 120px;
     height: 120px;
@@ -356,7 +363,7 @@
         float: none;
 	}
 	.card-inventario {
-    min-height: 245px;
+    min-height: 225px;
     padding: 20px 10px;
 	}
 	 .card-inventario {
@@ -376,6 +383,7 @@
 	.img-placeholder span , .img-placeholder-small span{ font-size: $size12px; padding: 0 19px;} 
 	.ui.progress {    max-width: 86% !important;}
 	table#addStock  {margin-bottom:$marginDefault; }
+	.content-wrapper  {margin-bottom:$marginDefault; }
 	table#addStock  .form-group .ui.checkbox label {
     font-size: $size14px !important;
 	}  
@@ -442,6 +450,41 @@
 	}
 	.filters .form-group {margin-bottom: 10px}
 	.filter-container {margin-bottom: 40px}
+	#timeline {margin-bottom: 109px;}
+	#timeline h3 {font-size: $size12px;}
+	#timeline section.year section ul li {font-size: $size14px}
+	.positionStatus{padding: 140px 0 0 !important;}
+	.bar-status {
+		height: 50px;
+	}
+	.bar-status-content a { font-size: $size14px;     padding: 0 54px 0 0;
+    background-size: 9%;
+    position: relative;
+    left: 18px;} 
+	.bar-status + nav.navbar {top: 50px;}
+	#timeline section.year section ul {
+      	padding: 3px 0 22px 35px;
+    	max-width: 16rem;
+	}
+	#timeline h3 {    width: 68px;
+    line-height: 15px;}
+    #timeline section.year section ul li span + .btn { margin:10px 0 0}
+    #timeline section.year section ul li {margin-left: 0}
+    .report {
+		margin-bottom: 80px;
+		textarea { height: 92px; margin-bottom: 20px}
+		.img-placeholder-small { height: 92px}
+		.img-placeholder-small span {
+			padding: 0 31px;
+		}
+	}
+	#activo .modal-content .modal-left-col {
+        padding: 0 15px 30px 15px;	
+	}
+	#activo .modal-content .modal-right-col {
+        padding: 0 15px 30px 15px;	
+	}
+	#col-left p {margin-bottom: 10px; font-size: $size14px;}
 
 }
 
@@ -495,7 +538,7 @@
 	nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
 		{color:$azulStorable; background: none;
 		    font-size: 14px;}
-	nav.navbar.shrink .nav li a, nav.navbar.shrink .nav > li.active > a {padding: 12px 16px 0;    font-size: 1.15rem;}
+	nav.navbar.shrink .nav li a, nav.navbar.shrink .nav > li.active > a {padding: 9px 18px;    font-size: 1.15rem;}
 	nav.navbar .navbar-collapse, nav.navbar .navbar-form {background: none transparent}
 	nav.navbar.shrink .nav-pills  li a  
 		{color:$darkGrey;}
@@ -512,7 +555,8 @@
      	margin-bottom: $marginBottom30;
 	}
     .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
-    background-size: 97px 31px;
+    	background-size: 97px 31px;
+		    width: 97px;
 	}
 	.navbar-brand {    width: 103px;background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
 	background-size: 97px 31px;}
@@ -528,7 +572,7 @@
 		padding:4px 10px 0;
 	}
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a,   {
-	    padding: 12px 16px 0;
+	    padding: 9px 18px;
 	    font-size: 1.15rem;
 	}
 	nav.navbar  .ui.empty.circular.label{    
@@ -805,7 +849,7 @@
 	}
 	.modal-content .btn-lg-social { padding: 30px 10px;}
 	.modal-content .btn-lg-social  {padding-right: 9px}
-	.modal-content .btn-lg-social, .modal-content .btn {font-size: $size12px;}
+	.modal-content .btn-lg-social {font-size: $size12px;}
 
 	.card-container .check {
   		 background: url(../images/check.svg) no-repeat 0 0;
@@ -998,7 +1042,11 @@
     text-align: center;
 	}
 	.sub-menu li a  { font-size: $size18px; padding: 1.2rem 4rem;}
-	.card-inventario {min-height: 245px; padding: 20px 10px}
+	.submenu-int li a  { font-size: $size18px; padding: 1.2rem 4rem;}
+	.card-inventario .plus {
+    bottom: 46px;
+	}	
+	.card-inventario {min-height: 177px; padding: 20px 10px}
 	.card-inventario img {width:120px; height: 120px; margin-right:$marginTop20; float: left}
 	.card-inventario img {width:60px; height: 60px; margin-right:$marginTop20; float: left}
 	.card-inventario .card-data {width:56%}
@@ -1019,6 +1067,7 @@
 	.img-placeholder span, .img-placeholder-small span { font-size: $size12px; padding: 0 19px;} 
 	.ui.progress {    max-width: 74% !important;}
 	table#addStock  {margin-bottom: $marginBottom80; }
+	.content-wrapper {margin-bottom: $marginBottom80; }
 	table#addStock  .form-group .ui.checkbox label {
     font-size: $size12px !important;
 	}
@@ -1066,6 +1115,37 @@
 	table#addStock  .form-group input, table#addStock  .form-group textarea {
 	font-size: $size14px; 
 	}
+	#timeline {margin-bottom: 119px;}
+	#timeline h3 {font-size: $size12px;}
+	#timeline section.year section ul li {font-size: $size14px}
+	.positionStatus{padding: 140px 0 0 !important;}
+	.bar-status {
+		height: 50px;
+	}
+	.bar-status-content a { font-size: $size18px; padding: 0 100px 0 0;background-size: 8%;} 
+	.bar-status + nav.navbar {top: 50px;}
+	#timeline h3 {    width: auto;
+    line-height: 15px;}
+    #timeline section.year section ul {
+     padding: 3px 0 22px 75px;
+ 		max-width: 92rem;
+	}
+	#timeline section.year section ul li span + .btn { margin:20px 0 0}
+	.report {
+		margin-bottom: 80px;
+		textarea { height: 162px}
+		.img-placeholder-small { height: 162px}
+		.img-placeholder-small span {
+			padding: 0 31px;
+		}
+	}
+	#activo .modal-content .modal-left-col {
+        padding: 0 7px 30px 57px;	
+	}
+	#activo .modal-content .modal-right-col {
+        padding: 0 57px 30px 27px;	
+	}
+	#col-left p {margin-bottom: 20px; font-size: $size14px;}
 }
 
 
@@ -1095,10 +1175,10 @@
 		    margin: 2px
 	}
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
-		padding: 12px 30px 0;
+		padding: 7px 20px ;
 	}
 	nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
-		{color:$azulStorable; background: none;padding: 12px 30px 0;
+		{color:$azulStorable; background: none;padding: 7px 20px;
 	    font-size: $size14px;}
 	nav.navbar, nav.navbar.shrink   { height: 70px;
 	     padding: 10px;}
@@ -1167,6 +1247,7 @@
 	.modal-dialog.modal-sm {
 	width:400px;
 	}
+
 	.modal-content .btn-lg-social, .modal-content .btn {font-size: $size18px;}
 	.modal-content .ui.checkbox .box, .modal-content  .ui.checkbox label
 		{
@@ -1504,6 +1585,9 @@
 	    min-height: 346px;
 	}
 	.title-section {font-size: $size40px !important;text-align: center;}
+	.card-inventario .plus {
+    bottom: 33px;
+	}	 
 	.card-inventario img {width:120px; height: 120px; margin-right:$marginTop30;}
 	.card-inventario img {width:60px; height: 60px; margin-right:$marginTop20; float: left}
 	.card-inventario .card-data {width:68%}
@@ -1542,7 +1626,49 @@
 	table#addStock  .form-group input, table#addStock  .form-group textarea {
 	font-size: $size18px; 
 	}
+	.bar-status {
+		padding: 0 60px
+	}
+	.bar-status-content a { font-size: $size24px; padding: 0 100px 0 0;background-size: 8%;} 
+	#timeline {margin-bottom: 149px;}
+	#timeline h3 {font-size: $size14px;}
+	#timeline section.year section ul li {font-size: $size18px}
+	.positionStatus{padding: 175px 0 0 !important;}
+	.bar-status {
+		height: 70px;
+	}
+	#timeline section.year section ul {
+     padding: 3px 0 22px 75px;
 
+ 		max-width: 92rem;
+	}
+	#timeline h3 {    width: auto;}
+	.bar-status-content a { font-size: $size24px; padding: 0 100px 0 0;background-size: 8%;} 
+	.bar-status + nav.navbar {top: 70px;}
+	#timeline section.year section ul {
+	  padding: 3px 0 22px 75px;
+	  max-width: 92rem;
+	}
+	#timeline section.year section ul li span + .btn { margin:30px 0 0}
+	.report {
+		margin-bottom: 80px;
+		textarea { height: 162px}
+		.img-placeholder-small { height: 162px}
+		.img-placeholder-small span {
+			padding: 0 31px;
+		}
+	}
+	.head-score {
+		p { font-size: $size20px;}
+		h6{ font-size: $size14px;}
+	}
+	#activo .modal-content .modal-left-col {
+        padding: 0 7px 30px 57px;	
+	}
+	#activo .modal-content .modal-right-col {
+        padding: 0 57px 30px 27px;	
+	}
+	#col-left p {margin-bottom: 40px; font-size: $size18px;}
 }
 
 /* Large Devices, Wide Screens */

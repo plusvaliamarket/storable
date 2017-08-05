@@ -46,6 +46,8 @@ hr {clear: both; margin-top: 0;
 
  ul {list-style: none; padding: 0; margin: 0}
 table {    table-layout: fixed;}
+textarea{ border: 1px solid $greylight;}
+.btn:focus, .btn:active:focus, .btn.active:focus { outline:none}
 
 h3.sub-title {color:$azulStorable; margin-top: 0}
 
@@ -59,6 +61,7 @@ h3.sub-title {color:$azulStorable; margin-top: 0}
 .long {width: 100% !important}
 .maring80 {margin-bottom: 80px}
 .hr-min {margin-bottom: 20px !important}
+
 
 /*FORMS*/
 
@@ -97,6 +100,7 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	{margin-left: 0;
 	    width: 24px !important;
     height: 24px !important;}
+ .ui.checkbox input[checked="checked"] + label,  .ui.checkbox input[checked] + label {color:$darkGrey !important;}
 .ui.checkbox .box, .ui.checkbox label {    padding-left: 34px!important;}
 .ui.checkbox .box, .ui.checkbox label  span {padding:0 20px}
 .ui.checkbox .box:before, .ui.checkbox label:before {width: 24px !important;
@@ -163,7 +167,8 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	@include btnStorableMain ($alert,$alert,#fff); 	    
 } 
 /*Disabled*/
-.btn-primary[disabled], .disabled {opacity: 0.5 !important; cursor: default }
+.btn-primary[disabled], .disabled {opacity: 0.3 !important; cursor: default }
+.btn-primary.disabled { background: $menta; border-color: $menta;}
 
 /*Divitons*/
 .line {
@@ -333,3 +338,34 @@ a svg #instagram {
     border-color: $greylight !important;
     color: #FFFFFF !important;
 }
+
+
+/*Bar status*/
+.bar-status {
+	background: $menta;
+	display: table;
+	text-align: center;
+	position: fixed;
+	right: 0;
+	left: 0;
+	height: 70px;
+	z-index: 1000;
+
+
+	width: 100%;
+	.bar-status-content{
+		display: table-cell;
+		vertical-align: middle;
+
+	}
+}
+.bar-status-content a { background: url(../images/flecha-white-right.svg) no-repeat 90% 50% ;
+	color: #fff;
+	background-size: 8%;
+	font-family: $fuente-botones;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
