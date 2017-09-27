@@ -269,7 +269,7 @@ aside .btn { margin-bottom: $marginBottom20;}
 textarea::selection, input::selection { color:$softGrey;}
 
 
-.panel .calendar-storable .form-group  { border-bottom: 0 none}
+.panel .calendar-storable .form-group  { border-bottom: 0 none; overflow:visible;}
 
 .panel .form-group-last {clear:both} 
 .panel label {font-size: $size14px;
@@ -1297,7 +1297,8 @@ width: 20px; height: 20px}
 }
 .img-placeholder span {color:$menta;    
     display: inline-block;} 
-.img-placeholder.uploaded, .img-placeholder-profile.uploaded  { border:0  none !important; background: $greylight !important;	}
+.img-placeholder.uploaded, .img-placeholder-profile
+  { border:0  none !important; background: $greylight !important;	}
 .img-placeholder-profile{ border:0.4px dashed $softGrey; background: $highlight; text-align: center; display: table;
 	vertical-align: middle;margin:0 auto;    border-radius: 130px;}
 .img-placeholder-profile .container-img {display: table-cell; vertical-align: middle; }

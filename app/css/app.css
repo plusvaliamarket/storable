@@ -926,7 +926,8 @@ textarea::selection, input::selection {
   color: #9fa2a2; }
 
 .panel .calendar-storable .form-group {
-  border-bottom: 0 none; }
+  border-bottom: 0 none;
+  overflow: visible; }
 
 .panel .form-group-last {
   clear: both; }
@@ -2374,7 +2375,7 @@ section.card-steps .popover {
   color: #00d4b8;
   display: inline-block; }
 
-.img-placeholder.uploaded, .img-placeholder-profile.uploaded {
+.img-placeholder.uploaded, .img-placeholder-profile {
   border: 0  none !important;
   background: #e6e6e6 !important; }
 
