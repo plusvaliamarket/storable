@@ -367,6 +367,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   overflow: hidden;
   clear: both; }
 
+.modal-body .form-group {
+  overflow: visible;
+  clear: both; }
+
 h1.title-section {
   color: #fff;
   font-family: "Proxima_nova_light", sans-serif; }

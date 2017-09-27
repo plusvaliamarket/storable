@@ -202,6 +202,7 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 .margin20 {margin-bottom:20px !important;}
 .margin30 {margin-bottom:30px !important;}
 .form-group {overflow: hidden; clear: both}
+.modal-body .form-group {overflow: visible; clear: both}
 h1.title-section {  color:#fff;
 font-family: $fuente-label}
 h4.subtitle-section {font-family: $fuente-titulos;
