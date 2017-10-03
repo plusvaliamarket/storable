@@ -256,7 +256,7 @@ section.card-steps{
 aside .btn { margin-bottom: $marginBottom20;}
 /*Panel*/
 .panel {border:1px solid $greylight;  margin-bottom: $marginBottom20; clear: both;}
-.panel .form-group {border-bottom:1px solid $greylight;}
+.panel .form-group {border-bottom:1px solid $greylight; overflow:visible}
 .panel .form-group:last-child { border:0 none;}
 .panel .form-group p {color: $darkGrey;}
 .panel  .form-group input {
