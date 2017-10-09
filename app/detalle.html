@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body id="layout-int">
@@ -415,6 +416,13 @@ debes completar tu registro.</span>
                       </div>
                     </div> 
                   </div>
+                  <div class="form-group">
+                    <label>Área a alquilar</label>
+                    <div class="slider-stand">
+                      <input id="input-with-keypress-1" type="text">
+                     <div id="html5" class="noUi-target noUi-ltr noUi-horizontal"> </div>
+                    </div>
+                  </div>
                   
             </div>
             
@@ -645,7 +653,35 @@ fácilmente tu inventario
 <script src="js/semantic.min.js"></script>
 <script type="text/javascript" src="js/moment.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/nouislider.min.js"></script>
 
+<!--Range script-->
+  <script type="text/javascript">
+   var html5Slider = document.getElementById('html5');
+
+  var input1 = document.getElementById('input-with-keypress-1');
+  var inputs = [input1];
+
+noUiSlider.create(html5Slider, {
+  start: [ 60 ],
+
+  range: {
+    'min': 50,
+    'max': 200
+    }
+  });
+  html5Slider.noUiSlider.on('update', function( values, handle ) {
+    inputs[handle].value = values[handle];
+  });
+  function setSliderHandle(i, value) {
+  var r = [null,null];
+  r[i] = value;
+  html5Slider.noUiSlider.set(r);
+}
+
+
+
+  </script>
    <script>
   $(document)
     .ready(function() {
