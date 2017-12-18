@@ -423,6 +423,7 @@ textarea::selection, input::selection { color:$softGrey;}
 	@include font-weight-light;
 	}
 
+
 /*Buscador principal*/
 .main-search {
      height: 89px;
@@ -464,6 +465,7 @@ textarea::selection, input::selection { color:$softGrey;}
     text-overflow: ellipsis;
     background: transparent;
 	}
+
 .main-search .ui.button span {}
 .main-search .ui.button:hover {
 	background: transparent;
@@ -497,7 +499,7 @@ textarea::selection, input::selection { color:$softGrey;}
 	@include btnStorableMain($menta, #fff, #fff);
 	font-size: $size18px;
 	&:hover {
-		@include btnStorableMain($darkmenta, $darkmenta, #fff);
+		@include btnStorableMain($menta, $menta, #fff);
 		}
 	}
 
@@ -532,10 +534,10 @@ textarea::selection, input::selection { color:$softGrey;}
 	  @include btnStorable($menta,$menta,#fff);
 	  font-size: $size14px;
 	  &:hover {
-		@include btnStorableMain($darkmenta, $darkmenta, #fff);
+		@include btnStorableMain($menta, $menta, #fff);
 		}
 		&:focus {
-		@include btnStorableMain($darkmenta, $darkmenta, #fff);
+		@include btnStorableMain($menta, $menta, #fff);
 		}
 	}
 
@@ -567,6 +569,25 @@ textarea::selection, input::selection { color:$softGrey;}
 	    padding-bottom: 0;
 	}
 .calendar-storable .input-group  { width: 100%}
+.calendar-storable input {
+color:$darkGrey;}
+.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu.top:after, .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {display:none}
+.calendar-storable .bootstrap-datetimepicker-widget {    top: 0 !important;
+bottom: auto !important; box-shadow: inset 3px 10px 19px -15px rgba(0, 0, 0, 0.4);}
+.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
+    width: 29.1em;    border-radius: 0 0 4px 4px; border:0  none}
+.calendar-storable .table-condensed > thead > tr > th, .calendar-storable .table-condensed > tbody > tr > th, .calendar-storable .table-condensed > tfoot > tr > th, .calendar-storable .table-condensed > thead > tr > td, .calendar-storable .table-condensed > tbody > tr > td, .calendar-storable .table-condensed > tfoot > tr > td
+{color:$softGrey;} 
+.calendar-storable  .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {display: none}
+.calendar-storable .bootstrap-datetimepicker-widget table td.today:before {display: none}
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover
+{color:#fff;   background: url(../images/calendar-hover.svg) no-repeat center  !important;}
+.calendar-storable .bootstrap-datetimepicker-widget table td.day {line-height: 16px;}
+.calendar-storable .bootstrap-datetimepicker-widget table td.active, .calendar-storable .bootstrap-datetimepicker-widget table td.active:hover
+.calendar-storable .bootstrap-datetimepicker-widget table td.active.today:before {display: none} 
+.calendar-storable .bootstrap-datetimepicker-widget table thead tr:first-child th {color:$darkGrey;}
+.calendar-storable .picker-switch.accordion-toggle { display:none}
+.calendar-storable  .glyphicon {font-weight: 100;    font-size: $size8px;}
 .calendar-storable  .input-group-addon 
 	{
 	    padding: 6px 12px;
@@ -606,7 +627,23 @@ textarea::selection, input::selection { color:$softGrey;}
 .calendar-storable .table-condensed>tfoot>tr>td {
 		    padding: 7px;
 	}
-
+/*Placeholder styles*/
+.calendar-storable input::-webkit-input-placeholder, .calendar-storable textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $darkGrey !important;
+  font-size: $size18px;
+}
+.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder  { /* Firefox 19+ */
+  color: $darkGrey !important;
+  font-size: $size18px;
+}
+.calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder { /* IE 10+ */
+  color: $darkGrey !important;
+  font-size: $size18px;
+}
+.calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder { /* Firefox 18- */
+  color: $darkGrey !important;
+  font-size: $size18px;
+}
 
 /*Selección mt2*/
 .size-control{}
@@ -744,7 +781,7 @@ footer {
     transition: all 0.4s;
 	@include btnStorable ($menta, $menta, #fff);
 		 &:hover {
-		@include btnStorable($darkmenta, $darkmenta, #fff);
+		@include btnStorable($menta, $menta, #fff);
 		}
 
 	}

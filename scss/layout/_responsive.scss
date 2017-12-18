@@ -485,6 +485,13 @@
         padding: 0 15px 30px 15px;	
 	}
 	#col-left p {margin-bottom: 10px; font-size: $size14px;}
+	.calendar-storable .bootstrap-datetimepicker-widget {
+    top: 43px !important;
+    left: 0px !important;
+	}
+	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
+    width: 23em;}
+    .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
 
 }
 
@@ -515,6 +522,7 @@
 	.navbar-right {
     float: right !important;
 	}
+
 	.btn-info {
 	    padding: 10px 54px;
 	}	 
@@ -528,7 +536,7 @@
 	margin-left: 30px;
 	@include font-weight-light;
 		&:hover {
-			@include btnStorable(#fff, #fff, $azulStorable) ;
+			@include btnStorable(#66b4f0, #66b4f0,$azulStorable) ;
 		}
 	
 	}
@@ -556,7 +564,7 @@
 	}
     .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     	background-size: 97px 31px;
-		    width: 97px;
+		    width: 145px;
 	}
 	.navbar-brand {    width: 103px;background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
 	background-size: 97px 31px;}
@@ -682,10 +690,11 @@
     	left: -1px !important;
    		 width: 238px;
 	}
+
 	.main-search .ui.popup {
    		top: 58px !important;
     	left: -138px !important;
-	    left: -42px !important;
+	    left: 0px !important;
     	width: 281px;
 	}
 	#layout-int .main-search .ui.grid { 
@@ -812,16 +821,16 @@
     }
     .lead-banner p.details {
     	margin: 0;
-    	font-size: $size14px;
+    	font-size: $size12px;
     	    line-height: 19px;
     }
     .lead-banner .counter {
-    font-size: 5.5rem;
+    font-size: 5.2rem;
 	}
 	.lead-banner  .btn {margin-bottom:0}
 	/*Placeholder styles*/
 	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: $softGrey !important;
+	  color: $softGrey ;
 	  font-size: 13px !important;
 	}
 	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
@@ -1146,6 +1155,15 @@
         padding: 0 57px 30px 27px;	
 	}
 	#col-left p {margin-bottom: 20px; font-size: $size14px;}
+	.calendar-storable input {font-size:$size12px;
+	}
+	.calendar-storable .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -18px !important;
+	}
+	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 10px;
+        width: 18.1em;}
+        .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: 11px}
 }
 
 
@@ -1223,7 +1241,8 @@
 		color:$azulStorable !important;
 		}
 	.main-search {    top: -163px;}	
-	
+	.main-search .ui.bottom.left.popup{ width: 178% !important;}
+	.main-search .ui.grid { width: 105.3%  !important;}
 	#navbar .ui.dropdown .menu {left:-363% !important; width:200px !important;
 		    top: 162% !important;
 		}
@@ -1233,7 +1252,7 @@
 	    height: 1.2em;}
 	#navbar .ui.dropdown .menu{ 
 	    padding:9px 0 }
-	#navbar .ui.dropdown .menu > .item {font-size: $size14px; padding: $padding20 !important}
+	#navbar .ui.dropdown .menu > .item {font-size: $size14px; padding: 13px 20px  !important;margin: 12px 0;}
 	#navbar  .ui.dropdown .menu > .item:hover {
 		background: $highlight;
 	    color: $azulStorable;
@@ -1312,7 +1331,7 @@
 	padding: 16px 0 2px;}
 	.main-search .line {    height: 89px;}
   	.main-search .ui.button { font-size:$size18px;padding: 10px 0 11px;}
-  	.main-search .btn-lg {padding: 10px 43px;}
+  	.main-search .btn-lg {padding: 10px 43px; width:136px; margin:0 auto;display: block}
   	.main-search label { 
   		padding-top: 0;
    		margin-bottom: 0;
@@ -1320,7 +1339,7 @@
 	}
 	.main-search .form-group-last
 	{
-	padding: 24px 0 20px 20px
+	padding: 24px 0 20px 0
 	}
 	#layout-int .main-search .ui.popup {
 	    top: 50px !important;
@@ -1369,6 +1388,7 @@
 	#layout-int .push-jumbotron{     padding-top: 145px !important;}
 	.jumbotron .swiper-slide .subtitle {
 	  font-size: $size40px;
+	  line-height: 43px;
 	}
 	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination { left:0 !important;     top: 14% !important;
     width: 8px;}
@@ -1415,7 +1435,7 @@
 	}
 	section.card-lead {
     margin-bottom: 130px;
-    margin-top: 130px;
+    margin-top: 90px;
 	}
 	section.card-lead h2.copy {
 	font-size: $size30px;}
@@ -1477,7 +1497,7 @@
     	 width: 100%;
     	     line-height: 36px;
     }
-    .lead-banner p.details {    padding: 0 27px;} 
+    .lead-banner p.details {    padding: 0 27px;font-size: $size12px;} 
 	.card-slider .swiper-slide {   
 	  width: 360px !important;
 	  height: 280px;
@@ -1669,7 +1689,20 @@
         padding: 0 57px 30px 27px;	
 	}
 	#col-left p {margin-bottom: 40px; font-size: $size18px;}
+	.lead-banner .counter {
+    font-size: 5rem;
+	}
+	.calendar-storable input {font-size:$size18px;
+	}
+	.calendar-storable .bootstrap-datetimepicker-widget {
+    top: 51px !important;
+    left: -15px !important;
+	}
+	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
+    width: 27.8em;}
+    .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
 }
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {

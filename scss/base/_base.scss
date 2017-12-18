@@ -194,7 +194,8 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	font-family: $fuente-botones;
 	@include font-weight-light;
 	&:hover {
-		text-decoration: none
+		text-decoration: none;
+		color:$azulStorable;
 	}
 }
 .spacer-aside {height: 73px}
@@ -226,8 +227,11 @@ h4.subtitle-section {font-family: $fuente-titulos;
 
 /*Redes sociales*/
 a.selected svg .list, a.selected  svg .places,
-a svg:hover #facebook, a svg:hover .list, a svg:hover .places,
-a svg:hover #instagram,  svg:hover #twitter { 
+a svg:hover #facebook {fill:#4A659F}
+a svg:hover #instagram {fill:#D23690}
+a svg:hover #twitter {fill:#1DA1F2}
+a svg:hover .list, a svg:hover .places,
+{ 
   fill: $azulStorable;
 }
 a svg #facebook, a svg #twitter,

@@ -67,7 +67,7 @@
   border: 1px solid $borderColor;
   color:$color;
   &:hover {
-    background:darken( $bg, 10% );
+    background:darken( $bg, 2% );
     transition: all 0.3s ease;
   }
   &:active {

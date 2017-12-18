@@ -270,7 +270,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   border: 1px solid #00d4b8;
   color: #fff; }
   .btn-primary:hover {
-    background: #00a18c;
+    background: #00caaf;
     transition: all 0.3s ease; }
   .btn-primary:active {
     background: #00d4b8; }
@@ -282,7 +282,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   font-size: 18px;
   padding: 10px 54px; }
   .btn-primary:focus:hover, .btn-primary:hover:hover {
-    background: #008574;
+    background: #00ae97;
     transition: all 0.3s ease; }
   .btn-primary:focus:active, .btn-primary:hover:active {
     background: #00b8a0; }
@@ -294,7 +294,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   font-size: 18px;
   color: #fff !important; }
   .btn-info:hover {
-    background: #0162b2;
+    background: #0178db;
     transition: all 0.3s ease; }
   .btn-info:active {
     background: #017ee5; }
@@ -305,7 +305,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   border: 1px solid #f15e5e;
   color: #fff; }
   .btn-danger:hover {
-    background: #ed2f2f;
+    background: #f05555;
     transition: all 0.3s ease; }
   .btn-danger:active {
     background: #f15e5e; }
@@ -349,7 +349,8 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   font-family: "Proxima_nova_light", sans-serif;
   font-weight: 100; }
   .link-main:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #017ee5; }
 
 .spacer-aside {
   height: 73px; }
@@ -394,8 +395,16 @@ h4.subtitle-section {
 
 /*Redes sociales*/
 a.selected svg .list, a.selected svg .places,
-a svg:hover #facebook, a svg:hover .list, a svg:hover .places,
-a svg:hover #instagram, svg:hover #twitter {
+a svg:hover #facebook {
+  fill: #4A659F; }
+
+a svg:hover #instagram {
+  fill: #D23690; }
+
+a svg:hover #twitter {
+  fill: #1DA1F2; }
+
+a svg:hover .list, a svg:hover .places {
   fill: #017ee5; }
 
 a svg #facebook, a svg #twitter,
@@ -860,7 +869,7 @@ section.card-lead .btn {
   border: 1px solid #fff;
   color: #fff; }
   section.card-lead .btn:hover {
-    background: #00a18c;
+    background: #00caaf;
     transition: all 0.3s ease; }
   section.card-lead .btn:active {
     background: #00d4b8; }
@@ -1185,19 +1194,19 @@ textarea::selection, input::selection {
   color: #fff;
   font-size: 18px; }
   .main-search .btn:hover {
-    background: #00a18c;
+    background: #00caaf;
     transition: all 0.3s ease; }
   .main-search .btn:active {
     background: #00d4b8; }
   .main-search .btn:hover {
-    background: #00b8a0;
-    border: 1px solid #00b8a0;
+    background: #00d4b8;
+    border: 1px solid #00d4b8;
     color: #fff; }
     .main-search .btn:hover:hover {
-      background: #008574;
+      background: #00caaf;
       transition: all 0.3s ease; }
     .main-search .btn:hover:active {
-      background: #00b8a0; }
+      background: #00d4b8; }
 
 .main-search .ui.bottom.left.popup:before {
   display: none; }
@@ -1249,23 +1258,23 @@ textarea::selection, input::selection {
   color: #fff !important;
   font-size: 14px; }
   .main-search .column .btn.btn-primary:hover {
-    background: #00b8a0;
-    border: 1px solid #00b8a0;
+    background: #00d4b8;
+    border: 1px solid #00d4b8;
     color: #fff; }
     .main-search .column .btn.btn-primary:hover:hover {
-      background: #008574;
+      background: #00caaf;
       transition: all 0.3s ease; }
     .main-search .column .btn.btn-primary:hover:active {
-      background: #00b8a0; }
+      background: #00d4b8; }
   .main-search .column .btn.btn-primary:focus {
-    background: #00b8a0;
-    border: 1px solid #00b8a0;
+    background: #00d4b8;
+    border: 1px solid #00d4b8;
     color: #fff; }
     .main-search .column .btn.btn-primary:focus:hover {
-      background: #008574;
+      background: #00caaf;
       transition: all 0.3s ease; }
     .main-search .column .btn.btn-primary:focus:active {
-      background: #00b8a0; }
+      background: #00d4b8; }
 
 .main-search .column .btn.btn-info {
   background: #e6e6e6;
@@ -1278,7 +1287,7 @@ textarea::selection, input::selection {
     border: 1px solid #e6e6e6;
     color: #e6e6e6; }
     .main-search .column .btn.btn-info:hover:hover {
-      background: #cdcdcd;
+      background: #e1e1e1;
       transition: all 0.3s ease; }
     .main-search .column .btn.btn-info:hover:active {
       background: #e6e6e6; }
@@ -1312,6 +1321,52 @@ textarea::selection, input::selection {
 
 .calendar-storable .input-group {
   width: 100%; }
+
+.calendar-storable input {
+  color: #303336; }
+
+.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu.top:after, .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+  display: none; }
+
+.calendar-storable .bootstrap-datetimepicker-widget {
+  top: 0 !important;
+  bottom: auto !important;
+  box-shadow: inset 3px 10px 19px -15px rgba(0, 0, 0, 0.4); }
+
+.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 30px;
+  width: 29.1em;
+  border-radius: 0 0 4px 4px;
+  border: 0  none; }
+
+.calendar-storable .table-condensed > thead > tr > th, .calendar-storable .table-condensed > tbody > tr > th, .calendar-storable .table-condensed > tfoot > tr > th, .calendar-storable .table-condensed > thead > tr > td, .calendar-storable .table-condensed > tbody > tr > td, .calendar-storable .table-condensed > tfoot > tr > td {
+  color: #9fa2a2; }
+
+.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+  display: none; }
+
+.calendar-storable .bootstrap-datetimepicker-widget table td.today:before {
+  display: none; }
+
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover {
+  color: #fff;
+  background: url(../images/calendar-hover.svg) no-repeat center !important; }
+
+.calendar-storable .bootstrap-datetimepicker-widget table td.day {
+  line-height: 16px; }
+
+.calendar-storable .bootstrap-datetimepicker-widget table td.active, .calendar-storable .bootstrap-datetimepicker-widget table td.active:hover .calendar-storable .bootstrap-datetimepicker-widget table td.active.today:before {
+  display: none; }
+
+.calendar-storable .bootstrap-datetimepicker-widget table thead tr:first-child th {
+  color: #303336; }
+
+.calendar-storable .picker-switch.accordion-toggle {
+  display: none; }
+
+.calendar-storable .glyphicon {
+  font-weight: 100;
+  font-size: 8px; }
 
 .calendar-storable .input-group-addon {
   padding: 6px 12px;
@@ -1351,6 +1406,27 @@ textarea::selection, input::selection {
 .calendar-storable .table-condensed > tbody > tr > td,
 .calendar-storable .table-condensed > tfoot > tr > td {
   padding: 7px; }
+
+/*Placeholder styles*/
+.calendar-storable input::-webkit-input-placeholder, .calendar-storable textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #303336 !important;
+  font-size: 18px; }
+
+.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #303336 !important;
+  font-size: 18px; }
+
+.calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #303336 !important;
+  font-size: 18px; }
+
+.calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #303336 !important;
+  font-size: 18px; }
 
 /*Selección mt2*/
 /*destacado*/
@@ -1487,8 +1563,8 @@ footer .brand-footer {
   border: 1px solid #00d4b8;
   color: #fff !important; }
   .modal-content .btn-primary:hover {
-    background: #00b8a0;
-    border: 1px solid #00b8a0;
+    background: #00d4b8;
+    border: 1px solid #00d4b8;
     color: #fff !important; }
 
 .modal-content .btn-info {
@@ -1499,7 +1575,7 @@ footer .brand-footer {
   border: 1px solid #017ee5;
   color: #fff; }
   .modal-content .btn-info:hover {
-    background: #0162b2;
+    background: #0178db;
     transition: all 0.3s ease; }
   .modal-content .btn-info:active {
     background: #017ee5; }
@@ -1508,7 +1584,7 @@ footer .brand-footer {
     border: 1px solid #e6e6e6;
     color: #e6e6e6; }
     .modal-content .btn-info:hover:hover {
-      background: #cdcdcd;
+      background: #e1e1e1;
       transition: all 0.3s ease; }
     .modal-content .btn-info:hover:active {
       background: #e6e6e6; }
@@ -1776,7 +1852,7 @@ footer .brand-footer {
   padding: 20px 0;
   background: url(../images/search-ico.svg) no-repeat right 50% !important; }
   .main-search .filter-movil .btn:hover {
-    background: #e6e6e6;
+    background: #fafafa;
     transition: all 0.3s ease; }
   .main-search .filter-movil .btn:active {
     background: #fff; }
@@ -3315,6 +3391,14 @@ section.card-steps .popover {
     padding: 0 15px 30px 15px; }
   #col-left p {
     margin-bottom: 10px;
+    font-size: 14px; }
+  .calendar-storable .bootstrap-datetimepicker-widget {
+    top: 43px !important;
+    left: 0px !important; }
+  .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 30px;
+    width: 23em; }
+  .calendar-storable .bootstrap-datetimepicker-widget table td.day {
     font-size: 14px; } }
 
 /*  Tablets */
@@ -3351,8 +3435,8 @@ section.card-steps .popover {
     margin-left: 30px;
     font-weight: 100; }
     nav.navbar .btn:hover {
-      background: #fff;
-      border: 1px solid #fff;
+      background: #66b4f0;
+      border: 1px solid #66b4f0;
       color: #017ee5 !important; }
   .navbar-collapse .nav-pills {
     margin-top: 6px; }
@@ -3384,7 +3468,7 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     background-size: 97px 31px;
-    width: 97px; }
+    width: 145px; }
   .navbar-brand {
     width: 103px;
     background: url(../images/storable-horizontal-blanco-plano.svg) no-repeat;
@@ -3514,7 +3598,7 @@ section.card-steps .popover {
   .main-search .ui.popup {
     top: 58px !important;
     left: -138px !important;
-    left: -42px !important;
+    left: 0px !important;
     width: 281px; }
   #layout-int .main-search .ui.grid {
     width: 111% !important;
@@ -3629,16 +3713,16 @@ section.card-steps .popover {
     width: 89%; }
   .lead-banner p.details {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 19px; }
   .lead-banner .counter {
-    font-size: 5.5rem; }
+    font-size: 5.2rem; }
   .lead-banner .btn {
     margin-bottom: 0; }
   /*Placeholder styles*/
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #9fa2a2 !important;
+    color: #9fa2a2;
     font-size: 13px !important; }
   input::-moz-placeholder, textarea::-moz-placeholder {
     /* Firefox 19+ */
@@ -4033,7 +4117,17 @@ section.card-steps .popover {
     padding: 0 57px 30px 27px; }
   #col-left p {
     margin-bottom: 20px;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .calendar-storable input {
+    font-size: 12px; }
+  .calendar-storable .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -18px !important; }
+  .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    width: 18.1em; }
+  .calendar-storable .bootstrap-datetimepicker-widget table td.day {
+    font-size: 11px; } }
 
 /* Medium Devices, Desktops */
 @media (min-width: 980px) {
@@ -4114,6 +4208,10 @@ section.card-steps .popover {
     color: #017ee5 !important; }
   .main-search {
     top: -163px; }
+  .main-search .ui.bottom.left.popup {
+    width: 178% !important; }
+  .main-search .ui.grid {
+    width: 105.3%  !important; }
   #navbar .ui.dropdown .menu {
     left: -363% !important;
     width: 200px !important;
@@ -4131,7 +4229,8 @@ section.card-steps .popover {
     padding: 9px 0; }
   #navbar .ui.dropdown .menu > .item {
     font-size: 14px;
-    padding: 20px !important; }
+    padding: 13px 20px  !important;
+    margin: 12px 0; }
   #navbar .ui.dropdown .menu > .item:hover {
     background: #f5f5f5;
     color: #017ee5; }
@@ -4209,13 +4308,16 @@ section.card-steps .popover {
     font-size: 18px;
     padding: 10px 0 11px; }
   .main-search .btn-lg {
-    padding: 10px 43px; }
+    padding: 10px 43px;
+    width: 136px;
+    margin: 0 auto;
+    display: block; }
   .main-search label {
     padding-top: 0;
     margin-bottom: 0;
     font-size: 14px; }
   .main-search .form-group-last {
-    padding: 24px 0 20px 20px; }
+    padding: 24px 0 20px 0; }
   #layout-int .main-search .ui.popup {
     top: 50px !important;
     left: 0 !important;
@@ -4265,7 +4367,8 @@ section.card-steps .popover {
   #layout-int .push-jumbotron {
     padding-top: 145px !important; }
   .jumbotron .swiper-slide .subtitle {
-    font-size: 40px; }
+    font-size: 40px;
+    line-height: 43px; }
   .swiperIntro-inverse.swiper-container-horizontal .swiper-pagination {
     left: 0 !important;
     top: 14% !important;
@@ -4316,7 +4419,7 @@ section.card-steps .popover {
     font-size: 1.27rem; }
   section.card-lead {
     margin-bottom: 130px;
-    margin-top: 130px; }
+    margin-top: 90px; }
   section.card-lead h2.copy {
     font-size: 30px; }
   section.card-lead .card-image {
@@ -4382,7 +4485,8 @@ section.card-steps .popover {
     width: 100%;
     line-height: 36px; }
   .lead-banner p.details {
-    padding: 0 27px; }
+    padding: 0 27px;
+    font-size: 12px; }
   .card-slider .swiper-slide {
     width: 360px !important;
     height: 280px;
@@ -4624,7 +4728,19 @@ section.card-steps .popover {
     padding: 0 57px 30px 27px; }
   #col-left p {
     margin-bottom: 40px;
-    font-size: 18px; } }
+    font-size: 18px; }
+  .lead-banner .counter {
+    font-size: 5rem; }
+  .calendar-storable input {
+    font-size: 18px; }
+  .calendar-storable .bootstrap-datetimepicker-widget {
+    top: 51px !important;
+    left: -15px !important; }
+  .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 30px;
+    width: 27.8em; }
+  .calendar-storable .bootstrap-datetimepicker-widget table td.day {
+    font-size: 14px; } }
 
 /* Large Devices, Wide Screens */
 .jumbotron .swiper-container-vertical > .swiper-pagination-bullets {
