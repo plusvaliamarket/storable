@@ -159,6 +159,9 @@ h3.sub-title {
 .hr-min {
   margin-bottom: 20px !important; }
 
+.row-centered {
+  margin: 0 auto !important; }
+
 /*FORMS*/
 /*Placeholder styles*/
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -697,9 +700,9 @@ section.card-thumb {
     height: auto !important; }
 
 h4.card-title {
-  font-family: "Proxima_nova_bold", sans-serif;
+  font-family: "Proxima_nova_regular", sans-serif;
   color: #303336;
-  font-weight: 800;
+  font-weight: 300;
   margin-top: 0px;
   width: 100%;
   overflow: hidden;
@@ -1410,21 +1413,6 @@ textarea::selection, input::selection {
 /*Placeholder styles*/
 .calendar-storable input::-webkit-input-placeholder, .calendar-storable textarea::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #303336 !important;
-  font-size: 18px; }
-
-.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #303336 !important;
-  font-size: 18px; }
-
-.calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #303336 !important;
-  font-size: 18px; }
-
-.calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder {
-  /* Firefox 18- */
   color: #303336 !important;
   font-size: 18px; }
 
@@ -3259,7 +3247,7 @@ section.card-steps .popover {
   table#addStock .form-group .ui.checkbox label {
     font-size: 14px !important; }
   .link-main {
-    font-size: 12px; }
+    font-size: 14px; }
   #ModalFiltro .ui.search.dropdown {
     font-size: 14px; }
   table#addStock tr td, table#addStock tr td table tr td {
@@ -3427,6 +3415,8 @@ section.card-steps .popover {
     padding: 10px 54px; }
   .navbar-collapse .nav-pills li a {
     font-size: 14px; }
+  .navbar > .container .navbar-brand {
+    margin-left: 0; }
   nav.navbar .btn {
     font-family: "Proxima_nova_light", sans-serif;
     background: #017ee5;
@@ -3437,7 +3427,7 @@ section.card-steps .popover {
     nav.navbar .btn:hover {
       background: #66b4f0;
       border: 1px solid #66b4f0;
-      color: #017ee5 !important; }
+      color: #fff !important; }
   .navbar-collapse .nav-pills {
     margin-top: 6px; }
   nav.navbar .navbar-header {
@@ -3458,7 +3448,7 @@ section.card-steps .popover {
   .navbar-collapse {
     background: none; }
   .link-main {
-    font-size: 14px; }
+    font-size: 18px; }
   nav.navbar .btn {
     padding: 5px 18px;
     font-size: 12px; }
@@ -3688,7 +3678,7 @@ section.card-steps .popover {
     font-size: 10rem;
     left: 48%; }
   section.card-steps p {
-    width: 68%; }
+    width: 87%; }
   #layout-int section.card-steps p {
     width: 80%; }
   section.card-steps .card-item {
@@ -3706,11 +3696,12 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .number-counter {
     height: 112.3px;
-    padding-right: 3.125rem;
+    padding-right: 0;
     border-right: 1px solid #fff; }
   .lead-banner h2.copy {
     font-size: 3rem;
-    width: 89%; }
+    width: 89%;
+    line-height: 35px; }
   .lead-banner p.details {
     margin: 0;
     font-size: 12px;
@@ -3791,7 +3782,7 @@ section.card-steps .popover {
     margin-bottom: 44px; }
   #layout-int .ui.button {
     font-size: 10px;
-    padding: 12px 0; }
+    padding: 10px 0; }
   #layout-int .push-jumbotron {
     padding-top: 103px !important; }
   /*Placeholder styles*/
@@ -4142,6 +4133,8 @@ section.card-steps .popover {
   h4.subtitle-section {
     font-size: 40px;
     margin-bottom: 40px; }
+  .row-centered {
+    max-width: 832px; }
   .link-main {
     font-size: 20px; }
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -4165,7 +4158,7 @@ section.card-steps .popover {
     height: 70px;
     padding: 10px; }
   nav.navbar .btn {
-    padding: 7px 20px;
+    padding: 4px 20px;
     font-size: 14px; }
   nav.navbar.shrink .navbar-brand {
     background: url(../images/logo-storable.svg) no-repeat;
@@ -4209,9 +4202,9 @@ section.card-steps .popover {
   .main-search {
     top: -163px; }
   .main-search .ui.bottom.left.popup {
-    width: 178% !important; }
+    width: 160% !important; }
   .main-search .ui.grid {
-    width: 105.3%  !important; }
+    width: 105.2%  !important; }
   #navbar .ui.dropdown .menu {
     left: -363% !important;
     width: 200px !important;
@@ -4250,19 +4243,43 @@ section.card-steps .popover {
   /*Placeholder styles*/
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #9fa2a2 !important;
-    font-size: 18px !important; }
+    color: #9fa2a2;
+    font-size: 18px; }
   input::-moz-placeholder, textarea::-moz-placeholder {
     /* Firefox 19+ */
-    color: #9fa2a2 !important;
-    font-size: 18px !important; }
+    color: #9fa2a2;
+    font-size: 18px; }
   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     /* IE 10+ */
     color: #9fa2a2 !important;
-    font-size: 18px !important; }
+    font-size: 18px; }
   input:-moz-placeholder, textarea:-moz-placeholder {
     /* Firefox 18- */
     color: #9fa2a2 !important;
+    font-size: 18px; }
+  .calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #303336 !important;
+    font-size: 18px !important; }
+  .calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #303336 !important;
+    font-size: 18px !important; }
+  .calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #303336 !important;
+    font-size: 18px !important; }
+  #layout-int .calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #303336 !important;
+    font-size: 14px !important; }
+  #layout-int .calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #303336 !important;
+    font-size: 14px !important; }
+  #layout-int .calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #303336 !important;
     font-size: 18px !important; }
   .card-container .check {
     background: url(../images/check.svg) no-repeat 0 0;
@@ -4309,8 +4326,8 @@ section.card-steps .popover {
     padding: 10px 0 11px; }
   .main-search .btn-lg {
     padding: 10px 43px;
-    width: 136px;
-    margin: 0 auto;
+    width: 141px;
+    margin: 0 10px 0 auto;
     display: block; }
   .main-search label {
     padding-top: 0;
@@ -4453,7 +4470,7 @@ section.card-steps .popover {
     overflow: hidden;
     margin-bottom: 80px; }
   section.card-steps h4.card-title, section.content-2col h4.card-title {
-    font-family: "Proxima_nova_regular", sans-serif;
+    font-family: "Proxima_nova_light", sans-serif;
     font-size: 20px;
     color: #303336;
     font-weight: 100;
@@ -4508,11 +4525,11 @@ section.card-steps .popover {
     height: 57px;
     margin-bottom: 40px; }
   #layout-int .main-search .calendar-storable .form-group {
-    padding: 6px 0 9px 20px; }
+    padding: 8px 0 7px 20px; }
   #layout-int .main-search .line {
     height: 57px; }
   #layout-int .main-search .form-group {
-    padding: 13px 0 13px 20px; }
+    padding: 11px 0 13px 20px; }
   .ui.search.dropdown > .text {
     font-size: 18px;
     color: #303336 !important; }

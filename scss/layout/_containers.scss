@@ -27,10 +27,10 @@ section.card-thumb {
   	}
 }
 h4.card-title { 
-		font-family: $fuente-titulos;
+		font-family:$fuente-principal;
  	
   		color: $darkGrey;
-  		@include font-weight-bold;
+  		@include font-weight-normal;
   		  		margin-top: $marginTopNull;
 
     	width: 100%;
@@ -632,18 +632,7 @@ bottom: auto !important; box-shadow: inset 3px 10px 19px -15px rgba(0, 0, 0, 0.4
   color: $darkGrey !important;
   font-size: $size18px;
 }
-.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder  { /* Firefox 19+ */
-  color: $darkGrey !important;
-  font-size: $size18px;
-}
-.calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder { /* IE 10+ */
-  color: $darkGrey !important;
-  font-size: $size18px;
-}
-.calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder { /* Firefox 18- */
-  color: $darkGrey !important;
-  font-size: $size18px;
-}
+
 
 /*Selección mt2*/
 .size-control{}

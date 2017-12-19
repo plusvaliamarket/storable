@@ -388,7 +388,7 @@
     font-size: $size14px !important;
 	}  
 	.link-main {
-    font-size: $size12px;
+    font-size: $size14px;
 	}
 	#ModalFiltro .ui.search.dropdown {
 		font-size: $size14px;}
@@ -500,6 +500,7 @@
 /*  Tablets */
 @media  (min-width : 768px) {
 	aside table { table-layout: fixed;}
+
 	h3.sub-title  {font-size: $size20px;margin-bottom: $marginBottom30;}
 	.btn-danger {
 
@@ -530,13 +531,14 @@
 	font-size: $size14px;
 
 	}
+	.navbar > .container .navbar-brand {margin-left:0}
 	nav.navbar .btn {
 	font-family: $fuente-botones; 	
 	@include btnStorable($azulStorable, #fff, #fff);
 	margin-left: 30px;
 	@include font-weight-light;
 		&:hover {
-			@include btnStorable(#66b4f0, #66b4f0,$azulStorable) ;
+			@include btnStorable(#66b4f0, #66b4f0, #fff) ;
 		}
 	
 	}
@@ -552,7 +554,7 @@
 		{color:$darkGrey;}
 	.navbar-collapse {background: none}
 	.link-main {
-	font-size: $size14px;}	
+	font-size: $size18px;}	
 
 	nav.navbar .btn{padding: 5px 18px;font-size: $size12px;}
 
@@ -796,7 +798,7 @@
     	font-size: 10rem;
     	left: 48%;
 	}
-	section.card-steps p {width: 68%;}
+	section.card-steps p {width: 87%;}
 	#layout-int section.card-steps p {width: 80%;}
 	section.card-steps .card-item {margin-top: 20px; margin-bottom: 0}
 	section.card-slider-small h4{
@@ -812,12 +814,13 @@
 	.lead-banner .col-centered h2.copy { width: 100%; font-size: 30px;    margin-bottom: 30px;}
     .number-counter {
     	height: 112.3px;
-    	 padding-right: 3.125rem;
+    	 padding-right: 0;
     	 border-right:1px solid #fff;
 	}
     .lead-banner h2.copy {
     	font-size: 3rem;
     	 width: 89%;
+    	 line-height: 35px;
     }
     .lead-banner p.details {
     	margin: 0;
@@ -901,7 +904,7 @@
 	}
 	#layout-int .ui.button {
 		font-size: $size10px;
-		    padding: 12px 0;
+		    padding: 10px 0;
 	}
 	#layout-int .push-jumbotron{     padding-top: 103px !important;}
 	/*Placeholder styles*/
@@ -1163,7 +1166,7 @@
 	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 10px;
         width: 18.1em;}
-        .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: 11px}
+    .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: 11px}
 }
 
 
@@ -1182,6 +1185,7 @@
 	h4.subtitle-section {font-size: $size40px;
 	margin-bottom: 40px;
 	}
+	.row-centered {max-width: 832px;}
 	.link-main {
 	font-size: $size20px;}	
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {margin-left: 0}
@@ -1200,7 +1204,7 @@
 	    font-size: $size14px;}
 	nav.navbar, nav.navbar.shrink   { height: 70px;
 	     padding: 10px;}
-	 nav.navbar .btn{padding: 7px 20px; font-size: $size14px;}
+	 nav.navbar .btn{padding: 4px 20px; font-size: $size14px;}
 	nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;
 	background-size: 130px 42px;}
 	h4.card-title { margin-bottom: $marginBottom30;}
@@ -1241,8 +1245,8 @@
 		color:$azulStorable !important;
 		}
 	.main-search {    top: -163px;}	
-	.main-search .ui.bottom.left.popup{ width: 178% !important;}
-	.main-search .ui.grid { width: 105.3%  !important;}
+	.main-search .ui.bottom.left.popup{ width: 160% !important;}
+	.main-search .ui.grid { width:105.2%  !important;}
 	#navbar .ui.dropdown .menu {left:-363% !important; width:200px !important;
 		    top: 162% !important;
 		}
@@ -1274,21 +1278,53 @@
 	}
 			/*Placeholder styles*/
 	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: $softGrey !important;
-	   font-size: $size18px !important;
+	  color: $softGrey ;
+	   font-size: $size18px ;
 	}
 	input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
-	  color: $softGrey !important;
-	  font-size: $size18px !important;
+	  color: $softGrey ;
+	  font-size: $size18px ;
 	}
 	input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
 	  color: $softGrey !important;
-	  font-size: $size18px!important;
+	  font-size: $size18px;
 	}
 	input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	  color: $softGrey !important ;
+	  font-size: $size18px ;
+	}
+	.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder  { /* Firefox 19+ */
+  	color: $darkGrey !important;
+ 	 font-size: $size18px !important;
+	}
+	.calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder { /* IE 10+ */
+	  color: $darkGrey !important;
 	  font-size: $size18px !important;
 	}
+	.calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder { /* Firefox 18- */
+	  color: $darkGrey !important;
+	  font-size: $size18px !important;
+	}
+	
+	#layout-int .calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder  { /* Firefox 19+ */
+  	color: $darkGrey !important;
+ 	 font-size: $size14px !important;
+	}
+	#layout-int .calendar-storable input:-ms-input-placeholder, .calendar-storable textarea:-ms-input-placeholder { /* IE 10+ */
+	  color: $darkGrey !important;
+	  font-size: $size14px !important;
+	}
+	#layout-int .calendar-storable input:-moz-placeholder, .calendar-storable textarea:-moz-placeholder { /* Firefox 18- */
+	  color: $darkGrey !important;
+	  font-size: $size18px !important;
+	}
+
+	
+
+
+
+
+
 	.card-container .check {
   		 background:url(../images/check.svg) no-repeat 0 0;
   		 position: absolute;
@@ -1331,7 +1367,7 @@
 	padding: 16px 0 2px;}
 	.main-search .line {    height: 89px;}
   	.main-search .ui.button { font-size:$size18px;padding: 10px 0 11px;}
-  	.main-search .btn-lg {padding: 10px 43px; width:136px; margin:0 auto;display: block}
+  	.main-search .btn-lg {padding: 10px 43px; width:141px; margin:0 10px 0 auto;display: block}
   	.main-search label { 
   		padding-top: 0;
    		margin-bottom: 0;
@@ -1464,7 +1500,7 @@
 	.card-slider-container  .swiper-button-next, .card-slider-container  .swiper-button-prev { top: 30%}
 	section.content-2col .item-2col {overflow: hidden; margin-bottom: 80px}
 	section.card-steps h4.card-title, section.content-2col h4.card-title  {
-   		font-family: $fuente-principal;
+   		font-family: $fuente-label;
  		font-size: $size20px;
   		color: $darkGrey;
   		@include font-weight-light;
@@ -1518,10 +1554,10 @@
 	#layout-int .main-search {
     height: 57px; margin-bottom: $marginDefault;
 	}
-	 #layout-int .main-search .calendar-storable .form-group {padding: 6px 0 9px 20px;
+	 #layout-int .main-search .calendar-storable .form-group {padding: 8px 0 7px 20px;
 	}
 	#layout-int .main-search .line {     height: 57px;}
-	#layout-int .main-search .form-group {    padding: 13px 0 13px 20px; }
+	#layout-int .main-search .form-group {    padding: 11px 0 13px 20px; }
 	.ui.search.dropdown > .text {font-size: $size18px;color:$darkGrey !important;}
 	#layout-int .ui.search.dropdown > .text {
 	font-size: $size14px;
