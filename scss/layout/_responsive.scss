@@ -74,13 +74,13 @@
 	}
 	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {margin:7px 0}
 	
-	.jumbotron .swiper-slide .title { font-size:  2rem;
-	    width: 91%;
+	.jumbotron .swiper-slide .title { font-size:  2.4rem;
+	    width: 75%;
     	float: left;
 	}
 	.jumbotron .swiper-slide .subtitle {
-	  font-size: 2rem;
-	   width: 85%;
+	  font-size: 2.4rem;
+	   width: 78%;
 
 	}
 
@@ -194,7 +194,7 @@
 
 	}
 	.lead-banner .col-centered h2.copy { width: 100%; font-size: 30px}
-	.lead-banner p.details {font-size: $size12px;}
+	.lead-banner p.details {font-size: $size12px; line-height: 16px;}
 	.lead-banner h2.copy {
     	 width: 100%;
     	 font-size: 21px;
@@ -311,6 +311,7 @@
 	}
 	h4.card-title { 
 		font-size: 27px;
+		margin-bottom: 20px;
  	}
  	.navbar-right {
     float: none !important;
@@ -492,6 +493,7 @@
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 23em;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
+    section.card-slider-small .card-image img{ height: 99px}
 
 }
 
@@ -520,6 +522,7 @@
 	margin-bottom: 30px;
 	}
 	.m-r55 {margin-right:55px !important}
+	.navbar-header {height: 45px;}
 	.navbar-right {
     float: right !important;
 	}
@@ -531,7 +534,7 @@
 	font-size: $size14px;
 
 	}
-	.navbar > .container .navbar-brand {margin-left:0}
+	.navbar > .container .navbar-brand {margin-left:0;margin-top: 5px;}
 	nav.navbar .btn {
 	font-family: $fuente-botones; 	
 	@include btnStorable($azulStorable, #fff, #fff);
@@ -566,7 +569,7 @@
 	}
     .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     	background-size: 97px 31px;
-		    width: 145px;
+		    width: 123px;
 	}
 	.navbar-brand {    width: 103px;background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
 	background-size: 97px 31px;}
@@ -684,6 +687,7 @@
     border-radius: 0 !important;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15) !important;
     left: -14px;
+    width: 275px;
 	}
 	.main-search .ui.dropdown .menu .item 
 		{padding: 16px 20px !important; font-size: $size14px;}
@@ -716,7 +720,7 @@
 	section.card-slider-small-container .swiper-button-prev {
     	top: 36%;
 	}
-	section.card-slider-small .card-image img{ height: 115px}
+	section.card-slider-small .card-image img{ height: 115px !important}
 	section.card-slider {
     margin-bottom: 96px;
 	}
@@ -1293,6 +1297,11 @@
 	  color: $softGrey !important ;
 	  font-size: $size18px ;
 	}
+
+	.calendar-storable input::-webkit-input-placeholder, .calendar-storable textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $darkGrey !important ;
+	   font-size: $size18px !important ;
+	}
 	.calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder  { /* Firefox 19+ */
   	color: $darkGrey !important;
  	 font-size: $size18px !important;
@@ -1399,7 +1408,7 @@
 	    left:0 !important;
     	width: 281px;
 	}
-	.main-search .ui.floating.dropdown > .menu {
+	.main-search .ui.floating.dropdown > .menu { width: 440px;
 		top: 45px;}
 	#layout-int	.main-search .ui.floating.dropdown > .menu {
 		top: 37px;}

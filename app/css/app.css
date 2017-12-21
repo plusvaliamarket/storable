@@ -1359,7 +1359,8 @@ textarea::selection, input::selection {
   line-height: 16px; }
 
 .calendar-storable .bootstrap-datetimepicker-widget table td.active, .calendar-storable .bootstrap-datetimepicker-widget table td.active:hover .calendar-storable .bootstrap-datetimepicker-widget table td.active.today:before {
-  display: none; }
+  color: #fff !important;
+  background: url(../images/calendar-hover.svg) no-repeat center !important; }
 
 .calendar-storable .bootstrap-datetimepicker-widget table thead tr:first-child th {
   color: #303336; }
@@ -1472,7 +1473,7 @@ footer ul h5 {
 
 footer .social li {
   display: inline-block;
-  padding: 0 50px 0 0; }
+  padding: 0 23px 0 0; }
 
 footer .social li:last-child {
   padding: 0; }
@@ -2944,12 +2945,12 @@ section.card-steps .popover {
   .swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {
     margin: 7px 0; }
   .jumbotron .swiper-slide .title {
-    font-size: 2rem;
-    width: 91%;
+    font-size: 2.4rem;
+    width: 75%;
     float: left; }
   .jumbotron .swiper-slide .subtitle {
-    font-size: 2rem;
-    width: 85%; }
+    font-size: 2.4rem;
+    width: 78%; }
   .jumbotron .parallax-bg {
     background-size: 140%; }
   .main-search {
@@ -3050,7 +3051,8 @@ section.card-steps .popover {
     width: 100%;
     font-size: 30px; }
   .lead-banner p.details {
-    font-size: 12px; }
+    font-size: 12px;
+    line-height: 16px; }
   .lead-banner h2.copy {
     width: 100%;
     font-size: 21px; }
@@ -3163,7 +3165,8 @@ section.card-steps .popover {
     width: 78%;
     padding: 0 0 0 11px; }
   h4.card-title {
-    font-size: 27px; }
+    font-size: 27px;
+    margin-bottom: 20px; }
   .navbar-right {
     float: none !important; }
   .card-slider h4 {
@@ -3387,7 +3390,9 @@ section.card-steps .popover {
     padding: 30px;
     width: 23em; }
   .calendar-storable .bootstrap-datetimepicker-widget table td.day {
-    font-size: 14px; } }
+    font-size: 14px; }
+  section.card-slider-small .card-image img {
+    height: 99px; } }
 
 /*  Tablets */
 @media (min-width: 768px) {
@@ -3409,6 +3414,8 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .m-r55 {
     margin-right: 55px !important; }
+  .navbar-header {
+    height: 45px; }
   .navbar-right {
     float: right !important; }
   .btn-info {
@@ -3416,7 +3423,8 @@ section.card-steps .popover {
   .navbar-collapse .nav-pills li a {
     font-size: 14px; }
   .navbar > .container .navbar-brand {
-    margin-left: 0; }
+    margin-left: 0;
+    margin-top: 5px; }
   nav.navbar .btn {
     font-family: "Proxima_nova_light", sans-serif;
     background: #017ee5;
@@ -3458,7 +3466,7 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     background-size: 97px 31px;
-    width: 145px; }
+    width: 123px; }
   .navbar-brand {
     width: 103px;
     background: url(../images/storable-horizontal-blanco-plano.svg) no-repeat;
@@ -3577,7 +3585,8 @@ section.card-steps .popover {
     top: 36px;
     border-radius: 0 !important;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15) !important;
-    left: -14px; }
+    left: -14px;
+    width: 275px; }
   .main-search .ui.dropdown .menu .item {
     padding: 16px 20px !important;
     font-size: 14px; }
@@ -3608,7 +3617,7 @@ section.card-steps .popover {
   section.card-slider-small-container .swiper-button-prev {
     top: 36%; }
   section.card-slider-small .card-image img {
-    height: 115px; }
+    height: 115px !important; }
   section.card-slider {
     margin-bottom: 96px; }
   section.card-slider .card-image img {
@@ -4257,6 +4266,10 @@ section.card-steps .popover {
     /* Firefox 18- */
     color: #9fa2a2 !important;
     font-size: 18px; }
+  .calendar-storable input::-webkit-input-placeholder, .calendar-storable textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #303336 !important;
+    font-size: 18px !important; }
   .calendar-storable input::-moz-placeholder, .calendar-storable textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: #303336 !important;
@@ -4356,6 +4369,7 @@ section.card-steps .popover {
     left: 0 !important;
     width: 281px; }
   .main-search .ui.floating.dropdown > .menu {
+    width: 440px;
     top: 45px; }
   #layout-int .main-search .ui.floating.dropdown > .menu {
     top: 37px; }
