@@ -57,7 +57,7 @@
             
             <div class="row">
               <div class="col-xs-12 ">
-                 <h4 class="modal-title" id="myModaFiltro">Iniciar sesión</h4>
+                 <h4 class="modal-title" id="myModaFiltro">Buscar</h4>
                 <a class="link-modal" href="#">Quitar filtros</a>
                  <div class="clear"></div>
                   <div class="row">
@@ -104,7 +104,7 @@
                       <div class="col-xs-6">
                         <div class="form-group calendar-storable">
                           <div class='input-group date' id='datetimepicker9'>
-                            <input type='text' class="form-control" placeholder="Llegada" />
+                            <input type='text' class="form-control" placeholder="Salida" />
                             <span class="input-group-addon">
                             </span>
                           </div>
@@ -191,7 +191,7 @@
                         </div> 
                       </div>
                       <div class="col-xs-12">
-                        <button type="submit" class="btn btn-lg btn-block">Filtrar búsqueda</button>
+                        <button type="submit" class="btn btn btn-lg btn-block btn-lg btn-block">Filtrar búsqueda</button>
                       </div>
                    </form>
                   </div>
@@ -268,7 +268,7 @@
           <div class="modal-body clearfix">
 
               <div class="col-xs-12 col-sm-6 line modal-col">
-                 <h4 class="modal-title" id="myModalRegistro">Crea tu cuenta</h4>
+                 <h4 class="modal-title" id="myModalRegistro">Crea una cuenta</h4>
                  <form>
                    <div class="form-group">
                     <input type="email" class="form-control"  placeholder="Tu email">
@@ -288,12 +288,12 @@
                        <label> Mantenerme ingresado
                     </label>
                   </div>
-                   <button type="submit" class="btn btn-lg btn-block">Submit</button>
+                   <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
                  </form>
               </div>
               <div class="col-xs-12 col-sm-6 modal-col">
                 <p class="hidden-xs">Si aún no estás registrado oprime en el siguiente botón para crear tu cuenta:</p>
-                <button type="button" class="btn btn-lg btn-block hidden-xs">Crear cuenta</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block hidden-xs">Crear una cuenta</button>
                 <span class="o"> o</span>
                 <button type="button" class="btn btn-lg btn-block btn-lg-social">
                   <span><i class="fa fa-facebook"></i></span>
@@ -933,7 +933,7 @@ $(function () {
         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
     });
     $('#datetimepicker8').datetimepicker();
-    $('#datetimepicker8').datetimepicker({
+    $('#datetimepicker9').datetimepicker({
         useCurrent: false 
     });
     $("#datetimepicker8").on("dp.change", function (e) {

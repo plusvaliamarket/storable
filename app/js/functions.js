@@ -33,14 +33,16 @@ function draw() {
   var colLeftHeight = $('#col-left').height();
  $('#map-container').css("height", colLeftHeight);
  var windowHeight = $(window).height();
- var btnHeight = $(".cerrar-movil").height();
+ var btnHeight = $(".cerrar-movil-container").height();
  var windowWidth = $(window).width();
 
-//$(".cerrar-movil").css("top", windowHeight - btnHeight );
+
+//
 
  if (windowWidth <= 500) {
-    $('.navbar-collapse.collapse').css("min-height", "90000px" );
+   
     $('.modal-content').css("min-height", windowHeight );
+
  } else {
     $('.navbar-collapse.collapse').css("min-height", "auto" );
     $('.modal-content').css("min-height", "auto" );

@@ -1026,6 +1026,17 @@ color: $darkGrey;
     top: -8px;
     transform: rotate(-45deg);
 }
+
+#ModalFiltro
+{
+
+	.btn {
+	@include btnStorableMain($menta, #fff, #fff);
+	
+	}
+
+}
+
 #ModalFiltro .modal-title {float: left; font-size: $size18px !important;margin-bottom: $marginDefault !important}
 #ModalFiltro .modal-content .ui.radio.checkbox, #ModalFiltro .modal-content .ui.checkbox { width: 100%}
 #ModalFiltro .modal-content .ui.radio.checkbox {    margin: 5px 0 20px;}

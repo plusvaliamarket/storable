@@ -115,16 +115,16 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	content: "\f0c8" !important;
     font-family: 'FontAwesome' !important; 	    
     background-color: $menta !important;
-    width: 31px !important;
-    height: 31px !important;
-    top: -2px !important;
-    left: -3px !important;
+   width: 30px !important;
+	height: 30px !important;
+	top: -1.7px !important;
+	left: -2.55px !important;
 
 }
 .footnote { display: inline-block; clear:both; width: 100%; font-style: normal; text-align: center; font-size: $size14px; color:$softGrey; }
 
 .ui.checkbox .box:after, .ui.checkbox label:after {    top: 4px !important;
-    left: 4px !important;
+    left: 3px !important;
         font-size: 17px !important;
 }
 .ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before {

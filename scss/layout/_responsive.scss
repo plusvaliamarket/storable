@@ -29,15 +29,15 @@
 	.jumbotron {   padding: 84px 15px 0 15px;
 		height: 400px}
 	.jumbotron .container {padding-right: 0; padding-left: 0}
-
+	.navbar-fixed-top {position: absolute;}
 	nav.navbar  .ui.empty.circular.label{    
 	    top: -9px;
 	    
 	    position: relative;
 	}
 	nav.navbar .nav li a, nav.navbar.shrink .nav  li a, nav.navbar.shrink .nav > li.active > a, nav.navbar.shrink .nav > li > a   
-		{color:#fff;    padding: 15px 16px 15px;font-size: $size18px;}
-	.navbar-collapse .nav-pills{ margin-top: 50px;}
+		{color:$darkGrey;    padding: 15px 16px 15px;font-size: $size18px;}
+	.navbar-collapse .nav-pills{ margin-top: 50px; background: #fff}
 	.navbar-collapse .nav-pills>li{ float: none; margin: 0;}
 	.navbar-header { height: 50px}
 	nav.navbar  .navbar-header{
@@ -248,6 +248,7 @@
 	}
 	.modal-content .btn {
 	padding: 9px 0;
+	font-size: $size14px;
 	}
 	.modal-dialog .modal-title {float: left; font-size: $size18px !important;margin-bottom: 15px !important}
 	.modal-content .modal-col {
@@ -491,7 +492,9 @@
     left: 0px !important;
 	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
-    width: 23em;}
+    width: 23em;
+    }
+     .calendar-storable #datetimepicker9 .bootstrap-datetimepicker-widget.dropdown-menu  {left: -176px !important;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
     section.card-slider-small .card-image img{ height: 99px}
 
@@ -509,6 +512,7 @@
 		font-size: $size14px !important;
 	    
 	} 
+	.nav > li > a {color:#fff}
 	.btn-primary {
 	    padding: 10px 24px;
 	    font-size: $size18px;
@@ -526,7 +530,7 @@
 	.navbar-right {
     float: right !important;
 	}
-
+	.navbar-collapse .nav-pills {background: transparent}
 	.btn-info {
 	    padding: 10px 54px;
 	}	 
@@ -559,7 +563,7 @@
 	.link-main {
 	font-size: $size18px;}	
 
-	nav.navbar .btn{padding: 5px 18px;font-size: $size12px;}
+	nav.navbar .btn{padding: 5px 18px;font-size: $size12px;margin-top: 4px;padding: 2px 18px;}
 
 	
 	.jumbotron {
@@ -569,7 +573,7 @@
 	}
     .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     	background-size: 97px 31px;
-		    width: 123px;
+		    width: 134px;
 	}
 	.navbar-brand {    width: 103px;background: url( ../images/storable-horizontal-blanco-plano.svg) no-repeat;
 	background-size: 97px 31px;}
@@ -584,9 +588,16 @@
 	nav.navbar, nav.navbar.shrink {
 		padding:4px 10px 0;
 	}
-	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a,   {
-	    padding: 9px 18px;
-	    font-size: 1.15rem;
+	
+	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
+		color:#fff;
+		 padding: 9px 18px;
+		 font-size: 1.15rem;
+	}
+	nav.navbar.shrink .nav > li > a {font-size: $size14px;
+		color:$darkGrey;
+		 padding: 9px 18px;
+		 font-size: 1.15rem;
 	}
 	nav.navbar  .ui.empty.circular.label{    
 	    top: 5px;
@@ -853,7 +864,7 @@
 	  font-size: 13px !important;
 	}
 	.modal-dialog {
-		width: 583px;
+		width: 629px;
 		margin: 30px auto;
 	}
 	.modal-content .modal-col {
@@ -1201,6 +1212,11 @@
 		    margin: 2px
 	}
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
+		color:#fff;
+		padding: 7px 20px ;
+	}
+	nav.navbar.shrink .nav > li > a {font-size: $size14px;
+		color:$darkGrey;
 		padding: 7px 20px ;
 	}
 	nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus 
@@ -1212,6 +1228,7 @@
 	nav.navbar.shrink .navbar-brand {background: url( ../images/logo-storable.svg) no-repeat;
 	background-size: 130px 42px;}
 	h4.card-title { margin-bottom: $marginBottom30;}
+	
 	.nav > li > a:hover
 		{opacity:0.4; 
 		background: none}

@@ -34,18 +34,6 @@ section.card-lead, section.card-steps {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ff', endColorstr='#017ee5',GradientType=1 );
   /* IE6-9 */ }
 
-nav.navbar .navbar-collapse, nav.navbar .navbar-form {
-  background: #00a9ff;
-  /* Old browsers */
-  background: -moz-linear-gradient(29deg, #00a9ff 0%, #017ee5 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(29deg, #00a9ff 0%, #017ee5 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(29deg, #00a9ff 0%, #017ee5 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ff', endColorstr='#017ee5',GradientType=1 );
-  /* IE6-9 */ }
-
 /*Fonts*/
 @font-face {
   font-family: "Proxima_nova_regular";
@@ -231,10 +219,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   content: "\f0c8" !important;
   font-family: 'FontAwesome' !important;
   background-color: #00d4b8 !important;
-  width: 31px !important;
-  height: 31px !important;
-  top: -2px !important;
-  left: -3px !important; }
+  width: 30px !important;
+  height: 30px !important;
+  top: -1.7px !important;
+  left: -2.55px !important; }
 
 .footnote {
   display: inline-block;
@@ -247,7 +235,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 
 .ui.checkbox .box:after, .ui.checkbox label:after {
   top: 4px !important;
-  left: 4px !important;
+  left: 3px !important;
   font-size: 17px !important; }
 
 .ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before {
@@ -614,6 +602,7 @@ nav.navbar .navbar-toggle .icon-bar {
   top: 1px; }
 
 nav.navbar .navbar-collapse, nav.navbar .navbar-form {
+  background: #fff;
   text-align: center;
   transform: all 0.5s; }
 
@@ -645,11 +634,18 @@ nav.navbar .navbar-toggle:hover, nav.navbar .navbar-toggle:focus {
   top: -8px;
   transform: rotate(-45deg); }
 
+.cerrar-movil-container {
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  width: 92%; }
+
 .cerrar-movil {
-  background: #0176d6;
+  background: #f5f5f5;
   display: block;
   margin: 0 -15px 0;
-  color: #fff;
+  color: #303336;
   text-align: center;
   font-size: 18px;
   padding: 20px;
@@ -1893,6 +1889,16 @@ footer .brand-footer {
   top: -8px;
   transform: rotate(-45deg); }
 
+#ModalFiltro .btn {
+  background: #00d4b8;
+  border: 1px solid #fff;
+  color: #fff; }
+  #ModalFiltro .btn:hover {
+    background: #00caaf;
+    transition: all 0.3s ease; }
+  #ModalFiltro .btn:active {
+    background: #00d4b8; }
+
 #ModalFiltro .modal-title {
   float: left;
   font-size: 18px !important;
@@ -2892,15 +2898,18 @@ section.card-steps .popover {
   .jumbotron .container {
     padding-right: 0;
     padding-left: 0; }
+  .navbar-fixed-top {
+    position: absolute; }
   nav.navbar .ui.empty.circular.label {
     top: -9px;
     position: relative; }
   nav.navbar .nav li a, nav.navbar.shrink .nav li a, nav.navbar.shrink .nav > li.active > a, nav.navbar.shrink .nav > li > a {
-    color: #fff;
+    color: #303336;
     padding: 15px 16px 15px;
     font-size: 18px; }
   .navbar-collapse .nav-pills {
-    margin-top: 50px; }
+    margin-top: 50px;
+    background: #fff; }
   .navbar-collapse .nav-pills > li {
     float: none;
     margin: 0; }
@@ -3114,7 +3123,8 @@ section.card-steps .popover {
     top: -8px;
     transform: rotate(-45deg); }
   .modal-content .btn {
-    padding: 9px 0; }
+    padding: 9px 0;
+    font-size: 14px; }
   .modal-dialog .modal-title {
     float: left;
     font-size: 18px !important;
@@ -3389,6 +3399,8 @@ section.card-steps .popover {
   .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
     padding: 30px;
     width: 23em; }
+  .calendar-storable #datetimepicker9 .bootstrap-datetimepicker-widget.dropdown-menu {
+    left: -176px !important; }
   .calendar-storable .bootstrap-datetimepicker-widget table td.day {
     font-size: 14px; }
   section.card-slider-small .card-image img {
@@ -3403,6 +3415,8 @@ section.card-steps .popover {
     margin-bottom: 30px; }
   .btn-danger {
     font-size: 14px !important; }
+  .nav > li > a {
+    color: #fff; }
   .btn-primary {
     padding: 10px 24px;
     font-size: 18px; }
@@ -3418,6 +3432,8 @@ section.card-steps .popover {
     height: 45px; }
   .navbar-right {
     float: right !important; }
+  .navbar-collapse .nav-pills {
+    background: transparent; }
   .btn-info {
     padding: 10px 54px; }
   .navbar-collapse .nav-pills li a {
@@ -3459,14 +3475,16 @@ section.card-steps .popover {
     font-size: 18px; }
   nav.navbar .btn {
     padding: 5px 18px;
-    font-size: 12px; }
+    font-size: 12px;
+    margin-top: 4px;
+    padding: 2px 18px; }
   .jumbotron {
     padding: 98px 15px 0 15px;
     height: 402px;
     margin-bottom: 30px; }
   .navbar-brand, nav.navbar.shrink .navbar-brand, #layout-int .navbar-brand {
     background-size: 97px 31px;
-    width: 123px; }
+    width: 134px; }
   .navbar-brand {
     width: 103px;
     background: url(../images/storable-horizontal-blanco-plano.svg) no-repeat;
@@ -3485,6 +3503,13 @@ section.card-steps .popover {
   nav.navbar, nav.navbar.shrink {
     padding: 4px 10px 0; }
   nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {
+    font-size: 14px;
+    color: #fff;
+    padding: 9px 18px;
+    font-size: 1.15rem; }
+  nav.navbar.shrink .nav > li > a {
+    font-size: 14px;
+    color: #303336;
     padding: 9px 18px;
     font-size: 1.15rem; }
   nav.navbar .ui.empty.circular.label {
@@ -3737,7 +3762,7 @@ section.card-steps .popover {
     color: #9fa2a2;
     font-size: 13px !important; }
   .modal-dialog {
-    width: 583px;
+    width: 629px;
     margin: 30px auto; }
   .modal-content .modal-col {
     padding: 29px 40px;
@@ -4157,6 +4182,11 @@ section.card-steps .popover {
     margin: 2px; }
   nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {
     font-size: 14px;
+    color: #fff;
+    padding: 7px 20px; }
+  nav.navbar.shrink .nav > li > a {
+    font-size: 14px;
+    color: #303336;
     padding: 7px 20px; }
   nav.navbar.shrink .nav-pills > li.active > a, nav.navbar.shrink .nav-pills > li.active > a:hover, nav.navbar.shrink .nav-pills > li.active > a:focus {
     color: #017ee5;
