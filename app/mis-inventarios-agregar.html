@@ -345,12 +345,12 @@
                   <tr>
                     <td>
                       <div class="form-group ">
-                        <label>Dirección de recogida </label>                       
-                        <div class="ui  checkbox pull-left m-r55">
+                        <label>¿Inventario frágil? </label>                       
+                        <div class="ui  radio checkbox pull-left m-r55">
                           <input name="radio" checked="" type="radio">
                           <label>Si</label>
                         </div>
-                        <div class="ui  checkbox pull-left">
+                        <div class="ui  radio checkbox pull-left">
                           <input name="radio" checked="checked" type="radio">
                           <label>No</label>
                         </div>
@@ -360,6 +360,7 @@
                       <div class="form-group">
                          <label>Código postal del lugar de recogida </label>
                          <input type="text" placeholder="Código" />
+                          <a href="#" data-toggle="modal" data-target="#modalPassword" class="link-main">Ver Códigos</a>
                       </div>  
                     </td>
                   </tr>
@@ -540,12 +541,15 @@
 <script type="text/javascript" src="js/moment.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="js/nouislider.min.js"></script>
-
+<script type="text/javascript" src="js/autosize.min.js"></script>
+<script>
+    autosize(document.querySelectorAll('textarea'));
+  </script>
   <script>
   $(document).ready(function() {
       $('#toolStorable')
   .popup({
-    position : 'bottom center',
+    position : 'bottom right',
     title    : 'REGISTRAR CAJAS:',
     content  : 'Debes registrar el número de cajas que vas a enviar en este inventario'
   });

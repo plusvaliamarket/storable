@@ -270,8 +270,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   background: #00b8a0;
   border: 1px solid #00b8a0;
   color: #fff;
-  font-size: 18px;
-  padding: 10px 54px; }
+  font-size: 18px; }
   .btn-primary:focus:hover, .btn-primary:hover:hover {
     background: #00ae97;
     transition: all 0.3s ease; }
@@ -696,7 +695,7 @@ section.card-thumb {
     height: auto !important; }
 
 h4.card-title {
-  font-family: "Proxima_nova_regular", sans-serif;
+  font-family: "Proxima_nova_bold", sans-serif;
   color: #303336;
   font-weight: 300;
   margin-top: 0px;
@@ -927,7 +926,7 @@ aside .btn {
 
 .panel .form-group input {
   border: 0;
-  height: 36px;
+  height: 41px;
   width: 100%;
   line-height: 20px; }
 
@@ -1456,7 +1455,6 @@ textarea::selection, input::selection {
 footer ul li {
   line-height: 3rem; }
   footer ul li a {
-    font-size: 14px;
     font-weight: 100;
     color: #303336; }
     footer ul li a:hover {
@@ -2039,7 +2037,8 @@ footer .brand-footer {
 
 .card-inventario:hover {
   background: #017ee5;
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
 
 .card-inventario.active-inventario {
   background: #017ee5;
@@ -2929,7 +2928,6 @@ section.card-steps .popover {
   nav.navbar.shrink .navbar-brand {
     background-size: 94px 31px; }
   nav.navbar .btn {
-    padding: 20px 18px;
     color: #fff;
     border: 0 none;
     background: none transparent;
@@ -3133,7 +3131,7 @@ section.card-steps .popover {
     padding-right: 15px;
     padding-left: 15px; }
   .modal-content .btn-lg-social {
-    padding: 10px; }
+    padding: 20px; }
   .jumbotron-detalle {
     height: 220px;
     margin-bottom: 15px; }
@@ -3156,6 +3154,8 @@ section.card-steps .popover {
     padding: 7px 3px; }
   .panel {
     padding: 14px 0; }
+  .panel .form-group input {
+    font-size: 14px; }
   .owner {
     padding: 7px 14px; }
   .owner .pic-profile {
@@ -3208,29 +3208,24 @@ section.card-steps .popover {
     padding: 1rem 1.1rem; }
   .card-inventario .plus {
     bottom: 33px; }
+  .card-inventario .card-data {
+    float: none; }
   .card-inventario img {
-    width: 120px;
-    height: 120px;
+    width: 106px;
+    height: 106px;
     margin-right: auto;
     margin-left: auto;
     float: none;
-    display: block; }
-  .card-inventario img {
-    width: 120px;
-    height: 120px;
-    margin-right: auto;
-    margin-left: auto;
-    float: none; }
-  .card-inventario {
-    min-height: 225px;
-    padding: 20px 10px; }
+    display: block;
+    margin-bottom: 13px; }
   .card-inventario {
     min-height: 132px;
-    padding: 20px 10px; }
+    padding: 20px 10px 74px; }
   .card-inventario .card-data span {
     font-size: 12px; }
   .card-inventario h4 {
-    width: 90%; }
+    width: 90%;
+    overflow: visible; }
   .panel .form-group {
     padding: 10px 12px 5px 12px; }
   .empty-message img {
@@ -3396,6 +3391,12 @@ section.card-steps .popover {
   .calendar-storable .bootstrap-datetimepicker-widget {
     top: 43px !important;
     left: 0px !important; }
+  .panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -30px !important; }
+  .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -174px !important; }
   .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
     padding: 30px;
     width: 23em; }
@@ -3474,10 +3475,9 @@ section.card-steps .popover {
   .link-main {
     font-size: 18px; }
   nav.navbar .btn {
-    padding: 5px 18px;
+    padding: 3px 18px;
     font-size: 12px;
-    margin-top: 4px;
-    padding: 2px 18px; }
+    margin-top: 4px; }
   .jumbotron {
     padding: 98px 15px 0 15px;
     height: 402px;
@@ -3506,6 +3506,7 @@ section.card-steps .popover {
     font-size: 14px;
     color: #fff;
     padding: 9px 18px;
+    margin: 0;
     font-size: 1.15rem; }
   nav.navbar.shrink .nav > li > a {
     font-size: 14px;
@@ -3770,11 +3771,11 @@ section.card-steps .popover {
   .modal-content .btn {
     padding: 14px 0; }
   .modal-content .btn-lg-social {
-    padding: 30px 10px; }
+    padding: 20px; }
   .modal-content .btn-lg-social {
-    padding-right: 9px; }
+    padding: 23px 10px; }
   .modal-content .btn-lg-social {
-    font-size: 12px; }
+    font-size: 15px; }
   .card-container .check {
     background: url(../images/check.svg) no-repeat 0 0;
     background-size: 39px 39px;
@@ -3791,8 +3792,6 @@ section.card-steps .popover {
     height: 43px; }
   #layout-int .main-search .calendar-storable .form-group {
     padding: 0 0 0px 14px; }
-  #layout-int .jumbotron {
-    padding: 80px 0 0; }
   #layout-int .main-search .form-group {
     padding: 6px 0 0px 14px; }
   #layout-int .main-search .col-md-5ths:first-child {
@@ -3866,6 +3865,8 @@ section.card-steps .popover {
     display: inline;
     margin-top: 9px;
     width: auto; }
+  footer ul li a {
+    font-size: 10px; }
   /*Filters*/
   .filters h4 {
     margin-bottom: 30px; }
@@ -3945,8 +3946,6 @@ section.card-steps .popover {
   .brand-footer {
     float: left;
     margin: 0 16px 0 0; }
-  .modal-content .btn-lg-social {
-    padding: 30px; }
   .map-place {
     margin-bottom: 80px; }
   h4.card-title {
@@ -4030,7 +4029,7 @@ section.card-steps .popover {
     font-size: 14px; }
   table#addStock .link-main {
     right: 20px;
-    top: 42%;
+    top: 52%;
     font-size: 15px; }
   section.card-steps .popover {
     margin-bottom: 30px; }
@@ -4152,7 +4151,13 @@ section.card-steps .popover {
     padding: 10px;
     width: 18.1em; }
   .calendar-storable .bootstrap-datetimepicker-widget table td.day {
-    font-size: 11px; } }
+    font-size: 11px; }
+  .panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -47px !important; }
+  .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -156px !important; } }
 
 /* Medium Devices, Desktops */
 @media (min-width: 980px) {
@@ -4275,6 +4280,8 @@ section.card-steps .popover {
     width: 810px; }
   .modal-dialog.modal-sm {
     width: 400px; }
+  .modal-content .btn-lg-social {
+    padding: 30px; }
   .modal-content .btn-lg-social, .modal-content .btn {
     font-size: 18px; }
   .modal-content .ui.checkbox .box, .modal-content .ui.checkbox label {
@@ -4562,7 +4569,7 @@ section.card-steps .popover {
     width: 100%;
     float: none; }
   #layout-int .jumbotron {
-    padding: 103px 0 0; }
+    padding: 0; }
   #layout-int .ui.button {
     font-size: 14px; }
   #layout-int .main-search {
@@ -4612,6 +4619,8 @@ section.card-steps .popover {
     background-size: 130px 42px; }
   footer {
     padding-bottom: 50px; }
+  footer ul li a {
+    font-size: 14px; }
   /*Filters*/
   .filters h4 {
     margin-bottom: 30px; }
@@ -4797,6 +4806,12 @@ section.card-steps .popover {
   .calendar-storable .bootstrap-datetimepicker-widget {
     top: 51px !important;
     left: -15px !important; }
+  .panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -148px !important; }
+  .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -278px !important; }
   .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
     padding: 30px;
     width: 27.8em; }

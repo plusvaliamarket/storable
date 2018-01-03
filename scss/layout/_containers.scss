@@ -27,7 +27,7 @@ section.card-thumb {
   	}
 }
 h4.card-title { 
-		font-family:$fuente-principal;
+		font-family:$fuente-titulos;
  	
   		color: $darkGrey;
   		@include font-weight-normal;
@@ -261,7 +261,7 @@ aside .btn { margin-bottom: $marginBottom20;}
 .panel .form-group p {color: $darkGrey;}
 .panel  .form-group input {
     border: 0;
-    height: 36px;
+    height: 41px;
     width: 100%;
     line-height: 20px;
    
@@ -684,7 +684,7 @@ footer {
 		li {
 			line-height: 3rem; 
 			a {
-				font-size: $size14px;
+				
 				@include font-weight-light;	
 				color:$darkGrey;
 
@@ -1146,7 +1146,7 @@ color: $darkGrey;
 
 .card-inventario {border:1px solid $greylight; position: relative; cursor: pointer;
 margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;}
-.card-inventario:hover {background: $azulStorable; color:#fff}
+.card-inventario:hover {background: $azulStorable; color:#fff; text-decoration:none}
 .card-inventario.active-inventario   {background: $azulStorable; color:#fff}
 .card-inventario.active-inventario  .description, .card-inventario.active-inventario .quantity i  {color:#fff}
 .card-inventario:hover  .description, .card-inventario:hover .quantity i  {color:#fff}

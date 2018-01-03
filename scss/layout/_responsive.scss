@@ -55,7 +55,7 @@
     margin: 7px 9px;
 	}
 	nav.navbar.shrink .navbar-brand { background-size: 94px 31px;}
-	nav.navbar .btn{padding: 20px 18px;color:#fff ;
+	nav.navbar .btn{color:#fff ;
 		border:0 none; background: none transparent;font-size: 18px}
 	nav.navbar .btn:hover, nav.navbar .btn:focus {background: none; outline: none; border: 0 none;color:#fff !important}	
 	#map-container { margin-bottom: $marginBottom20;}
@@ -256,7 +256,7 @@
     padding-left: 15px;
 	}
 	.modal-content  .btn-lg-social{
-	padding: $marginTop10;
+	padding: 20px;
 	}
 	.jumbotron-detalle {
     height: 220px;
@@ -286,6 +286,7 @@
 	.panel {
     padding: 14px 0;
 	}
+	.panel .form-group input {font-size: $size14px;}
 	.owner {
 
     padding: 7px 14px;
@@ -349,31 +350,23 @@
 	.card-inventario .plus {
     bottom: 33px;
 	}	
+	.card-inventario .card-data {float:none}
 	.card-inventario img {
-    width: 120px;
-    height: 120px;
+    width: 106px;
+    height: 106px;
     margin-right: auto;
     margin-left: auto;
         float: none;
     display: block;
+    margin-bottom: 13px;
 	}
-	.card-inventario img {
-    width: 120px;
-    height: 120px;
-    margin-right: auto;
-    margin-left: auto;
-        float: none;
-	}
-	.card-inventario {
-    min-height: 225px;
-    padding: 20px 10px;
-	}
+
 	 .card-inventario {
     min-height: 132px;
-    padding: 20px 10px;
+    padding: 20px 10px 74px;
 	}
 	.card-inventario .card-data  span { font-size: $size12px;}
-	.card-inventario h4 {width: 90%}
+	.card-inventario h4 {width: 90%; overflow:visible}
 	.panel .form-group {
     padding: 10px 12px 5px 12px;
 	}
@@ -491,6 +484,14 @@
     top: 43px !important;
     left: 0px !important;
 	}
+	 .panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -30px !important;
+	}
+    .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -174px !important;
+	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 23em;
     }
@@ -563,7 +564,7 @@
 	.link-main {
 	font-size: $size18px;}	
 
-	nav.navbar .btn{padding: 5px 18px;font-size: $size12px;margin-top: 4px;padding: 2px 18px;}
+	nav.navbar .btn{padding: 3px 18px;font-size: $size12px;margin-top: 4px;}
 
 	
 	.jumbotron {
@@ -592,6 +593,7 @@
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
 		color:#fff;
 		 padding: 9px 18px;
+		 margin:0;
 		 font-size: 1.15rem;
 	}
 	nav.navbar.shrink .nav > li > a {font-size: $size14px;
@@ -874,9 +876,12 @@
 	.modal-content .btn {
 	padding: 14px 0;
 	}
-	.modal-content .btn-lg-social { padding: 30px 10px;}
-	.modal-content .btn-lg-social  {padding-right: 9px}
-	.modal-content .btn-lg-social {font-size: $size12px;}
+	.modal-content  .btn-lg-social{
+	padding: 20px;
+	}
+	.modal-content .btn-lg-social { padding: 23px 10px;}
+
+	.modal-content .btn-lg-social {font-size: $size15px;}
 
 	.card-container .check {
   		 background: url(../images/check.svg) no-repeat 0 0;
@@ -893,7 +898,6 @@
   	#layout-int .main-search .line {     height: 43px;}
   	#layout-int .main-search .calendar-storable .form-group {padding: 0 0 0px 14px;
 	}
-	#layout-int .jumbotron {padding:80px 0 0}
   	#layout-int .main-search .form-group 
   		{padding: 6px 0 0px 14px;
 	}
@@ -966,6 +970,8 @@
 		margin-top: 9px;
 		width: auto;
 	}
+	footer ul li a {
+	font-size: $size10px;}
 
 	/*Filters*/
 	.filters {
@@ -1050,9 +1056,8 @@
 		margin: 0 16px 0 0;
 	}	
 	
-	.modal-content  .btn-lg-social{
-	padding: $marginTop30;
-	}
+	
+
 	.map-place {
 	margin-bottom: $marginBottom80;
 		
@@ -1104,7 +1109,7 @@
 	}
 	table#addStock  p { font-size:$size14px;}
 	table#addStock .link-main {    right: 20px;
-    top: 42%;font-size: $size15px;}
+    top: 52%;font-size: $size15px;}
 	section.card-steps .popover{ margin-bottom:30px}
 	.ui.checkbox .box, .ui.checkbox label { font-size: $size14px !important; }
 	.notifications table tr td:first-child {width: 20%;}
@@ -1178,10 +1183,18 @@
 	.calendar-storable .bootstrap-datetimepicker-widget {
     top: 40px !important;
     left: -18px !important;
-	}
-	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 10px;
+	}.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu
+	 {padding: 10px;
         width: 18.1em;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: 11px}
+    .panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -47px !important;
+	}
+    .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -156px !important;
+	}
 }
 
 
@@ -1214,6 +1227,7 @@
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
 		color:#fff;
 		padding: 7px 20px ;
+
 	}
 	nav.navbar.shrink .nav > li > a {font-size: $size14px;
 		color:$darkGrey;
@@ -1290,6 +1304,9 @@
 	}
 	.modal-dialog.modal-sm {
 	width:400px;
+	}
+	.modal-content  .btn-lg-social{
+	padding: $marginTop30;
 	}
 
 	.modal-content .btn-lg-social, .modal-content .btn {font-size: $size18px;}
@@ -1575,7 +1592,7 @@
 	#layout-int .filter { text-indent: 0;
 	    width: 100%; float: none
 	}
-	#layout-int .jumbotron {padding: 103px 0 0;}
+	#layout-int .jumbotron {padding: 0;}
 	#layout-int .ui.button {font-size: $size14px;}
 	#layout-int .main-search {
     height: 57px; margin-bottom: $marginDefault;
@@ -1619,6 +1636,8 @@
 	background-size: 130px 42px;}
 	footer{
 	padding-bottom: $marginBottom50;}
+	footer ul li a {
+	font-size: $size14px;}
 
 	/*Filters*/
 	.filters {
@@ -1760,9 +1779,19 @@
     top: 51px !important;
     left: -15px !important;
 	}
+	.panel .calendar-storable.desde .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -148px !important;
+	}
+	.panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
+    top: 40px !important;
+    left: -278px !important;
+	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 27.8em;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
+
+
 }
 
 
