@@ -48,8 +48,15 @@ hr {clear: both; margin-top: 0;
 table {    table-layout: fixed;}
 textarea{ border: 1px solid $greylight;}
 .btn:focus, .btn:active:focus, .btn.active:focus { outline:none}
+strong {color:$darkGrey}
 
 h3.sub-title {color:$azulStorable; margin-top: 0}
+h3.sub-title-light {color:$darkGrey; margin-top: 0; 
+	@include font-weight-normal;
+}
+
+.quotes {color:$darkGrey; text-align: left;
+	@include font-weight-normal;}
 
 /*Margins paddings classes*/
 .nopadding { padding: 0 !important};
@@ -115,8 +122,8 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 	content: "\f0c8" !important;
     font-family: 'FontAwesome' !important; 	    
     background-color: $menta !important;
-   width: 30px !important;
-	height: 30px !important;
+   width: 28px !important;
+	height: 28px !important;
 	top: -1.7px !important;
 	left: -2.55px !important;
 

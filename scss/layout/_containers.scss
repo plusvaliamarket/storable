@@ -1142,7 +1142,7 @@ color: $darkGrey;
 
 
 /**Mis inventarios*/
-.head-title-section {position:relative; margin-bottom:40px}
+.head-title-section {position:relative; margin-bottom:29px}
 
 .card-inventario {border:1px solid $greylight; position: relative; cursor: pointer;
 margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;}
@@ -1603,3 +1603,17 @@ color:$softGrey;}
 		border-bottom: 2px solid $azulStorable;
 	}
 }
+
+/*Team*/
+.team {min-height:283px; border:1px solid $greylight; margin-bottom: 20px}
+.team .avatar{margin-right: 20px; margin-bottom: 20px} 
+.team .avatar .user {background-position: 50%;
+	background-color: $softGrey;
+    border-radius: 50%;
+    background-size: 100% auto;}
+.team .position {
+	font-family: $fuente-label;
+	@include font-weight-light;
+}
+
+

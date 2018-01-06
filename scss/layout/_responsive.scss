@@ -498,6 +498,14 @@
      .calendar-storable #datetimepicker9 .bootstrap-datetimepicker-widget.dropdown-menu  {left: -176px !important;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
     section.card-slider-small .card-image img{ height: 99px}
+    .quotes {font-size: $size18px;line-height: 28px;margin-bottom: 10px}
+	#col-right {padding-bottom: 60px}
+	#col-right img {margin-top:10px;margin-bottom: 10px; }
+	.team {padding:$padding10;}
+	.team .avatar .user { width:50px; height:50px}
+	.team .author a {font-size: $size18px;}
+	.team .position {font-size: $size14px;}
+	h3.sub-title-light {font-size: $size18px;}
 
 }
 
@@ -1195,6 +1203,14 @@
     top: 40px !important;
     left: -156px !important;
 	}
+	.quotes {font-size: $size20px;line-height: 28px;margin-bottom: 10px}
+	#col-right {padding-bottom: 90px}
+	#col-right img {margin-top:10px;margin-bottom: 10px; }
+	.team {padding:$padding20;}
+	.team .avatar .user { width:70px; height:70px}
+	.team .author a {font-size: $size20px;}
+	.team .position {font-size: $size15px;}
+	h3.sub-title-light {font-size: $size20px;}
 }
 
 
@@ -1592,7 +1608,8 @@
 	#layout-int .filter { text-indent: 0;
 	    width: 100%; float: none
 	}
-	#layout-int .jumbotron {padding: 0;}
+	#layout-int .jumbotron {padding: 26px 0 0 0;
+		margin-top: 70px;}
 	#layout-int .ui.button {font-size: $size14px;}
 	#layout-int .main-search {
     height: 57px; margin-bottom: $marginDefault;
@@ -1790,7 +1807,14 @@
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 27.8em;}
     .calendar-storable .bootstrap-datetimepicker-widget table td.day {font-size: $size14px}
-
+	.quotes {font-size: $size30px;line-height: 38px;margin-bottom: 20px}
+	#col-right  { padding-bottom: 130px}
+	#col-right img {margin-top:20px;margin-bottom: 20px;}
+	.team {padding:$paddingTop30}
+	.team .avatar .user { width:100px; height:100px}
+	.team .author a {font-size: $size30px;}
+	.team .position {font-size: $size20px;}
+	h3.sub-title-light {font-size: $size30px;}
 
 }
 
