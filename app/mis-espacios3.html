@@ -388,8 +388,13 @@
                     <td colspan="2">
                        <div class="form-group">
                          <label>Código postal del espacio</label>
-                          <input type="text" placeholder="Código">
-                          <a href="#" data-toggle="modal" data-target="#modalPassword" class="link-main">Ver códigos</a>
+                         <div class="row">
+                           <div class="col-xs-6"><input type="text" placeholder="Código"></div>
+                           <div class="col-xs-6"> <a href="#" data-toggle="modal" data-target="#modalPassword" class="link-main">Ver códigos</a></div>
+
+                         </div>
+                          
+                         
                       </div>
                     </td>
                   </tr>
@@ -611,7 +616,7 @@
             <section class="card-steps">
                 <div class="row">
                   <div class="col-xs-12">
-                    <h3 class="sub-title">Especificaciones</h3>
+                    <h3 class="sub-title">Una última información</h3>
                      <h4 class="card-title">¿Dividir el espacio para alquilar cada uno por separado?</h4>
                      <hr>
                   </div>
@@ -635,28 +640,59 @@
                         </div>
                     </div> 
                   </div>
-                </div>
-            </section>
-             <section class="card-steps">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-7  col-md-4">
-                     <h4 class="card-title">Sub-espacios</h4>
-                  </div>
-                  <div class="col-xs-6 col-sm-5  col-md-8">
-                     <a   class="link-main pull-right">+ Agregar sub-espacio</a>
-                  </div> 
-                </div>
-                <div class="clear"></div>
-                <hr>
-                  <div class="row">
-                  <div class="col-xs-12 col-sm-5 col-md-4 col-xs-offset-0  col-xs-offset-7 col-md-offset-8">
-                   <div class="popover bottom visible"> <div class="arrow"></div> <h3 class="popover-title">REGISTRAR SUB-ESPACIO:</h3> <div class="popover-content"> <p> Debes registrar el precio y el calendario para cada sub-espacio</p> </div> </div>
-                  </div>
 
-                 </div>
-                  <a href="#" class="btn btn-info  btn-block btn-lg margin20" >Guardar</a>
-                 <a href="#" class="btn btn-primary   btn-block btn-lg">Publicar</a>
+                  
+
+                </div>
             </section>
+
+            <table id="addStock" class="table table-bordered ">
+                  <tr>
+                    <td><div class="form-group">
+                         <label>Precio del espacio</label>
+                         <input placeholder="$0 por noche" type="text">  
+                      </div>
+                    </td>
+                    <td>
+                       <div class="form-group">
+                         <label>Precio - Desct. por 3 meses</label>
+                         <input placeholder="0%" type="text">  
+                      </div>
+                    </td>
+                    <td> <div class="form-group">
+                         <label>Precio - Desct. por 12 meses</label>
+                          <input placeholder="0%" type="text">  
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="nopadding">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="cell-border">
+                          <div class="form-group">
+                           <label>¿Desde cuando vas a alquilar?</label>
+                            <input placeholder="Llegada" type="text">  
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                          <label>¿Hasta cuando vas a alquilar?</label>
+                          <input placeholder="Despacho" type="text">  
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                    </td>
+                  </tr>
+                </table>
+            <section class="card-steps">
+                <a href="#" class="btn btn-primary  btn-block btn-lg margin20" >Guardar</a>
+                 <a href="#" class="btn btn-info   btn-block btn-lg ">Publicar</a>
+            </section>
+ 
+
+           
 
 
         </div>

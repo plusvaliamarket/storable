@@ -344,61 +344,442 @@
         <div class="col-xs-12">
           <ol class="breadcrumb">
             <li ><a href="">Mis espacios</a></li>
-            <li><a href="">Sin alquiler</a></li>
+            <li><a href="">Sin alquilar</a></li>
             <li><a href="">Agregar espacio</a></li>
             <li class="active">Agregar sub-espacio</li>
           </ol>  
         </div>  
         
         <div class="col-sm-9">
+
           <section id="col-left">
-             <h4 class="card-title">Agregar sub-espacio</h4>
+             <h4 class="card-title">Garaje en la calera</h4>
+            <h3 class="sub-title">Información general</h3>
                <table id="addStock" class="table table-bordered ">
+                <tbody>
+         
                   <tr>
-                    <td><div class="form-group">
-                         <label>Precio del espacio</label>
-                         <input placeholder="$0 por noche" type="text">  
+                    <td colspan="2">
+                    <div class="form-group">
+                         <label>ID o título del espacio </label>
+                        <input type="text" placeholder="Dale un título o ID">
                       </div>
                     </td>
-                    <td>
+                    <td colspan="2">
                        <div class="form-group">
-                         <label>Precio - Desct. por 3 meses</label>
-                         <input placeholder="0%" type="text">  
-                      </div>
-                    </td>
-                    <td> <div class="form-group">
-                         <label>Precio - Desct. por 12 meses</label>
-                          <input placeholder="0%" type="text">  
+                         <label>Dirección del espacio</label>
+                         <p>Calle 123 # 45 -</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td colspan="3" class="nopadding">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td class="cell-border">
-                          <div class="form-group">
-                           <label>¿Desde cuando vas a alquilar?</label>
-                            <input placeholder="Llegada" type="text">  
-                          </div>
-                        </td>
-                        <td>
-                          <div class="form-group">
-                          <label>¿Hasta cuando vas a alquilar?</label>
-                          <input placeholder="Despacho" type="text">  
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
+                    <td colspan="2">
+                   <div class="form-group ">
+                        <label>Tipo</label>                       
+                        <div class="ui  radio checkbox pull-left m-r55">
+                          <input name="radio" checked="" type="radio">
+                          <label>Residencial</label>
+                        </div>
+
+                        <div class="ui  radio checkbox pull-left">
+                          <input name="radio" checked="checked" type="radio">
+                          <label>Comercial</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                       <div class="form-group">
+                         <label>Código postal del espacio</label>
+                         <div class="row">
+                           <div class="col-xs-6"><input type="text" placeholder="Código"></div>
+                           <div class="col-xs-6"> <a href="#" data-toggle="modal" data-target="#modalPassword" class="link-main">Ver códigos</a></div>
+
+                         </div>
+                          
+                         
+                      </div>
                     </td>
                   </tr>
-                </table> 
+                  <tr>
+                    <td colspan="4">
+                      <div class="form-group">
+                         <label>Descripción general del espacio</label>
+                          <textarea rows="4" cols="50" placeholder="¿Cómo es tu espacio?"> </textarea>
+                      </div>                      
+                    </td>
+
+                  </tr>
+                  <tr>
+                 
+                    <td colspan="4" class="nopadding">
+                      <table>
+                        <tr>
+                          <td class="cell-border">
+                          <div class="form-group">
+                             <label>Alto</label>
+                             <input type="text" placeholder="0 mts">
+                          </div>  
+                        </td>
+                          <td class="cell-border">
+                            <div class="form-group">
+                               <label>Ancho</label>
+                               <input type="text" placeholder="0 mts">
+                            </div>    
+                          </td>
+                          <td>
+                            <div class="form-group">
+                               <label>Largo</label>
+                               <input type="text" placeholder="0 mts">
+                            </div>    
+                          </td>
+
+                        </tr>
+
+                      </table>
+
+                    </td>
+                  </tr>
+               
+                </tbody>
+
+              </table>
+
+             <section class="content-2col">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h3 class="sub-title">Especificaciones</h3>
+                </div>
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                    <h4 class="card-title">Vigiliancia privada</h4> 
+                    <hr>
+                    <div class="row nomargin">
+                    <div class="form-group">                       
+                      <div class="ui radio checkbox">
+                        <input name="radio" checked="checked" type="radio">
+                        <label>Con vigilancia privada</label>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui radio checkbox">
+                          <input name="radio" checked="checked" type="radio">
+                          <label>Sin vigilancia privada</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                        <h4 class="card-title">Cámaras de seguridad</h4> 
+                        <hr>
+                        <div class="row nomargin">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Con cámara de seguridad</label>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="row nomargin">
+                        <div class="form-group">                       
+                          <div class="ui radio checkbox">
+                            <input name="radio" checked="checked" type="radio">
+                            <label>Sin cámara de seguridad</label>
+                          </div>
+                        </div> 
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                      <h4 class="card-title">Iluminación</h4> 
+                      <hr>
+                      <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui checkbox">
+                          <input name="radio"  type="checkbox">
+                          <label>Natural</label>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui  checkbox">
+                          <input name="radio" checked="checked" type="checkbox">
+                          <label>Artificial (reflectores y lamparas)</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                      <h4 class="card-title">Ventilación</h4> 
+                      <hr>
+                      <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui checkbox">
+                          <input name="radio" checked="checked" type="checkbox">
+                          <label>Natural</label>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui  checkbox">
+                          <input name="radio" checked="checked" type="checkbox">
+                          <label>Artificial (ventiladores, extractores)</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                      <h4 class="card-title">Detalle del espacio</h4> 
+                      <hr>
+                      <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui radio checkbox">
+                          <input name="radio" checked="checked" type="radio">
+                          <label>Abierto - al aire libre</label>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui radio checkbox">
+                          <input name="radio" checked="checked" type="radio">
+                          <label>Cerrado - bajo techo</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="item-2col">
+                      <h4 class="card-title">Accesibilidad</h4> 
+                      <hr>
+                      <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui checkbox">
+                          <input name="radio" checked="checked" type="checkbox">
+                          <label>Escaleras y rampas</label>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="row nomargin">
+                      <div class="form-group">                       
+                        <div class="ui  checkbox">
+                          <input name="radio" checked="checked" type="checkbox">
+                          <label>Ascensores o elevadores</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <table id="addStock" class="table table-bordered ">
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="form-group">
+                         <label>Tipo de piso</label>
+                         <textarea  placeholder="Ej. Madera, alfombra, cerámica, etc"> </textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="form-group ">
+                        <label>Restricciones (opcional)</label>
+                         <textarea  placeholder="Restricciones (opcional)"> </textarea>
+                    
+                      </div> 
+
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </section>
+            
+            <section class="card-steps">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h3 class="sub-title">Una última información</h3>
+                     <h4 class="card-title">¿Dividir el espacio para alquilar cada uno por separado?</h4>
+                     <hr>
+                  </div>
+                  
+                <div class="clear"></div>
+                
+                <div class="col-xs-12 col-sm-6">
+
+                    <div class="form-group ">
+                      <div class="ui  radio checkbox pull-left m-r55">
+                          <input name="radio" checked="" type="radio">
+                          <label>Si, quiero dividir el espacio</label>
+                        </div>
+                    </div> 
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group ">
+                        <div class="ui  radio checkbox pull-left m-r55">
+                          <input name="radio" checked="" type="radio">
+                          <label>No, no quiero dividir el espacio</label>
+                        </div>
+                    </div> 
+                  </div>
+
+                  
+
+                </div>
+            </section>
+
+
+
+
+             
                         
+              
+                <section class="card-steps">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-7  col-md-4">
+                     <h4 class="card-title">Sub-espacios</h4>
+                  </div>
+                  <div class="col-xs-6 col-sm-5  col-md-8">
+                     <a   class="link-main pull-right">+ Agregar sub-espacio</a>
+                  </div> 
+                </div>
+                <div class="clear"></div>
+                <hr>
+                  <div class="row">
+                  <div class="col-xs-12 col-sm-5 col-md-4 col-xs-offset-0  col-xs-offset-7 col-md-offset-8">
+                   <div class="popover bottom visible"> <div class="arrow"></div> <h3 class="popover-title">REGISTRAR SUB-ESPACIO:</h3> <div class="popover-content"> <p> Debes registrar el precio y el calendario para cada sub-espacio</p> </div> </div>
+                  </div>
+
+                 </div>
+                 
               </section>
               <section class="card-steps">
-                 <a href="#" class="btn btn-primary   btn-block btn-lg">Guardar</a>  
-              </section>
+                  <a href="#" class="btn btn-primary disabled  btn-block btn-lg margin20" disabled>Guardar</a>
+                  <a href="#" class="btn btn-info disabled   btn-block btn-lg disabled">Publicar</a>
+                 </section>
 
+
+        </div>
+        <div class="col-sm-3">
+          <aside>
+           
+           <div class="panel clearfix">
+              <div class="progress-container">
+                <label>Completa lo más que puedas…</label>
+                <div class="ui indicating progress" data-value="1" data-total="200" id="example5">
+                  <div class="bar">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="label-bar">100%</div>
+               </div> 
+            </div>
+          </div>
+            <h3 class="sub-title">Fotos</h3>
+            <div class="img-placeholder-small">
+              <a href="" class="close-img"></a>
+              <div class="container-img">
+                <img src="images/img-icon.svg" alt="">
+                <span>+ Agregar imagen principal de portada</span>
+              </div>
+            </div>
+            <div class="img-placeholder-thumb-container">
+            <div class="img-placeholder-thumb">
+              <a href="" class="close-img"></a>
+              <div class="container-img">
+                <img src="images/img-placeholder.gif" width="126" height="56" alt="">
+              </div>           
+            </div>
+            <div class="img-placeholder-thumb img-placeholder-thumb-last">
+                <div class="container-img">
+                  <img src="images/img-icon.svg" alt="">
+                </div>           
+              </div>
+              <div class="img-placeholder-thumb">
+                <div class="container-img">
+                  <img src="images/img-icon.svg" alt="">
+                </div>           
+              </div>
+              <div class="img-placeholder-thumb img-placeholder-thumb-last">
+                <div class="container-img">
+                  <img src="images/img-icon.svg" alt="">
+                </div>           
+              </div>
+              <div class="img-placeholder-thumb">
+                <div class="container-img">
+                  <img src="images/img-icon.svg" alt="">
+                </div>           
+              </div>
+              <div class="img-placeholder-thumb img-placeholder-thumb-last">
+                <div class="container-img">
+                  <img src="images/img-icon.svg" alt="">
+                </div>           
+              </div>
+            </div>
+            <div class="panel-open">
+              
+               <h4>Certificación Storable</h4>
+               <hr> 
+                <p>Acredita que un espacio cumple con los mejores estandares de calidad/servicio y podrá estar rankeada en los primeros lugares de la plataforma.</p>
+                <div class="row nomargin">
+                  <div class="form-group">                       
+                    <div class="ui radio checkbox">
+                      <input name="radio" checked="checked" type="radio">
+                      <label>Solicitar certificado</label>
+                    </div>
+                  </div> 
+                </div>
+                <div class="row nomargin">
+                  <div class="form-group">                       
+                    <div class="ui radio checkbox">
+                      <input name="radio" checked="checked" type="radio">
+                      <label>No solicitar certificado</label>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="panel-open">
+               <h4>Despacho de envios</h4>
+               <hr> 
+                <p>Gana dinero extra repartiendo los inventarios que tus arrendatarios necesitan despachar en tu ciudad.</p>
+                <div class="row nomargin">
+                  <div class="form-group">                       
+                    <div class="ui radio checkbox">
+                      <input name="radio" checked="checked" type="radio">
+                      <label>Posibilidad de despachar</label>
+                    </div>
+                  </div> 
+                </div>
+                <div class="row nomargin">
+                  <div class="form-group">                       
+                    <div class="ui radio checkbox">
+                      <input name="radio" checked="checked" type="radio">
+                      <label>No quiero despachar</label>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+          </aside>
 
         </div>
 
