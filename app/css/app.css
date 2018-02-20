@@ -235,7 +235,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   width: 28px !important;
   height: 28px !important;
   top: -1.7px !important;
-  left: -2.55px !important; }
+  left: -1.5px !important; }
 
 .footnote {
   display: inline-block;
@@ -616,7 +616,8 @@ nav.navbar .navbar-toggle .icon-bar {
 nav.navbar .navbar-collapse, nav.navbar .navbar-form {
   background: #fff;
   text-align: center;
-  transform: all 0.5s; }
+  max-height: 100% !important;
+  overflow-y: visible; }
 
 .navbar-collapse .nav-pills li a {
   font-weight: 100;
@@ -648,10 +649,8 @@ nav.navbar .navbar-toggle:hover, nav.navbar .navbar-toggle:focus {
 
 .cerrar-movil-container {
   height: 20px;
-  position: fixed;
-  bottom: 0;
   z-index: 1000;
-  width: 92%; }
+  width: 100%; }
 
 .cerrar-movil {
   background: #f5f5f5;
@@ -742,7 +741,7 @@ h4.card-title {
     padding: 10px; }
   .descuento span {
     color: #017ee5;
-    padding: 0 10px 0 0; }
+    padding: 0; }
   .descuento h5 {
     color: #9fa2a2;
     display: inline; }
@@ -781,7 +780,8 @@ section.card-slider span.caption {
 section.card-slider span.card-detail {
   margin-bottom: 10px;
   font-size: 14px;
-  display: block; }
+  display: block;
+  height: 29px; }
 
 section.card-slider span.card-place {
   margin-bottom: 20px;
@@ -962,8 +962,7 @@ textarea::selection, input::selection {
 
 .panel .calendar-storable {
   background: none;
-  float: left;
-  width: 50%; }
+  width: 100%; }
 
 .panel .calendar-storable:last-child .form-group {
   border-left: 0 none !important; }
@@ -991,6 +990,13 @@ textarea::selection, input::selection {
 .panel table {
   font-size: 14px; }
 
+.panel > .table > tbody:first-child > tr:first-child td {
+  border-top: 1px solid #ddd; }
+
+.panel > .table {
+  width: 91%;
+  margin-left: 12px; }
+
 .panel table tr td p, .panel table tr td span {
   color: #9fa2a2;
   display: block;
@@ -1000,13 +1006,21 @@ textarea::selection, input::selection {
   font-weight: 300;
   color: #303336; }
 
+.panel table tr td:first-child {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-align: left !important; }
+
 .panel table tr td:last-child {
   font-weight: 400;
   color: #9fa2a2;
-  text-align: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
+  text-align: right; }
+
+.panel .ui.dropdown .menu > .item {
+  padding: 1em 1.14285714rem !important; }
+
+.panel .ui.dropdown .menu > .item:hover {
+  color: #017ee5 !important; }
 
 #layout-int .panel .ui.button {
   background: transparent;
@@ -1027,6 +1041,9 @@ textarea::selection, input::selection {
 
 #layout-int .panel .ui.search.dropdown {
   background: none !important; }
+
+#layout-int .jumbotron {
+  display: none; }
 
 /*Panel 2*/
 .panel-open {
@@ -1088,24 +1105,25 @@ textarea::selection, input::selection {
 .jumbotron-detalle .area {
   border-radius: 4px 0 0 4px;
   color: #fff;
-  float: left; }
+  float: left;
+  position: relative;
+  z-index: 3; }
 
 .jumbotron-detalle .price {
-  float: right;
+  top: 58px;
   color: #fff;
+  right: 0;
   font-weight: 100;
-  position: relative;
+  position: absolute;
   z-index: 1;
   margin-right: 0.3rem;
   border-radius: 0 0 4px 4px; }
 
 .jumbotron-detalle .name-place {
   background-color: #fff;
-  float: left;
-  display: table-cell;
-  width: 100%;
+  right: 0;
   color: #303336;
-  position: relative;
+  position: absolute;
   z-index: 2;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15); }
   .jumbotron-detalle .name-place span {
@@ -1687,6 +1705,10 @@ footer .brand-footer {
 #layout-int .nav-pills li a {
   color: #303336; }
 
+#layout-int .nav-pills li a:hover {
+  color: #017ee5;
+  opacity: 1; }
+
 #layout-int .ui.search.dropdown {
   background: url(../images/flecha.svg) no-repeat right 33% !important; }
 
@@ -2053,6 +2075,9 @@ footer .brand-footer {
   color: #fff;
   text-decoration: none; }
 
+.card-inventario:hover img {
+  background-color: #fff; }
+
 .card-inventario.active-inventario {
   background: #017ee5;
   color: #fff; }
@@ -2129,6 +2154,9 @@ footer .brand-footer {
   border-radius: 80px;
   position: absolute;
   right: 10px; }
+
+.card-inventario img {
+  background-color: #e6e6e6; }
 
 .hint {
   background: #f5f5f5;
@@ -2234,7 +2262,10 @@ table#addStock .form-group label {
 
 table#addStock .form-group input, table#addStock .form-group textarea {
   border: 0;
-  height: 34px;
+  min-height: 74px;
+  width: 100%;
+  overflow: visible;
+  height: auto;
   width: 100%; }
 
 table#addStock p {
@@ -2376,6 +2407,9 @@ section.card-steps .popover {
   position: relative; }
 
 /*Image placeholder*/
+.img-placeholder-thumb {
+  cursor: pointer; }
+
 .img-placeholder-thumb-container {
   overflow: hidden; }
 
@@ -2952,6 +2986,8 @@ section.card-steps .popover {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     background: #fff; }
+  nav.navbar .navbar-collapse.in {
+    height: 7000px; }
   .navbar-brand, #layout-int .navbar-brand {
     background: url(../images/logo-storable.svg) no-repeat;
     background-size: 94px 31px;
@@ -3033,16 +3069,16 @@ section.card-steps .popover {
     width: 130px;
     height: 115px; }
   /*section.card-slider  .swiper-slide {width: 130px !important; margin-right: 15px !important }*/
-  .card-slider-small-container .swiper-button-next, .card-slider-small-container .swiper-container-rtl .swiper-button-prev {
-    display: none; }
-  .card-slider-small-container .swiper-button-prev, .card-slider-small-container .swiper-container-rtl .swiper-button-next {
-    display: none; }
-  .card-slider-container .swiper-button-next, .card-slider-container .swiper-container-rtl .swiper-button-prev {
-    display: none; }
-  .card-slider-container .swiper-button-prev, .card-slider-container .swiper-container-rtl .swiper-button-next {
-    display: none; }
-  .card-slider-thumb-container .swiper-button-next, .card-slider-thumb-container .swiper-button-prev {
-    display: none; }
+  /*.card-slider-small-container .swiper-button-next, .card-slider-small-container  .swiper-container-rtl .swiper-button-prev 
+	{display: none}
+	.card-slider-small-container .swiper-button-prev, .card-slider-small-container .swiper-container-rtl .swiper-button-next
+	{display: none}
+	.card-slider-container .swiper-button-next, .card-slider-container  .swiper-container-rtl .swiper-button-prev 
+	{display: none}
+	.card-slider-container .swiper-button-prev, .card-slider-container .swiper-container-rtl .swiper-button-next
+	{display: none}
+	.card-slider-thumb-container .swiper-button-next, .card-slider-thumb-container   .swiper-button-prev
+	{display: none}*/
   .card-slider-small .swiper-slide {
     width: 160px !important;
     height: 115px; }
@@ -3197,12 +3233,13 @@ section.card-steps .popover {
     margin-top: 8px; }
   .owner span.pic-profile {
     font-size: 1.7rem !important;
-    padding: 10px 17px 0 15px !important; }
+    padding: 10px 17px 0 15px !important;
+    margin-top: 0; }
   .owner h4 {
     font-size: 1.3rem;
     width: 77%;
     margin-bottom: 0.5rem;
-    padding-top: 10px; }
+    padding-top: 4px; }
   .owner span {
     font-size: 1rem;
     width: 78%;
@@ -3333,8 +3370,6 @@ section.card-steps .popover {
     padding: 20px 15px; }
   .panel-body {
     padding: 10px 15px 15px; }
-  .panel table tr td:last-child {
-    max-width: 20px; }
   .post-content .pic-profile {
     width: 29px !important;
     height: 29px !important;
@@ -3361,7 +3396,7 @@ section.card-steps .popover {
   .breadcrumb > li + li:before {
     padding: 0 2px; }
   .img-placeholder-thumb {
-    width: 48%;
+    width: 100%;
     margin: 0 7px 10px 0;
     float: left;
     height: 56px; }
@@ -3429,7 +3464,7 @@ section.card-steps .popover {
     left: -30px !important; }
   .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -174px !important; }
+    left: -30px !important; }
   .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
     padding: 30px;
     width: 23em; }
@@ -3554,7 +3589,7 @@ section.card-steps .popover {
     background-color: transparent;
     min-height: 50px; }
   nav.navbar, nav.navbar.shrink {
-    padding: 4px 10px 0; }
+    padding: 4px 10px 4px; }
   nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {
     font-size: 14px;
     color: #fff;
@@ -3894,8 +3929,6 @@ section.card-steps .popover {
     padding: 10px 12px 5px 12px; }
   .panel-open .btn {
     padding: 10px 7px; }
-  .panel table tr td:last-child {
-    max-width: 168px; }
   .pagination {
     float: none;
     display: block;
@@ -3937,15 +3970,17 @@ section.card-steps .popover {
     width: 68%; }
   .jumbotron-detalle .area {
     border-radius: 4px 0 0 4px;
-    padding: 15px 14px;
-    font-size: 12px; }
+    padding: 17px 14px;
+    font-size: 12px;
+    min-width: 78px; }
   .jumbotron-detalle .name-place {
-    font-size: 3rem;
-    padding: 0.2rem 0 0rem 3rem;
+    font-size: 2rem;
+    padding: 1rem 0 0.9rem 3rem;
     width: 84%; }
   .jumbotron-detalle .price {
     font-size: 18px;
     margin: -1px 0 0 0;
+    top: 52px;
     padding: 7px 20px; }
   .owner {
     padding: 7px 14px; }
@@ -4117,7 +4152,7 @@ section.card-steps .popover {
   aside {
     margin-bottom: 100px; }
   aside section.card-slider {
-    margin-top: 72px; }
+    margin-top: 78px; }
   .spacer-aside {
     height: 56px; }
   .panel-heading .panel-title a {
@@ -4210,7 +4245,7 @@ section.card-steps .popover {
     left: -47px !important; }
   .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -156px !important; }
+    left: -47px !important; }
   .quotes {
     font-size: 20px;
     line-height: 28px;
@@ -4531,10 +4566,10 @@ section.card-steps .popover {
   .jumbotron-detalle .name-place {
     font-size: 3rem;
     padding: 0.4rem 0 0.4rem 3rem;
-    width: 84%; }
+    min-width: 112px; }
   .jumbotron-detalle .price {
     font-size: 18px;
-    margin: -1px 3px 0 0; }
+    margin: -1px 30 0 0; }
   .swiperIntro {
     height: 400px; }
   .jumbotron .swiperIntro-inverse .swiper-slide .title {
@@ -4708,12 +4743,13 @@ section.card-steps .popover {
   .owner span.pic-profile {
     font-size: 20px !important;
     padding: 9px 17px 0 15px !important;
-    margin-top: 6px; }
+    margin-top: 0; }
   .owner h4 {
     font-size: 18px;
     width: 73%;
+    padding-top: 11px;
     margin-bottom: 0.3rem;
-    margin-top: 1.8rem; }
+    margin-top: 0; }
   .owner span {
     font-size: 14px;
     padding: 0 11px;
@@ -4810,8 +4846,8 @@ section.card-steps .popover {
   .panel-open {
     margin-bottom: 40px; }
   .img-placeholder-thumb {
-    width: 48%;
-    margin: 0 10px 10px 0;
+    width: 35%;
+    margin: 0 8px 10px 0;
     float: left;
     height: 56px; }
   .suma table {
@@ -4885,7 +4921,7 @@ section.card-steps .popover {
     left: -148px !important; }
   .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -278px !important; }
+    left: -148px !important; }
   .calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {
     padding: 30px;
     width: 27.8em; }
@@ -4997,7 +5033,7 @@ section.card-steps .popover {
 
 .swiper1 {
   width: 100%;
-  height: 287px;
+  height: 301px;
   overflow: hidden;
   position: relative; }
 

@@ -32,9 +32,12 @@ function draw() {
 
   var colLeftHeight = $('#col-left').height();
  $('#map-container').css("height", colLeftHeight);
- var windowHeight = $(window).height();
- var btnHeight = $(".cerrar-movil-container").height();
+ var windowHeight = $(window).outerHeight();
+ var btnHeight = $(".cerrar-movil-container").outerHeight();
  var windowWidth = $(window).width();
+ var heightCerrar = $('.cerrar-movil-container').outerHeight();
+ var heightHeader = $('.navbar-header').outerHeight();
+
 
 
 //
@@ -42,6 +45,9 @@ function draw() {
  if (windowWidth <= 500) {
    
     $('.modal-content').css("min-height", windowHeight );
+    $('.nav-pills ').css("height", windowHeight - heightCerrar - heightHeader - 90);
+     $('.navbar-collapse.collapse.in').css("height", "7000px");
+
 
  } else {
     $('.navbar-collapse.collapse').css("min-height", "auto" );

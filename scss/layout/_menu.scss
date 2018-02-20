@@ -77,7 +77,9 @@ nav.navbar .navbar-toggle .icon-bar { background-color: $azulStorable;
 nav.navbar .navbar-collapse, nav.navbar .navbar-form
 { background: #fff;
 	text-align: center;	
-	transform: all 0.5s;
+	max-height: 100% !important; 
+	
+	overflow-y:visible;
 }
 .navbar-collapse .nav-pills  li  a {
 
@@ -107,7 +109,7 @@ nav.navbar .navbar-toggle:hover, nav.navbar .navbar-toggle:focus
 	  transform: rotate(-45deg);
 }
 
-.cerrar-movil-container {height:20px; position: fixed; bottom:0; z-index: 1000; width:92%} 
+.cerrar-movil-container {height:20px;  z-index: 1000; width:100%} 
 .cerrar-movil {background:$highlight; display: block;
 margin:0 -15px 0; color:$darkGrey; text-align: center; font-size: $size18px;
 padding: $padding20; text-decoration:none;

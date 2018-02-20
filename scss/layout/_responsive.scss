@@ -47,6 +47,7 @@
     background: #fff;
         
 	}
+	nav.navbar .navbar-collapse.in {height:7000px}
 	.navbar-brand, #layout-int .navbar-brand {
     background: url(../images/logo-storable.svg) no-repeat;
     background-size: 94px 31px;
@@ -134,7 +135,7 @@
 	margin-bottom: 30px;}
 	section.card-slider .card-image img { width: 130px; height: 115px}
 	/*section.card-slider  .swiper-slide {width: 130px !important; margin-right: 15px !important }*/
-	.card-slider-small-container .swiper-button-next, .card-slider-small-container  .swiper-container-rtl .swiper-button-prev 
+	/*.card-slider-small-container .swiper-button-next, .card-slider-small-container  .swiper-container-rtl .swiper-button-prev 
 	{display: none}
 	.card-slider-small-container .swiper-button-prev, .card-slider-small-container .swiper-container-rtl .swiper-button-next
 	{display: none}
@@ -143,7 +144,7 @@
 	.card-slider-container .swiper-button-prev, .card-slider-container .swiper-container-rtl .swiper-button-next
 	{display: none}
 	.card-slider-thumb-container .swiper-button-next, .card-slider-thumb-container   .swiper-button-prev
-	{display: none}
+	{display: none}*/
 	.card-slider-small .swiper-slide {   
 	   width: 160px !important;
 	  height: 115px;
@@ -299,12 +300,13 @@
 	.owner span.pic-profile {
     font-size: 1.7rem !important;
     padding: 10px 17px 0 15px !important;
+    margin-top: 0;
 	}
 	.owner h4 {
     font-size: 1.3rem;
     width: 77%;
     margin-bottom: 0.5rem;
-    padding-top: 10px;
+    padding-top: 4px;
 	}
 	.owner span {
     font-size: 1rem;
@@ -409,10 +411,7 @@
 	.spacer-aside {height: auto}
 	.panel-heading .panel-title a{ padding: 20px 15px;}
 	.panel-body {padding: 10px 15px 15px; }
-	.panel table tr td:last-child {
-	 max-width: 20px;
-
-	}
+	
 
 	.post-content .pic-profile {
 		 width: 29px !important;
@@ -433,7 +432,7 @@
     padding: 0 2px;
 	}
 	.img-placeholder-thumb {
-    width: 48%;
+    width: 100%;
     margin: 0 7px 10px 0;
     float: left;
     height: 56px;
@@ -490,7 +489,7 @@
 	}
     .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -174px !important;
+    left: -30px !important;
 	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 23em;
@@ -595,7 +594,7 @@
 
 	nav.navbar {background-color:transparent; min-height: 50px}
 	nav.navbar, nav.navbar.shrink {
-		padding:4px 10px 0;
+		padding:4px 10px 4px;
 	}
 	
 	nav.navbar .nav > li > a, nav.navbar.shrink .nav > li > a {font-size: $size14px;
@@ -745,6 +744,7 @@
 	section.card-slider {
     margin-bottom: 96px;
 	}
+	
 	section.card-slider .card-image img { width: 100%; height: auto}
 	section.card-slider h4{margin-bottom:$marginBottom30;font-size: $size18px;}
 	.card-slider .swiper-slide {   
@@ -955,10 +955,7 @@
 	.swiperIntro-inverse.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {margin:7px 0}
 	.panel .form-group { padding:10px 12px 5px 12px}
 	.panel-open .btn {padding: 10px 7px;}
-	.panel table tr td:last-child {
-	 max-width: 168px;
 
-	}
 	.pagination {
     float: none;
     display: block;
@@ -1005,14 +1002,15 @@
 	}
 	.jumbotron-detalle .area { 
 		border-radius: 4px 0 0 4px;
-	 	 padding: 15px 14px;
+	 	 padding: 17px 14px;
 	 	font-size: $size12px;
+	 	min-width: 78px;
 	 }
-	 .jumbotron-detalle .name-place {font-size: 3rem;
- 	    padding: 0.2rem 0 0rem 3rem;
+	 .jumbotron-detalle .name-place {font-size: 2rem;
+ 	    padding: 1rem 0 0.9rem 3rem;
 	    width: 84%;}
 	 .jumbotron-detalle .price {font-size: $size18px;
-	 margin: -1px 0 0 0;
+	 margin: -1px 0 0 0;top: 52px;
 		padding: 7px 20px;}
 	 .owner {
 	 
@@ -1133,7 +1131,7 @@
 	.credit table { table-layout: fixed;}
   	.notification-info {font-size: $size14px;}
   	aside { margin-bottom: 100px}
-  	aside section.card-slider {margin-top:72px}
+  	aside section.card-slider {margin-top:78px}
 	.spacer-aside {height: 56px}
 	.panel-heading .panel-title a{ padding: 20px 30px;}
 	.panel-body {padding: 10px 30px 30px; }
@@ -1201,7 +1199,7 @@
 	}
     .panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -156px !important;
+    left: -47px !important;
 	}
 	.quotes {font-size: $size20px;line-height: 28px;margin-bottom: 10px}
 	#col-right {padding-bottom: 90px}
@@ -1503,11 +1501,12 @@
 		border-radius: 4px 0 0 4px;
 	 	 padding: 16px 16px;
 	 	font-size: $size18px;
+
 	 }
 	 .jumbotron-detalle .name-place {font-size: 3rem;
  	    padding: 0.4rem 0 0.4rem 3rem;
-	    width: 84%;}
-	 .jumbotron-detalle .price {font-size: $size18px;    margin: -1px 3px 0 0;}
+	    min-width: 112px;}
+	 .jumbotron-detalle .price {font-size: $size18px;    margin: -1px 30 0 0;}
 	  .swiperIntro {
 	  height: 400px;
 	}
@@ -1676,12 +1675,13 @@
 	.owner span.pic-profile {
 		 font-size: 20px !important;
     	padding: 9px 17px 0 15px !important;
-		 margin-top: 6px;
+		 margin-top: 0;
 	}
 	.owner h4 { font-size: $size18px;
 		width: 73%; 
+		padding-top:11px;
 	    margin-bottom: 0.3rem;
-	    margin-top: 1.8rem;}
+	    margin-top: 0;}
 	.owner span {font-size: $size14px; padding: 0 11px;
 		    width: 81%;}
 	.panel table tr td {padding: 15px }
@@ -1737,7 +1737,7 @@
 	.img-placeholder-thumb-container {margin-bottom: $marginDefault;}
 	aside hr { margin-top: $marginTop30;}
 	.panel-open {margin-bottom: $marginDefault;}
-	.img-placeholder-thumb { width: 48%; margin:0 10px 10px 0; float: left; height: 56px}
+	.img-placeholder-thumb { width: 35%; margin:0 8px 10px 0; float: left; height: 56px}
 	.suma  table {font-size: $size18px;}
 	.ui.checkbox label span {padding:0 20px}
 	.credit table { table-layout: auto;}
@@ -1802,7 +1802,7 @@
 	}
 	.panel .calendar-storable.hasta .bootstrap-datetimepicker-widget {
     top: 40px !important;
-    left: -278px !important;
+    left: -148px !important;
 	}
 	.calendar-storable .bootstrap-datetimepicker-widget.dropdown-menu {padding: 30px;
     width: 27.8em;}

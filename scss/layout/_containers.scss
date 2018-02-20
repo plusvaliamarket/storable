@@ -68,7 +68,7 @@ h4.card-title {
 		width:100%;
 		padding: $intspacing;
 	}
-	span {color:$azulStorable; padding: 0 $intspacing 0 0}
+	span {color:$azulStorable; padding:  0}
 	h5 {color:$softGrey;
 		display: inline;
 	}
@@ -110,6 +110,7 @@ section.card-slider {
 		margin-bottom: $spacing;
 		font-size: $size14px;
 		display: block;
+		height: 29px;
   	}
   	span.card-place {
 		margin-bottom: $marginBottom20;
@@ -278,7 +279,7 @@ textarea::selection, input::selection { color:$softGrey;}
 	font-family: $fuente-label;
 	width: 100%;
 	}
-.panel .calendar-storable {background:none; float: left; width:50%}
+.panel .calendar-storable {background:none; width:100%}
 .panel .calendar-storable:last-child .form-group {border-left:0 none !important}
 .panel .pic-profile { float: left;}
 .owner {   
@@ -298,19 +299,21 @@ textarea::selection, input::selection { color:$softGrey;}
     padding: 0 11px;
 	}
 .panel table  {font-size: $size14px;}
-
+.panel > .table > tbody:first-child > tr:first-child td {border-top: 1px solid #ddd;}
+.panel > .table {width: 91%;
+margin-left: 12px;}
 .panel table tr td p, .panel table tr td span {color:$softGrey; display: block; line-height: 18px}
 .panel table tr td:first-child {@include font-weight-normal;
 	color:$darkGrey;
 }
+.panel table tr td:first-child {white-space:normal !important; overflow:visible !important; text-align: left !important} 
 .panel table tr td:last-child {@include font-weight-semibold;
 	color:$softGrey;
 	text-align: right;
 	
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
+.panel .ui.dropdown .menu > .item { padding: 1em 1.14285714rem !important; }
+.panel .ui.dropdown .menu > .item:hover {color:#017ee5 !important}
 #layout-int .panel  .ui.button {
 	background: transparent;
 	color: $darkGrey;
@@ -324,6 +327,7 @@ textarea::selection, input::selection { color:$softGrey;}
 #layout-int  .panel .calendar-storable .form-control {background:none !important}
 .panel .ui.search.dropdown > .text {color:$darkGrey}
 #layout-int .panel .ui.search.dropdown {background: none !important}
+#layout-int .jumbotron {display:none}
 
 /*Panel 2*/
 .panel-open {
@@ -384,24 +388,24 @@ textarea::selection, input::selection { color:$softGrey;}
 	color:#fff;
  	@extend %gradientStorable ;
  	float: left;
+ 	position:relative;
+	 	z-index: 3;
 
  }
  .jumbotron-detalle .price {@extend %gradientStorable ;
- 	float:right;
+ 	top: 58px;
  	color:#fff;
-  
+  	right: 0;
  	@include font-weight-light;
- 	position: relative;
+ 	position: absolute;
  	z-index: 1;
  	margin-right: 0.3rem;
  	border-radius: 0 0 4px 4px
  }
  .jumbotron-detalle .name-place {background-color: #fff;
- 	float: left;
- 	display: table-cell;
- 	width: 100%;
+ 	right:0;
  	color:$darkGrey;
- 	position: relative;
+ 	position: absolute;
    	z-index: 2;
    	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
 		span {    
@@ -854,7 +858,8 @@ footer {
 			@include btnStorable($azulStorable, $azulStorable, #fff);
 		}
 }
-#layout-int .nav-pills li a { color:$darkGrey}
+#layout-int .nav-pills li a { color:$darkGrey;}
+#layout-int .nav-pills li a:hover {color:$azulStorable;opacity:1}
 #layout-int .ui.search.dropdown {background: url(../images/flecha.svg) no-repeat right 33%  !important;}
 #layout-int .calendar-storable .form-control {background: url(../images/flecha.svg) no-repeat right 50%  !important;}
 #layout-int .ui.button {background: url(../images/flecha.svg) no-repeat right 50%  !important;
@@ -1147,6 +1152,7 @@ color: $darkGrey;
 .card-inventario {border:1px solid $greylight; position: relative; cursor: pointer;
 margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;}
 .card-inventario:hover {background: $azulStorable; color:#fff; text-decoration:none}
+.card-inventario:hover img {background-color:#fff }
 .card-inventario.active-inventario   {background: $azulStorable; color:#fff}
 .card-inventario.active-inventario  .description, .card-inventario.active-inventario .quantity i  {color:#fff}
 .card-inventario:hover  .description, .card-inventario:hover .quantity i  {color:#fff}
@@ -1182,6 +1188,7 @@ margin-bottom: $marginDefault;overflow: hidden; display: block; color:$darkGrey;
  
 position:absolute; right: 10px;
 } 
+.card-inventario  img {background-color:#e6e6e6}
 .hint {background: $highlight; color:$softGrey; position: absolute; bottom:0; font-size: $size14px;
 	    width: 100%;
     left: 0;
@@ -1235,7 +1242,10 @@ table#addStock  .form-group label {
 .cell-border{    border-right: 1px solid #ddd;}
 table#addStock  .form-group input, table#addStock  .form-group textarea {
 	    border: 0;
-    height: 34px;
+    min-height: 74px;
+width: 100%;
+overflow: visible;
+height: auto;
     width: 100%;
 	
 }
@@ -1299,6 +1309,7 @@ section.card-steps .popover{position:relative;}
 
 
 /*Image placeholder*/
+.img-placeholder-thumb {cursor:pointer}
 .img-placeholder-thumb-container {overflow: hidden}
 .img-placeholder-thumb { border:0.4px dashed $softGrey; background: $highlight; text-align: center; display: table;
 	vertical-align: middle; height: 56px; position: relative;}
