@@ -1042,9 +1042,6 @@ textarea::selection, input::selection {
 #layout-int .panel .ui.search.dropdown {
   background: none !important; }
 
-#layout-int .jumbotron {
-  display: none; }
-
 /*Panel 2*/
 .panel-open {
   font-size: 20px; }
